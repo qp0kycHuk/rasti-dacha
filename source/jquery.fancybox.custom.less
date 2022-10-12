@@ -1,0 +1,99 @@
+// out:./
+
+.fancybox-image {
+	object-fit: initial;
+}
+
+
+
+
+// .fancybox-custom-inner {
+// 	max-width      : 100%;
+// 	display        : flex;
+// 	align-items    : center;
+// 	justify-content: center;
+// }
+
+@media (pointer:coarse) {
+	.fancybox-active {
+		overflow: hidden;
+	}
+}
+
+.fancybox-custom-inner {
+
+
+	position         : relative;
+	width            : max-content;
+	max-width        : 100%;
+	// transform     : scale(0.9);
+	transition       : .3s ease;
+	display          : flex;
+	flex-direction   : column;
+
+	margin: auto;
+
+}
+
+.fancybox-custom-modal {
+	display       : flex;
+	overflow      : auto;
+	pointer-events: all !important;
+	padding-top   : 15px;
+	padding-bottom: 15px;
+
+	&.fancybox-is-open {
+		background: rgba(0, 0, 0, 0.8);
+
+	}
+
+
+
+	.fancybox-bg {
+		background: none;
+	}
+
+	.fancybox-stage {
+		position : relative;
+		transform: none;
+		height   : auto;
+		width    : auto;
+		overflow : visible;
+	}
+
+	.fancybox-slide {
+		position : relative;
+		transform: none;
+		height   : auto;
+		width    : auto;
+		padding  : 0;
+		overflow : visible;
+	}
+
+	.fancybox-content {
+		// overflow    : visible;
+		// height   : auto !important;
+		// width    : auto !important;
+	}
+
+	.fancybox-iframe {
+		position : relative;
+		transform: none;
+		overflow : visible;
+	}
+
+	@media (min-width:768px) {
+		// .fancybox-close-small {
+		// 	color        : #fff;
+		// 	position     : fixed;
+		// 	right        : 0;
+		// 	top          : 0;
+		// 	// background: rgba(255, 255, 255, 0.3);
+		// }
+	}
+}
+
+.fancybox-slide--image {
+	padding-left : 15px;
+	padding-right: 15px;
+}
