@@ -1,12 +1,18 @@
-@import './ui-reset.less';
-@import '../source/jquery.fancybox.custom.less';
-@import './Grid.less';
-@import './Margin.less';
-@import './Padding.less';
-@import './Form.less';
-@import './Progress.less';
-@import './Typography.less';
-@import './Display.less';
+@import 'npm-kit-ripple/index.css';
+@import 'swiper/css';
+
+@import "./functions";
+@import "./variables";
+
+@import './ui-reset.scss';
+@import '../source/jquery.fancybox.custom.scss';
+@import './Grid.scss';
+@import './Margin.scss';
+@import './Padding.scss';
+@import './Form.scss';
+@import './Progress.scss';
+@import './Typography.scss';
+@import './Display.scss';
 
 
 
@@ -17,55 +23,16 @@
 }
 
 :root {
-	@color-primary        : #55AD4D;
-	--color-primary       : @color-primary;
-	--color-primary-10    : fade(@color-primary, 10);
-	--color-primary-20    : fade(@color-primary, 20);
-	--color-primary-30    : fade(@color-primary, 30);
-	--color-primary-40    : fade(@color-primary, 40);
-	--color-primary-50    : fade(@color-primary, 50);
-	--color-primary-60    : fade(@color-primary, 50);
-	--color-primary-70    : fade(@color-primary, 70);
-	--color-primary-80    : fade(@color-primary, 80);
-	--color-primary--light: lighten(@color-primary, 5%);
-	--color-primary--dark : darken(@color-primary, 5%);
-
-
-
-	@color-accent        : #FF8049;
-	--color-accent       : @color-accent;
-	--color-accent-10    : fade(@color-accent, 10);
-	--color-accent-20    : fade(@color-accent, 20);
-	--color-accent-30    : fade(@color-accent, 30);
-	--color-accent-40    : fade(@color-accent, 40);
-	--color-accent-50    : fade(@color-accent, 50);
-	--color-accent-60    : fade(@color-accent, 60);
-	--color-accent-70    : fade(@color-accent, 70);
-	--color-accent-80    : fade(@color-accent, 80);
-	--color-accent--light: lighten(@color-accent, 5%);
-	--color-accent--dark : #F16426;
-
-
-
-
-	@color-text       : #443E3E;
-	--color-text      : @color-text;
-	--color-text-dark : darken(@color-text, 5%);
-	--color-text-light: lighten(@color-text, 5%);
-	--color-text-10   : fade(@color-text, 10);
-	--color-text-20   : fade(@color-text, 20);
-	--color-text-40   : fade(@color-text, 40);
-	--color-text-60   : fade(@color-text, 60);
-	--color-text-80   : fade(@color-text, 80);
-
-
+	@include getColors(#55AD4D, "primary");
+	@include getColors(#FF8049, "accent");
+	@include getColors(#443E3E, "text");
 
 	--radius-small : 5px;
 	--radius-middle: 10px;
 	--radius-large : 15px;
 
 
-
+	--spacing: 4px;
 
 	--font-base: ~"'Ubuntu', Arial, Helvetica, sans-serif";
 
@@ -323,7 +290,7 @@ body {
 	}
 
 
-	&-icon&--link {
+	&-icon:is(.btn--link) {
 		border: none;
 	}
 

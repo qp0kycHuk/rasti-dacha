@@ -25,10 +25,9 @@ input[type="search"]::-webkit-search-results-decoration {
 }
 
 q {
-    quotes: "\201c""\201d";
+    quotes: "\201c" "\201d";
 }
 
-[type='file'],
 body p:empty,
 body h1:empty,
 body h2:empty,
@@ -39,12 +38,10 @@ body h6:empty,
 body li:empty {
     display: none;
 }
-
-*::after,
-*::before,
-*::placeholder {
-    transition: all .2s linear;
+*{
+    color: inherit;
 }
+
 
 html {
     font-size: 16px;
@@ -56,10 +53,12 @@ html *::after,
 body *::after,
 html *::before,
 body *::before {
+    margin       : 0;
+    padding      : 0;
     border       : none;
     border-radius: 0;
     box-sizing   : border-box;
-    outline      : none;
+    outline: none;
 }
 
 sup {
@@ -82,13 +81,12 @@ label,
 button,
 select,
 input[type=submit] {
-    cursor   : pointer;
+    cursor: pointer;
     font-size: inherit;
 }
 
 button {
     background: transparent;
-    padding   : 0;
 }
 
 textarea {
@@ -108,11 +106,14 @@ img[src="/"] {
 
 img {
     max-width  : 100%;
-    object-fit : contain;
+    object-fit: scale-down;
     display    : block;
     user-select: none;
 }
 
+ul li {
+    list-style: none;
+}
 
 ol li {
     list-style: decimal;

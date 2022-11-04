@@ -32,14 +32,14 @@
 		align-items: center;
 		position   : relative;
 
-	
-		color        : var(--color-text-60);
+
+		color: var(--color-text-60);
 
 
 
 		transition: .2s ease;
 
-	
+
 	}
 
 	&-field--error &-input-cover {
@@ -73,8 +73,8 @@
 		cursor    : inherit;
 		outline   : none;
 
-		appearance: none;
-		font-size : 16px;
+		appearance   : none;
+		font-size    : 16px;
 		background   : #FFFFFF;
 		border       : 1px solid rgba(42, 45, 48, 0.2);
 		border-radius: 10px;
@@ -99,11 +99,13 @@
 		&::placeholder {
 			color: var(--color-text-60);
 		}
+
 		&:focus {
 			border-color: var(--field-color);
 			box-shadow  : 0 0 0 1px var(--field-color);
 			color       : var(--color-text);
 		}
+
 		&--error {
 
 			border: 1px solid #D62D30;
@@ -130,7 +132,7 @@
 
 
 
-	textarea&-input {
+	textarea:is(.form-input) {
 		min-height: 120px;
 	}
 
@@ -152,17 +154,17 @@
 
 
 	&-checkbox &-input {
-		position: absolute;
-		left    : 0 !important;
-		top     : 0 !important;
-		width   : 0 !important;
-		height  : 0 !important;
-		border: none !important;
+		position  : absolute;
+		left      : 0 !important;
+		top       : 0 !important;
+		width     : 0 !important;
+		height    : 0 !important;
+		border    : none !important;
 		background: none !important;
 		box-shadow: none !important;
-		overflow: hidden;
-		padding : var(--spacing-2);
-		z-index : -1;
+		overflow  : hidden;
+		padding   : var(--spacing-2);
+		z-index   : -1;
 	}
 
 	&-checkbox-target {
