@@ -1,7 +1,7 @@
 document.addEventListener('toggleopen', (event) => {
 	if (
 		event.detail.target.closest('#mobil') ||
-		event.detail.target.closest('#catalog-filter') ||
+		event.detail.target.id == 'catalog-filter' ||
 		event.detail.target.closest('#news-catalog-nav')
 	) {
 		document.body.classList.add('menu-opened')
@@ -10,7 +10,7 @@ document.addEventListener('toggleopen', (event) => {
 document.addEventListener('toggleclose', (event) => {
 	if (
 		event.detail.target.closest('#mobil') ||
-		event.detail.target.closest('#catalog-filter') ||
+		event.detail.target.id == 'catalog-filter' ||
 		event.detail.target.closest('#news-catalog-nav')
 	) {
 		document.body.classList.remove('menu-opened')
