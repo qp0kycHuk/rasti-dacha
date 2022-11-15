@@ -2526,9 +2526,14 @@ header {
 }
 
 .category-block {
-	display              : grid;
-	grid-template-columns: 270px 3fr;
-	grid-gap             : 1.9em;
+	display: flex;
+	justify-content: space-between;
+	grid-gap: 30px;
+}
+
+.category-filter {
+	width: 100%;
+	max-width: 270px;
 }
 
 
