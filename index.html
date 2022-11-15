@@ -428,7 +428,13 @@
 
 	<!-- Хиты продаж -->
 	<section class="container-block card">
-		<h1 class="page-title mb-5 mb-md-9">хиты продаж</h1>
+		<div class="card-top mb-5 mb-md-9">
+			<h1 class="page-title mb-1">хиты продаж</h1>
+			<a class="btn btn--accent btn--contur" href="">
+				<span class="color-text">Показать больше</span>
+			</a>
+		</div>
+		<!-- <h1 class="page-title mb-5 mb-md-9">хиты продаж</h1> -->
 		<div class="card-items card-items--4">
 			<div class="card-page">
 				<div class="card-page__title" style="background-color: #3FC54C;">Новинка</div>
@@ -453,7 +459,7 @@
 						<div class="card-page-text__price-new">390 руб.</div>
 						<div class="card-page-text__price-old ml-2">390 руб.</div>
 					</div>
-					<a class="btn btn--accent" href="">
+					<a class="btn btn--accent mt-auto" href="">
 						<svg class="icon text-h6 mr-2">
 							<use xlink:href="img/icons.svg#shopping-cart" />
 						</svg>
@@ -484,7 +490,7 @@
 						<div class="card-page-text__price-new">390 руб.</div>
 						<div class="card-page-text__price-old ml-2">390 руб.</div>
 					</div>
-					<a class="btn btn--accent" href="">
+					<a class="btn btn--accent mt-auto" href="">
 						<svg class="icon text-h6 mr-2">
 							<use xlink:href="img/icons.svg#shopping-cart" />
 						</svg>
@@ -515,7 +521,7 @@
 						<div class="card-page-text__price-new">390 руб.</div>
 						<div class="card-page-text__price-old ml-2">390 руб.</div>
 					</div>
-					<a class="btn btn--accent" href="">
+					<a class="btn btn--accent mt-auto" href="">
 						<svg class="icon text-h6 mr-2">
 							<use xlink:href="img/icons.svg#shopping-cart" />
 						</svg>
@@ -545,7 +551,7 @@
 						<div class="card-page-text__price-new">390 руб.</div>
 						<div class="card-page-text__price-old ml-2">390 руб.</div>
 					</div>
-					<a class="btn btn--accent" href="">
+					<a class="btn btn--accent mt-auto" href="">
 						<svg class="icon text-h6 mr-2">
 							<use xlink:href="img/icons.svg#shopping-cart" />
 						</svg>
@@ -557,7 +563,7 @@
 	</section>
 
 	<!-- Статистика -->
-	<section class="container-block statistics">
+	<section class="container-block statistics leaves">
 		<div class="statistics__item pl-lg-10 pr-lg-10">
 			<img class="statistics__img" src="img/dacha/statistics-1.png" alt="">
 			<div class="statistics__title mb-3">
@@ -923,7 +929,12 @@
 
 	<!-- новинки -->
 	<section class="container-block card">
-		<h1 class="page-title mb-5 mb-md-9">новинки</h1>
+		<div class="card-top mb-5 mb-md-9">
+			<h1 class="page-title mb-1">новинки</h1>
+			<a class="btn btn--accent btn--contur" href="">
+				<span class="color-text">Показать больше</span>
+			</a>
+		</div>
 		<div class="card-items card-items--4">
 			<div class="card-page">
 				<div class="card-page__title" style="background-color: #3FC54C;">Новинка</div>
@@ -948,7 +959,7 @@
 						<div class="card-page-text__price-new">390 руб.</div>
 						<div class="card-page-text__price-old ml-2">390 руб.</div>
 					</div>
-					<a class="btn btn--accent" href="">
+					<a class="btn btn--accent mt-auto" href="">
 						<svg class="icon text-h6 mr-2">
 							<use xlink:href="img/icons.svg#shopping-cart" />
 						</svg>
@@ -979,7 +990,7 @@
 						<div class="card-page-text__price-new">390 руб.</div>
 						<div class="card-page-text__price-old ml-2">390 руб.</div>
 					</div>
-					<a class="btn btn--accent" href="">
+					<a class="btn btn--accent mt-auto" href="">
 						<svg class="icon text-h6 mr-2">
 							<use xlink:href="img/icons.svg#shopping-cart" />
 						</svg>
@@ -1010,7 +1021,7 @@
 						<div class="card-page-text__price-new">390 руб.</div>
 						<div class="card-page-text__price-old ml-2">390 руб.</div>
 					</div>
-					<a class="btn btn--accent" href="">
+					<a class="btn btn--accent mt-auto" href="">
 						<svg class="icon text-h6 mr-2">
 							<use xlink:href="img/icons.svg#shopping-cart" />
 						</svg>
@@ -1040,7 +1051,7 @@
 						<div class="card-page-text__price-new">390 руб.</div>
 						<div class="card-page-text__price-old ml-2">390 руб.</div>
 					</div>
-					<a class="btn btn--accent" href="">
+					<a class="btn btn--accent mt-auto" href="">
 						<svg class="icon text-h6 mr-2">
 							<use xlink:href="img/icons.svg#shopping-cart" />
 						</svg>
@@ -1052,37 +1063,37 @@
 	</section>
 
 	<!-- Форма отправки -->
-	<section class="container-block form">
-		<div class="form__title">Стань членом клуба и получи каталог спецпредложение</div>
-		<form action="" name="myForm" class="formSubmit">
-			<label for="name" class="form-field">
-				<span class="input__title">Имя</span>
-				<input type="text" name="name" id="name" class="form__input" placeholder="Введите имя"
-					data-mask="order">
-				<span class="form__err">Обязательное поле для заполнения</span>
-			</label>
-			<label for="tel" class="form-field">
-				<span class="input__title">Телефон</span>
-				<input type="tel" name="tel" id="tel" class="form__input" placeholder="+7">
-				<span class="form__err">Обязательное поле для заполнения</span>
-			</label>
-			<label for="password" class="form-field form-field-error">
-				<span class="input__title">Пароль</span>
-				<input type="password" name="password" id="password" class="form__input" placeholder="Введите пароль">
-				<span class="form__err">Пароль должен содержать 8 символов</span>
-			</label>
-			<button type="submit" class="button__submit">Регистрация</button>
-			<div class="form__perdan">
-				<span id="perdan">Нажимая на кнопку “Регистрация”, Вы соглашаетесь на обработку персональных
-					данных</span>
+	<section class="container-block consultation">
+		<form class="consultation__form py-5 px-4 py-md-10 px-md-8">
+			<div class="consultation__title page-title mb-4">
+				нужна бесплатная консультация?
 			</div>
+			<div class="text-body-1 mb-4 mb-md-5">
+				Отправьте заявку, а мы перезвоним и уточним
+				все детали и нюансы
+			</div>
+			<label class="consultation__label mb-4">
+				<span class="text-body-1 mb-2">Имя</span>
+				<input class="page-input" type="text" placeholder="Введите текст" required>
+			</label>
+			<label class="consultation__label mb-9">
+				<span class="text-body-1 mb-2">Телефон</span>
+				<input class="page-input" type="tel" placeholder="+7" required>
+			</label>
+			<button class="btn btn--accent mb-6" type="submit">Отправить</button>
+			<a class="consultation__politic" href="">
+				Отправляя форму Вы даете согласие на обработку <br>Ваших персональных данных
+			</a>
 		</form>
 	</section>
 
 	<!-- Новости садоводства -->
 	<section class="container-block news">
-		<div class="button-news">
-			<button class="button--page">НОВОСТИ САДОВОДСТВА</button>
+		<div class="card-top mb-5 mb-md-9">
+			<h1 class="page-title mb-1">новости садоводства</h1>
+			<a class="btn btn--accent btn--contur" href="">
+				<span class="color-text">Показать больше</span>
+			</a>
 		</div>
 		<div class="image-slider swiper-container swiper-mp">
 			<div class="image-slider__wrapper swiper-wrapper">
@@ -1093,10 +1104,14 @@
 							<img src="img/gard-1.png" loading="lazy" class="news__image">
 						</picture>
 						<div class="news-text">
-							<div class="news__subtitle">Пестициды в продуктах питания теперь быстро высвечивает
-								бактериальный
-								биосенсор</div>
-							<div class="news__date">02.03.21</div>
+							<div class="news__date mb-10">02.03.21</div>
+							<div class="news__subtitle">
+								Можно ли совершать полив овощных посадо морской водой?
+							</div>
+							<p class="news__info mb-5">
+								Ответ на этот актуальный вопрос дали ученые из международной исследовательской группы...
+							</p>
+							<a class="news__btn btn btn--accent mt-auto" href="">Читать подробнее</a>
 						</div>
 					</div>
 				</div>
@@ -1107,9 +1122,14 @@
 							<img src="img/gard-2.png" loading="lazy" class="news__image">
 						</picture>
 						<div class="news-text">
-							<div class="news__subtitle">Потребление зелени в России может резко вырасти к 2030 году
+							<div class="news__date mb-10">02.03.21</div>
+							<div class="news__subtitle">
+								Капуста, влюбившая в себя весь мир
 							</div>
-							<div class="news__date">02.03.21</div>
+							<p class="news__info mb-5">
+								Известный агрохолдинг «Московский» явил миру совершенно новый продукт для...
+							</p>
+							<a class="news__btn btn btn--accent mt-auto" href="">Читать подробнее</a>
 						</div>
 					</div>
 				</div>
@@ -1120,8 +1140,14 @@
 							<img src="img/gard-3.png" loading="lazy" class="news__image">
 						</picture>
 						<div class="news-text">
-							<div class="news__subtitle">Красноярский край открыл поставку перловки за границу</div>
-							<div class="news__date">02.03.21</div>
+							<div class="news__date mb-10">02.03.21</div>
+							<div class="news__subtitle">
+								Куда сдавать яблоки? Садоводы жалуются на проблемы с реализацией урожаев из-за импорта
+							</div>
+							<p class="news__info mb-5">
+								Ответ на этот актуальный вопрос дали ученые из международной...
+							</p>
+							<a class="news__btn btn btn--accent mt-auto" href="">Читать подробнее</a>
 						</div>
 					</div>
 				</div>
@@ -1130,119 +1156,77 @@
 		<div class="swiper-pagination"></div>
 	</section>
 
-	<!-- Партнеры -->
-	<section class="container-block partners">
-		<div class="partners__title">ПАРТНЕРЫ</div>
-		<div class="partners-icons">
-			<picture>
-				<source srcset="img/part_1.webp" type="image/webp">
-				<img src="img/part_1.png" loading="lazy" class="partners__image">
-			</picture>
-			<picture>
-				<source srcset="img/part_2.webp" type="image/webp">
-				<img src="img/part_2.png" loading="lazy" class="partners__image">
-			</picture>
-			<picture>
-				<source srcset="img/part_3.webp" type="image/webp">
-				<img src="img/part_3.png" loading="lazy" class="partners__image">
-			</picture>
-			<picture>
-				<source srcset="img/part_4.webp" type="image/webp">
-				<img src="img/part_4.png" loading="lazy" class="partners__image">
-			</picture>
-			<picture>
-				<source srcset="img/part_5.webp" type="image/webp">
-				<img src="img/part_5.png" loading="lazy" class="partners__image">
-			</picture>
-			<picture>
-				<source srcset="img/part_6.webp" type="image/webp">
-				<img src="img/part_6.png" loading="lazy" class="partners__image">
-			</picture>
-			<picture>
-				<source srcset="img/part_7.webp" type="image/webp">
-				<img src="img/part_7.png" loading="lazy" class="partners__image">
-			</picture>
+	<!-- Реквизиты -->
+	<section class="container-block requisites">
+		<div class="requisites__main">
+			<a href="/" class="requisites-logo mb-4 mb-md-8">
+				<img src="img/dacha/logo-light.png">
+			</a>
+			<div class="requisites__main-text">
+				Лучшее место для садовода. <br>
+				Здесь есть всё, что вам нужно <br>
+				и даже больше
+			</div>
 		</div>
-	</section>
-
-	<!-- Соцсети -->
-	<section class="container-block social">
-		<div class="social__title">Мы в социальных сетях:</div>
-		<div class="social-icons">
-			<a href="#"><img src="img/ok.svg" class="social-icons_image"></a>
-			<a href="#"><img src="img/vk.svg" class="social-icons_image"></a>
-			<a href="#"><img src="img/instagramm.svg" class="social-icons_image"></a>
-			<a href="#"><img src="img/youtube.svg" class="social-icons_image"></a>
-			<a href="#"><img src="img/dzen.svg" class="social-icons_image"></a>
+		<div class="requisites__item requisites__item--1 py-5 px-5 py-md-8 px-md-7">
+			<div class="requisites__item-title mb-4 mb-md-7 pb-4 pb-md-7">
+				Наши реквизиты
+			</div>
+			<span class="text-body-1 mb-5">ООО “Расти дача”</span>
+			<span class="text-body-1 mb-5">ИНН: 233803715292</span>
+			<span class="text-body-1"> ОГРН: 320237500326338</span>
+		</div>
+		<div class="requisites__item requisites__item--2 py-5 px-5 py-md-8 px-md-7">
+			<div class="requisites__item-title mb-4 mb-md-7 pb-4 pb-md-7">
+				Инфо по заказам
+			</div>
+			<a class="text-body-1 mb-5" href="">Отследить заказ</a>
+			<a class="text-body-1 mb-5" href="">Оплата и доставка</a>
+			<span class="text-body-1" href="">Гарантия</span>
+		</div>
+		<div class="requisites__item requisites__item--3 py-5 px-5 py-md-8 px-md-7">
+			<div class="requisites__item-title mb-4 mb-md-7 pb-4 pb-md-7">
+				О нашей компании
+			</div>
+			<a class="text-body-1 mb-5" href="">О нас</a>
+			<a class="text-body-1 mb-5" href="">Акции и скидки</a>
+			<a class="text-body-1" href="">Контакты</a>
 		</div>
 	</section>
 
 	<!-- Подвал -->
-	<footer class="container-block footer">
-		<div class="footer-inner">
-			<div class="footer-block">
-
-				<div class="footer-block-icons">
-					<img src="img/Group 5590.svg" class="footer-block-icons__image">
-					<img src="img/KSP.svg" class="footer-block-icons__image">
+	<footer class="footer py-6">
+		<div class="footer__block container-block">
+			<div class="footer__items">
+				<div class="footer__item">
+					<span class="footer__text text-body-1 mb-2">Общая почта (по всем вопросам):</span>
+					<a class="footer__link" href="mailto: info@rastidacha.ru">info@rastidacha.ru</a>
 				</div>
-				<a href="tel: +78001008975" class="footer-block__link" rel="nofollow">+7 (800) 100-89-75</a>
-				<a href="mailto: klubsadprof@mail.ru" class="footer-block__link" rel="nofollow">klubsadprof@mail.ru</a>
-				<div class="footer-block-social">
-					<a href="https://api.whatsapp.com/send?phone=79183568715" target="_blank" rel="nofollow"><img
-							src="img/watsapp.svg" class="footer-block-social__image"></a>
-					<a href="tg://resolve?domain=KlubSadProf_bot" target="_blank" rel="nofollow"><img
-							src="img/telegramm.svg" class="footer-block-social__image"></a>
+				<div class="footer__item">
+					<span class="footer__text text-body-1 mb-2">Отдел продаж</span>
+					<a class="footer__link" href="tel: +7 (800) 000-00-00">+7 (800) 000-00-00</a>
 				</div>
-			</div>
-			<div class="footer-block" data-toggle-cover="">
-
-
-				<div class="footer-block__title" data-toggle-link="">
-					Реквизиты
-				</div>
-				<div class="heightOver" data-toggle-content="" data-toggle-height="true" data-toggle-static="true"
-					style="height: 0px; overflow: hidden;">
-					<div class="footer-block__requaer">
-						ООО "ЗЕЛЕНЫЙ МИР" </div>
-					<div class="footer-block__requaer">
-						ИНН: 2360012044 </div>
-					<div class="footer-block__requaer">
-						КПП: 236001001 </div>
-					<div class="footer-block__requaer">
-						ОГРН: 1192375068874 </div>
-					<!-- <div class="footer-block__requaer">
-	ООО “Флора”
-</div>
-<div class="footer-block__requaer">
-	ИНН: 2360012855
-</div>
-<div class="footer-block__requaer">
-	КПП: 236001001
-</div>
-<div class="footer-block__requaer">
-	ОГРН: 1202300045650
-</div> -->
+				<div class="footer__item">
+					<span class="footer__text text-body-1 mb-2">Отдел консультации</span>
+					<a class="footer__link" href="tel: +7 (800) 000-00-00">+7 (800) 000-00-00</a>
 				</div>
 			</div>
-			<div class="footer-block" data-toggle-cover="">
-				<div class="footer-block__title" data-toggle-link="">Покупателям</div>
-				<div class="heightOver" data-toggle-content="" data-toggle-height="true" data-toggle-static="true"
-					style="height: 0px; overflow: hidden;">
-					<a href="/payment-delivery/" class="footer-block__link">Оплата и доставка</a>
-					<a href="/guarantee/" class="footer-block__link">Гарантия</a>
-					<a href="/order_status/" class="footer-block__link">Отследить заказ</a>
-					<a href="/kontakty/" class="footer-block__link">Контакты</a>
-					<a href="/polzovatelskoe-soglashenie/" class="footer-block__link">Пользовательское соглашение</a>
-					<a href="/usloviya-pokupki/" class="footer-block__link">Условия покупки</a>
-				</div>
+			<div class="footer__social">
+				<a href="">
+					<img class="footer__icon icon" src="img/dacha/tg.svg" alt="">
+				</a>
+				<a href="">
+					<img class="footer__icon icon" src="img/dacha/wa.svg" alt="">
+				</a>
+				<a href="">
+					<img class="footer__icon icon" src="img/dacha/vb.svg" alt="">
+				</a>
 			</div>
 		</div>
-
-
-		<div>
-			2022 © Интернет-магазин КЛУБА САДОВОДОВ-ПРОФЕССИОНАЛОВ осуществляет доставку растений и саженцев по Москве и
-			России </div>
+		<div class="footer__block container-block">
+			<span class="footer__text text-body-1">(с) 2022</span>
+			<a class="footer__politic text-body-1" href="">Политика конфиденциальности</a>
+		</div>
 	</footer>
 
 	<!-- Мобильный подвал -->

@@ -3636,3 +3636,35 @@ body {
 		text-align: center;
 	}
 }
+
+.leaves {
+	position: relative;
+}
+
+.leaves::before,
+.leaves::after {
+	content        : '';
+	position       : absolute;
+	width          : 274px;
+	height         : 216px;
+	background     : url('../img/dacha/list.png') no-repeat center;
+	background-size: 100%;
+	pointer-events : none;
+}
+
+.leaves::before {
+	left     : 100px;
+	transform: scale(1, 1) rotate(-98deg)
+}
+
+.leaves::after {
+	right    : 100px;
+}
+
+@media(max-width: 1200px) {
+
+	.leaves::before,
+	.leaves::after {
+		display: none;
+	}
+}
