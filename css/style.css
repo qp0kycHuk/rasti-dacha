@@ -5759,3 +5759,54 @@ header {
 		flex-direction: column;
 	}
 }
+
+.contacts__items {
+	display              : grid;
+	grid-template-columns: repeat(4, 1fr);
+	grid-gap             : 30px;
+}
+
+.contacts__item {
+	display        : flex;
+	flex-direction : column;
+	justify-content: center;
+	background     : #FFFFFF;
+	box-shadow     : 0px 8px 16px rgba(35, 35, 35, 0.06);
+	border-radius  : 16px;
+}
+
+.contacts__name {
+	opacity: 0.4;
+}
+
+.contacts__social {
+	display        : flex;
+	justify-content: space-between;
+	flex-wrap      : wrap;
+	grid-gap       : 20px;
+	width          : 100%;
+	max-width      : 600px;
+}
+
+.contacts__social-item {
+	display    : flex;
+	align-items: center;
+}
+
+.contacts__social-content {
+	display       : flex;
+	flex-direction: column;
+}
+
+@media(max-width: 1200px) {
+	.contacts__items {
+		grid-template-columns: repeat(2, 1fr);
+	}
+}
+
+@media(max-width: 576px) {
+	.contacts__items {
+		grid-template-columns: 1fr;
+		grid-gap             : 15px;
+	}
+}
