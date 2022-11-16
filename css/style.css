@@ -5889,3 +5889,58 @@ header {
 		display: none;
 	}
 }
+
+.favourites-empty {
+	background   : #FFFFFF;
+	border-radius: 16px;
+	position     : relative;
+}
+
+.favourites-empty__img {
+	position : absolute;
+	bottom   : 0;
+	right    : 0;
+	width    : 100%;
+	max-width: 400px;
+}
+
+.favourites-empty__content {
+	display       : flex;
+	flex-direction: column;
+	position      : relative;
+	z-index       : 1;
+}
+
+.favourites-empty__btn {
+	width: max-content;
+}
+
+@media(max-width: 1200px) {
+	.favourites-empty {
+		padding-bottom: 0;
+	}
+
+	.favourites-empty__img {
+		position   : static;
+		margin-left: auto;
+	}
+}
+
+@media(max-width: 1200px) {
+	.favourites-empty__text {
+		font-size: 18px;
+	}
+}
+
+.payment-status__text {
+	font-size: 20px;
+}
+
+.payment-status__link {
+	color        : #af2f2f;
+	border-bottom: 1px dashed #af2f2f;
+}
+
+.payment-status__btn {
+	width: max-content;
+}
