@@ -2705,38 +2705,45 @@ header {
 	flex-direction : column;
 	align-items    : center;
 	justify-content: center;
+	border-radius  : 16px;
+	background     : #F8F2AA url('../img/dacha/box.png') no-repeat center;
+	background-size: cover;
+	padding-top    : 80px;
+	padding-bottom : 80px;
 }
 
 .status__title {
-	font-size    : 20px;
-	line-height  : 23px;
-	font-family  : var(--font-base);
-	font-weight  : 500;
-	font-style   : normal;
-	text-align   : center;
-	margin-bottom: 30px;
+	font-size  : 32px;
+	font-weight: 700;
+	text-align : center;
+	color      : #fff;
+	background : linear-gradient(90.26deg, rgba(0, 0, 0, 0.2) 0%, rgba(0, 0, 0, 0) 50.23%), var(--color-primary);
 }
 
 .status-form {
-	display       : flex;
-	flex-direction: column;
-	width         : 100%;
-	max-width     : 570px;
+	display         : flex;
+	flex-direction  : column;
+	width           : 100%;
+	max-width       : 400px;
+	background-color: #fff;
+	border-radius   : 16px;
+	overflow        : hidden;
 }
 
 .status-form-label {
 	display       : flex;
 	flex-direction: column;
+	position      : relative;
 	margin-bottom : 30px;
 }
 
 .status-form-label__title {
-	font-size    : 16px;
-	line-height  : 18px;
-	font-family  : var(--font-base);
-	font-weight  : 300;
-	font-style   : normal;
-	margin-bottom: 10px;
+	font-size  : 16px;
+	font-weight: 600;
+}
+
+.status-form-label__subtitle {
+	opacity: 0.7;
 }
 
 .status-form-label__input {
@@ -2761,10 +2768,34 @@ header {
 	color: #999999;
 }
 
-.btn__status {
-	margin   : 0 auto;
-	width    : 100%;
-	max-width: 370px;
+.status-form__error {
+	position   : absolute;
+	right      : 0;
+	font-weight: 600;
+	bottom     : -19px;
+	font-size  : 14px;
+	color      : #AF2F2F;
+	display    : none;
+}
+
+.status-form-label--error .page-input {
+	border-color: #AF2F2F;
+}
+
+.status-form-label--error .status-form__error {
+	display: block;
+}
+
+@media(max-width: 576px) {
+	.status {
+		padding-top   : 0;
+		padding-bottom: 0;
+		box-shadow    : 6px 6px 20px rgba(0, 0, 0, 0.2);
+	}
+
+	.status__title {
+		font-size: 20px;
+	}
 }
 
 /* ÐÐºÑ†Ð¸Ð¸ */
@@ -5808,5 +5839,53 @@ header {
 	.contacts__items {
 		grid-template-columns: 1fr;
 		grid-gap             : 15px;
+	}
+}
+
+.error-page {
+	display        : flex;
+	align-items    : center;
+	justify-content: center;
+	flex-direction : column;
+	width          : 100%;
+	max-width      : 720px;
+	margin         : 0 auto;
+	text-align     : center;
+}
+
+.error-page__number {
+	background             : linear-gradient(90.26deg, rgba(0, 0, 0, 0.2) 0%, rgba(0, 0, 0, 0) 50.23%), #749E1B;
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
+	background-clip        : text;
+	text-fill-color        : transparent;
+	font-weight            : 800;
+	font-size              : 228px;
+}
+
+.error-page__text {
+	opacity    : 0.6;
+	line-height: 140%;
+}
+
+.error-page__btns {
+	display        : flex;
+	align-items    : center;
+	justify-content: center;
+	flex-wrap      : wrap;
+	grid-gap       : 16px;
+}
+
+@media(max-width: 576px) {
+	.error-page__number {
+		font-size: 120px;
+	}
+
+	.error-page__text {
+		font-size: 14px;
+	}
+
+	.error-page__text br {
+		display: none;
 	}
 }
