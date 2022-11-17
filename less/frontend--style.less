@@ -1650,7 +1650,7 @@ body {
 		background   : #FFFFFF;
 		border-radius: 10px;
 		box-shadow   : 4px 4px 20px rgba(0, 0, 0, 0.2);
-		width        : 520px;
+		width        : 425px;
 		transition   : .3s ease;
 
 		&:not(.toggle-active) {
@@ -1659,29 +1659,17 @@ body {
 			pointer-events: none;
 		}
 
-
-		&:before {
-			content      : '';
-			display      : block;
-			width        : 20px;
-			height       : 20px;
-			border-radius: 2px;
-			background   : linear-gradient(135deg, #fff 50%, rgba(0, 0, 0, 0) calc(50% + 1px));
-			transform    : rotateZ(45deg);
-			position     : absolute;
-			right        : 15px;
-			bottom       : calc(100% - 10px);
-		}
-
 		&-top {
 			display        : flex;
 			align-items    : center;
 			justify-content: space-between;
-			padding        : 10px 20px;
+			padding        : 14px 16px;
+			background-color:  var(--color-primary-20);
 
-			&-title {
-				font-size: 18px;
-			}
+		}
+
+		&-title {
+			font-size: 18px;
 		}
 	}
 
@@ -1691,7 +1679,7 @@ body {
 		margin-right  : 10px;
 		margin-bottom : 10px;
 		padding-bottom: 10px;
-		max-height    : 378px;
+		max-height    : 230px;
 		overflow      : auto;
 
 		&::-webkit-scrollbar-track {
@@ -1714,15 +1702,15 @@ body {
 		&+& {
 			margin-top : 20px;
 			padding-top: 20px;
-			border-top : 1px solid #CCCCCC;
+			border-top : 1px dashed #CCCCCC;
 		}
 
 		&-img {
-			width        : 100px;
-			height       : 100px;
-			border-radius: 10px;
+			width        : 92px;
+			height       : 74px;
+			border-radius: 16px;
 			overflow     : hidden;
-			margin-right : 10px;
+			margin-right : 14px;
 
 			img {
 				width     : 100%;
@@ -1737,10 +1725,21 @@ body {
 			align-items   : flex-start;
 		}
 
+		&-price {
+			display: flex;
+			align-items: flex-end;
+		}
+
 		&-cost {
-			font-weight  : 500;
-			font-size    : 24px;
-			margin-bottom: 8px;
+			font-weight  : 600;
+			font-size    : 20px;
+
+			&-old {
+				font-weight: 400;
+				font-size: 16px;
+				opacity: 0.6;
+				text-decoration-line: line-through;
+			}
 		}
 
 		&-name {
@@ -1757,26 +1756,27 @@ body {
 			position : absolute;
 			right    : 0;
 			bottom   : 0;
-			font-size: 25px;
-			color    : #999999;
+			font-size: 20px;
+			width: 46px;
+			height: 46px;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			background: #EEEEEE;
+			border-radius: 8px;
+			cursor: pointer;
 		}
 	}
 
 	&-cost {
 		padding        : 10px 20px;
-		background     : #F4F7F7;
 		display        : flex;
 		align-items    : center;
 		justify-content: space-between;
 
-		&-title {
-			font-weight: 500;
-			font-size  : 24px;
-		}
-
-		&-value {
-			font-weight: 500;
-			font-size  : 24px;
+		&-title, &-value {
+			font-weight: 600;
+			font-size  : 20px;
 		}
 	}
 
