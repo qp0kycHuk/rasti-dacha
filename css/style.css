@@ -3584,49 +3584,70 @@ header {
 	font-weight: 500;
 }
 
+.status-delivery-intelligence-products {
+	display       : flex;
+	flex-direction: column;
+	grid-gap      : 16px;
+}
+
 .status-delivery-intelligence-product {
-	max-width            : 620px;
-	display              : grid;
-	grid-template-columns: 1fr 2fr 1fr;
-	grid-gap             : 20px;
-	align-items          : center;
-	margin-bottom        : 30px;
+	display        : flex;
+	justify-content: space-between;
+	grid-gap       : 20px;
+	align-items    : center;
+	background     : #FFFFFF;
+	box-shadow     : 0px 8px 16px rgba(35, 35, 35, 0.06);
+	border-radius  : 16px;
+	padding        : 8px;
+	padding-right  : 57px;
+}
+
+.status-delivery-intelligence-product__info {
+	display    : flex;
+	align-items: center;
 }
 
 .status-delivery-intelligence-product-image {
-	border-radius: 10px;
+	border-radius: 16px;
+	min-width    : 140px;
+	height       : 110px;
+	position     : relative;
+	overflow     : hidden;
 }
 
 .status-delivery-intelligence-product-image img {
-	width        : 100%;
-	height       : 90px;
-	object-fit   : cover;
-	border-radius: 10px;
+	position  : absolute;
+	top       : 0;
+	left      : 0;
+	right     : 0;
+	bottom    : 0;
+	width     : 100%;
+	height    : 100%;
+	object-fit: cover;
 }
 
 .status-delivery-intelligence-product-name {
 	display       : flex;
 	flex-direction: column;
+	width         : 100%;
+	max-width     : 220px;
 }
 
 .status-delivery-intelligence-product-name__title {
-	font-weight  : 500;
-	font-size    : 20px;
-	line-height  : 23px;
-	margin-bottom: 20px;
+	font-weight  : 600;
+	font-size    : 16px;
+	line-height  : 1.2;
+	margin-bottom: 26px;
 }
 
 .status-delivery-intelligence-product-name__quantity {
-	font-weight: 300;
-	font-size  : 16px;
-	line-height: 18px;
+	font-weight: 400;
+	font-size  : 12px;
 }
 
 .status-delivery-intelligence-product__price {
-	font-weight: 500;
+	font-weight: bold;
 	font-size  : 24px;
-	line-height: 28px;
-	text-align : right;
 }
 
 @media(max-width: 990px) {
@@ -3641,17 +3662,14 @@ header {
 	}
 }
 
-@media(max-width: 450px) {
+@media(max-width: 576px) {
 	.status-delivery-intelligence-product {
-		grid-template-columns: repeat(2, 1fr);
-	}
-
-	.status-delivery-intelligence-product-image img {
-		height: 110px;
+		flex-wrap: wrap;
+		padding  : 16px;
 	}
 
 	.status-delivery-intelligence-product__price {
-		grid-area: 2/2/3/3;
+		margin-left: auto;
 	}
 }
 
