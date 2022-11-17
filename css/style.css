@@ -3103,7 +3103,7 @@ header {
 	.basket-form {
 		align-self: start;
 		position  : sticky;
-		top       : 142px;
+		top       : 200px;
 	}
 }
 
@@ -3118,7 +3118,10 @@ header {
 	border-radius  : 8px;
 	color          : rgba(35, 35, 35, 0.7);
 	margin-top     : 20px;
+}
 
+.basket-form__conditions:hover {
+	color: rgba(35, 35, 35, 1);
 }
 
 @media(max-width: 1200px) {
@@ -6019,4 +6022,39 @@ header {
 
 .payment-status__btn {
 	width: max-content;
+}
+
+.dialog-click {
+	max-width    : 100%;
+	width        : 400px;
+	border-radius: 16px;
+	overflow     : hidden;
+	background   : #FFFFFF;
+	box-shadow   : 0px 8px 16px rgba(35, 35, 35, 0.06);
+}
+
+.dialog-click__head {
+	font-weight: 700;
+	font-size  : 32px;
+	color      : #FFFFFF;
+	text-align : center;
+	background : linear-gradient(90.26deg, rgba(0, 0, 0, 0.2) 0%, rgba(0, 0, 0, 0) 50.23%), #749E1B;
+}
+
+.dialog-click__form {
+	display       : flex;
+	flex-direction: column;
+}
+
+.dialog-click__label {
+	display       : flex;
+	flex-direction: column;
+	position      : relative;
+}
+
+.dialog-click__link {
+	opacity   : 0.6;
+	font-size : 12px;
+	text-align: center;
+	cursor    : pointer;
 }
