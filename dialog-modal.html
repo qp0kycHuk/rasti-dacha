@@ -1,33 +1,30 @@
 <div class="fancybox-content">
-	<div class="dialog-info">
-		<div class="dialog-info__title dialog-info__title--mb">Купить в 1 клик</div>
-		<div class="dialog-info__form">
-			<label class="dialog-info__label pray-form-field">
-				<div class="pray-form-label">ФИО</div>
-				<input class="pray-form-input" placeholder="Введите имя">
-			</label>
-			<label class="dialog-info__label pray-form-field">
-				<div class="pray-form-label">Телефон</div>
-				<input class="pray-form-input" placeholder="+7 " type="tel">
-			</label>
-			<label class="dialog-info__label pray-form-field">
-				<div class="pray-form-label">E-mail</div>
-				<input class="pray-form-input" type="text">
-			</label>
-			<label class="dialog-info__label pray-form-field">
-				<div class="pray-form-label">Город</div>
-				<input class="pray-form-input" type="text">
-			</label>
-			<button class="dialog-info__submit pray-form-btn btn btn--accent waves-effect">Отправить</button>
-			<div class="dialog-info__perdan dialog-infopray-agree">
-				<svg class="icon">
-					<use xlink:href="img/icons.svg#gal-ochka"></use>
-				</svg>
-				<div class="pray-agree-content">
-					Нажимая на кнопку, Вы соглашаетесь на <span class="dialog-info__perdan-line">обработку персональных данных</span>
-				</div>
-			</div>
-			<img class="dialog-info__bc" src="img/dialog-info-bc.png" alt="">
+	<div class="dialog-click">
+		<div class="dialog-click__head font-alt p-4">
+			Купить в 1 клик
 		</div>
+		<form class="dialog-click__form px-8 py-5 px-md-8">
+			<label class="dialog-click__label mb-5">
+				<span class="text-body-0 text--demibold mb-2">Ваше имя</span>
+				<input class="page-input" type="text">
+			</label>
+			<label class="dialog-click__label mb-5">
+				<span class="text-body-0 text--demibold mb-2">Ваша фамилия</span>
+				<input class="page-input" type="text">
+			</label>
+			<label class="dialog-click__label mb-5">
+				<span class="text-body-0 text--demibold mb-2">Ваше отчество</span>
+				<input class="page-input" type="text">
+			</label>
+			<label class="dialog-click__label mb-8">
+				<span class="text-body-0 text--demibold mb-2">Телефон</span>
+				<input class="page-input" type="tel" placeholder="+7">
+			</label>
+			<button class="btn btn--accent mb-5">Показать</button>
+			<span class="dialog-click__link">
+				Нажимая на кнопку “Отправить”, Вы соглашаетесь <br>
+				на обработку персональных данных
+			</span>
+		</form>
 	</div>
 </div>
