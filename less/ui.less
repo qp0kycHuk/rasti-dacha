@@ -9,7 +9,7 @@
 @import './Display.less';
 
 .btn {
-	--btn-color-light: var(--color-text-20);
+	--btn-color-light: var(--color-text-10);
 	--btn-color      : var(--color-text);
 	--btn-text       : #fff;
 
@@ -48,10 +48,14 @@
 	@media (hover) {
 		&:hover {
 			--btn-color      : var(--color-text-dark);
-			--btn-color-light: var(--color-text-40);
+			--btn-color-light: var(--color-text-20);
 
 			color: var(--btn-text);
 		}
+	}
+
+	&:active {
+		transform: translateY(2px);
 	}
 
 	// color
@@ -315,5 +319,23 @@
 
 	&-90 {
 		opacity: .9;
+	}
+}
+
+.flex {
+	display: flex;
+
+	&-align {
+		&-center {
+			align-items: center;
+		}
+
+		&-end {
+			align-items: flex-end;
+		}
+
+		&-start {
+			align-items: flex-start;
+		}
 	}
 }

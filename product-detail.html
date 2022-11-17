@@ -5,9 +5,11 @@
 	<meta charset="UTF-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<link rel="stylesheet" href="fonts/stylesheet.css">
+	<link rel="stylesheet" href="fonts/Inter/stylesheet.css">
+	<link rel="stylesheet" href="fonts/PT Sans/stylesheet.css">
 	<link rel="stylesheet" href="source/jquery.fancybox.min.css">
 	<link rel="stylesheet" href="css/swiper.css">
+	<link rel="stylesheet" href="css/ui.css">
 	<link rel="stylesheet" href="css/style.css">
 	<link rel="stylesheet" href="css/frontend--style.css">
 
@@ -18,811 +20,138 @@
 
 <body>
 
-	<!-- Шапка документа -->
-	<header class="container-block header-block">
-		<ul class="header__menu">
-			<li>Отследить заказ</li>
-			<li>Оплата и доставка</li>
-			<li>Гарантия</li>
-			<li>Контакты</li>
-			<li class="header__li">
-				О клубе
-				<ul class="header__submenu">
-					<li>О нас</li>
-					<li>Видео</li>
-					<li>Партнеры</li>
-				</ul>
-			</li>
-			<li class="header__li">
-				Наши сервисы
-				<ul class="header__submenu">
-					<li>Новости и статьи</li>
-					<li>Найти эксперта</li>
-					<li>Отзовик</li>
-					<li>Энциклопедия</li>
-					<li>Конкурсы</li>
-					<li>Форум</li>
-				</ul>
-			</li>
-		</ul>
-		<div class="header-button">
-			<button class="header__button">Личный кабинет</button>
-		</div>
-	</header>
+	<section class="container-block page--block  product-detail">
 
-	<!-- Навигационное меню -->
-	<div class="nav-sticky">
-		<div class="container-block nav-mobile-search" id="nav-mobile-search">
-			<form class="nav-mobile-search-field">
-				<input type="text" class="nav-mobile-search-input">
-				<button class="nav-mobile-search-btn">
-					<svg class="icon">
-						<use xlink:href="img/icons.svg#search" />
-					</svg>
-				</button>
-			</form>
-			<button class="nav-mobile-search-close" data-toggle-link="nav-mobile-search">
-				<svg class="icon">
-					<use xlink:href="img/icons.svg#cross" />
-				</svg>
-			</button>
-		</div>
-
-		<div class="container-block nav-block">
-
-
-			<button id="burger" data-toggle-link="mobil" class="burger">
-				<svg class="icon">
-					<use xlink:href="img/icons.svg#burger" />
-				</svg>
-			</button>
-			<a href="/" class="nav-logo">
-				<picture>
-					<source srcset="img/logo.webp" type="image/webp">
-					<img src="img/logo.png" loading="lazy" class="nav__logo">
-				</picture>
-				<picture>
-					<source srcset="img/kps.webp" type="image/webp">
-					<img src="img/kps.png" loading="lazy" class="nav__kps">
-				</picture>
-			</a>
-			<div class="nav-text">
-				<span class="nav__time__day">с 10.00 - 19.00 без выходных</span>
-				<a href="tel: +78001008975" class="nav__tel">+7 (800) 100-89-75</a>
-			</div>
-			<div class="nav-button">
-				<input type="text" placeholder="Поиск по сайту" class="nav__button">
-
-
-			</div>
-			<button class="nav-loop" data-toggle-link="nav-mobile-search">
-				<svg class="icon">
-					<use xlink:href="img/icons.svg#search" />
-				</svg>
-			</button>
-			<div class="nav-like"></div>
-			<div class="nav-korz">
-				<div class="nav__int">12</div>
-			</div>
-		</div>
-		<nav class="container-block nav-menu">
-			<a href="#" class="nav__link">Каталог</a>
-			<a href="#" class="nav__link">Акции</a>
-			<a href="#" class="nav__link">Саженцы</a>
-			<a href="#" class="nav__link">Семена</a>
-			<a href="#" class="nav__link">Луковицы</a>
-			<a href="#" class="nav__link">Для сада</a>
-		</nav>
-	</div>
-
-	<!-- Мобильное меню -->
-	<div class="modalMenu" id="mobil">
-		<div class="modalMenu-logo">
-			<picture>
-				<source srcset="img/logo.webp" type="image/webp">
-				<img src="img/logo.png" loading="lazy" class="modalMenu-logo__logo">
-			</picture>
-			<picture>
-				<source srcset="img/kps.webp" type="image/webp">
-				<img src="img/kps.png" loading="lazy" class="modalMenu-logo__kps">
-			</picture>
-		</div>
-		<div class="modalMenu-nav">
-			<a href="#" class="modalMenu-nav__link">Каталог</a>
-			<a href="#" class="modalMenu-nav__link">Акции</a>
-			<a href="#" class="modalMenu-nav__link">Саженцы</a>
-			<a href="#" class="modalMenu-nav__link">Семена</a>
-			<a href="#" class="modalMenu-nav__link">Луковицы</a>
-			<a href="#" class="modalMenu-nav__link">Для сада</a>
-		</div>
-		<div class="modalMenu-header">
-			<a href="#" class="modalMenu-header__link">Отследить заказ</a>
-			<a href="#" class="modalMenu-header__link">Оплата и доставка</a>
-			<a href="#" class="modalMenu-header__link">Гарантия</a>
-			<a href="#" class="modalMenu-header__link">Контакты</a>
-			<div class="modalMenu-header__link" data-toggle-cover>
-				<div class="modalMenu-header__list" data-toggle-link>О клубе</div>
-				<div class="modalMenu-header-listing" data-toggle-content data-toggle-height="true"
-					data-toggle-static="true">
-					<a href="#" class="modalMenu-header-listing__link">О нас</a>
-					<a href="#" class="modalMenu-header-listing__link">Видео</a>
-					<a href="#" class="modalMenu-header-listing__link">Партнеры</a>
-				</div>
-			</div>
-			<div class="modalMenu-header__link" data-toggle-cover>
-				<div class="modalMenu-header__list" data-toggle-link>Наши сервисы</div>
-				<div class="modalMenu-header-listing" data-toggle-content data-toggle-height="true"
-					data-toggle-static="true">
-					<a href="#" class="modalMenu-header-listing__link">Новости и статьи</a>
-					<a href="#" class="modalMenu-header-listing__link">Найти эксперта</a>
-					<a href="#" class="modalMenu-header-listing__link">Отзовик</a>
-					<a href="#" class="modalMenu-header-listing__link">Энциклопедия</a>
-					<a href="#" class="modalMenu-header-listing__link">Конкурсы</a>
-					<a href="#" class="modalMenu-header-listing__link">Форум</a>
-				</div>
-			</div>
-			<div class="modalMenu-header-contact">
-				<span class="modalMenu-header-contact__time">с 10.00 - 19.00 без выходных</span>
-				<a href="tel: +78001008975" class="modalMenu-header-contact__tel">+7 (800) 100-89-75</a>
-			</div>
-		</div>
-	</div>
-	<!-- 
-	<section class="container-block product-detail">
-		<button class="back-btn btn btn-sm btn--primary btn--contur">назад</button>
-		<div class="product-detail-top">
-			<div class="product-detail-info">
-				<div class="product-detail-title">Туя Западная Даника</div>
-				<div class="product-detail-gallery">
-					<div class="product-detail-gallery-thumbs">
-						<div class="swiper-container">
-							<div class="swiper-wrapper">
-								<div class="product-detail-gallery-thumb swiper-slide">
-									<img src="https://picsum.photos/id/111/300/300" alt="">
-								</div>
-								<div class="product-detail-gallery-thumb swiper-slide">
-									<img src="https://picsum.photos/id/133/300/300" alt="">
-								</div>
-								<div class="product-detail-gallery-thumb swiper-slide">
-									<img src="https://picsum.photos/id/202/300/300" alt="">
-								</div>
-								<div class="product-detail-gallery-thumb swiper-slide">
-									<img src="https://picsum.photos/id/212/300/300" alt="">
-								</div>
-								<div class="product-detail-gallery-thumb swiper-slide">
-									<img src="https://picsum.photos/id/311/300/300" alt="">
-								</div>
-								<div class="product-detail-gallery-thumb swiper-slide">
-									<img src="https://picsum.photos/id/320/300/300" alt="">
-								</div>
-								<div class="product-detail-gallery-thumb swiper-slide">
-									<img src="https://picsum.photos/id/322/300/300" alt="">
-								</div>
-							</div>
-						</div>
-					</div>
-					<div class="product-detail-gallery-slider">
-						<div class="swiper-container">
-							<div class="swiper-wrapper">
-								<a data-fancybox="detail-gallery" class="product-detail-gallery-slide swiper-slide"
-									href="https://picsum.photos/id/111/1920/1080">
-									<img src="https://picsum.photos/id/111/500/500" alt="">
-								</a>
-								<a data-fancybox="detail-gallery" class="product-detail-gallery-slide swiper-slide"
-									href="https://picsum.photos/id/133/1920/1080">
-									<img src="https://picsum.photos/id/133/500/500" alt="">
-								</a>
-								<a data-fancybox="detail-gallery" class="product-detail-gallery-slide swiper-slide"
-									href="https://picsum.photos/id/202/1920/1080">
-									<img src="https://picsum.photos/id/202/500/500" alt="">
-								</a>
-								<a data-fancybox="detail-gallery" class="product-detail-gallery-slide swiper-slide"
-									href="https://picsum.photos/id/212/1920/1080">
-									<img src="https://picsum.photos/id/212/500/500" alt="">
-								</a>
-								<a data-fancybox="detail-gallery" class="product-detail-gallery-slide swiper-slide"
-									href="https://picsum.photos/id/311/1920/1080">
-									<img src="https://picsum.photos/id/311/500/500" alt="">
-								</a>
-								<a data-fancybox="detail-gallery" class="product-detail-gallery-slide swiper-slide"
-									href="https://picsum.photos/id/320/1920/1080">
-									<img src="https://picsum.photos/id/320/500/500" alt="">
-								</a>
-								<a data-fancybox="detail-gallery" class="product-detail-gallery-slide swiper-slide"
-									href="https://picsum.photos/id/322/1920/1080">
-									<img src="https://picsum.photos/id/322/500/500" alt="">
-								</a>
-							</div>
-						</div>
-						<div class="swiper-pagination"></div>
-					</div>
-				</div>
-				<div class="product-detail-desc ">
-					<div class="product-detail-rating rating">
-						<img src="img/star-1.svg">
-						<img src="img/star-1.svg">
-						<img src="img/star-1.svg">
-						<img src="img/star-1.svg">
-						<img src="img/star-2.svg">
-						<span class="product-detail-rating__comment">0 отзывов</span>
-					</div>
-					<div class="product-detail-prop">
-						<span>Артикул:</span> 0121517
-					</div>
-					<div class="product-detail-prop">
-						<span>Наличие:</span>
-
-						<svg class="icon color-primary">
-							<use xlink:href="img/icons.svg#check-circle" />
-						</svg>
-						есть в наличии
-
-					</div>
-
-					<div class="product-detail-cost">
-						<div class="product-detail-newcost">450 руб.</div>
-						<div class="product-detail-oldcost">450 руб.</div>
-					</div>
-
-					<div class="product-detail-counter">
-						<div class="counter">
-							<button class="counter-btn">-</button>
-							<input type="text" class="counter-input">
-							<button class="counter-btn">+</button>
-						</div>
-					</div>
-
-					<button class="product-detail-btn btn btn--accent">
-						<svg class="icon">
-							<use xlink:href="img/icons.svg#shopping-cart" />
-						</svg>
-						В корзину
-					</button>
-				</div>
-			</div>
-			<div class="product-detail-advantages">
-				<div class="advantage-item">
-					<div class="advantage-item__img">
-						100
-					</div>
-					<div class="advantage-item__content">
-						<div class="advantage-item__title">Гарантия 100 дней</div>
-						<div class="advantage-item__desc">
-							с момента получения посылки
-						</div>
-					</div>
-				</div>
-				<div class="advantage-item">
-					<div class="advantage-item__img">
-						<svg class="icon">
-							<use xlink:href="img/icons.svg#truck" />
-						</svg>
-					</div>
-					<div class="advantage-item__content">
-						<div class="advantage-item__title">Доставка</div>
-						<div class="advantage-item__desc">СДЭК, Почта России</div>
-					</div>
-				</div>
-				<div class="advantage-item">
-					<div class="advantage-item__img">
-						<svg class="icon">
-							<use xlink:href="img/icons.svg#box" />
-						</svg>
-					</div>
-					<div class="advantage-item__content">
-						<div class="advantage-item__title">Сберегающая упаковка</div>
-						<div class="advantage-item__desc">Трехфазная упаковка для защиты саженцев</div>
-					</div>
-				</div>
-				<div class="advantage-item">
-					<div class="advantage-item__img">
-						<svg class="icon">
-							<use xlink:href="img/icons.svg#headphones" />
-						</svg>
-					</div>
-					<div class="advantage-item__content">
-						<div class="advantage-item__title">Персональный консультант</div>
-						<div class="advantage-item__desc">Для решения любых вопросов, связанных с заказами</div>
-					</div>
-				</div>
-			</div>
-		</div>
-	</section> -->
-
-	<section class="container-block page--block  ">
-
-		<div class="row  bx-blue" id="bx_117848907_776">
-			<div>
-				<a href="javascript:window.history.back();"
-					class="back-btn btn btn-sm btn--primary btn--contur waves-effect">назад</a>
-				<div class="hidden-mobile">
-					<div class="page--link" itemprop="http://schema.org/breadcrumb" itemscope=""
-						itemtype="http://schema.org/BreadcrumbList">
-						<a href="/" title="Главная" itemprop="item">
-							<span itemprop="name">Главная</span>
-						</a>
-						/
-						<a href="/catalog/" title="Каталог" itemprop="item">
-							<span itemprop="name">Каталог</span>
-						</a>
-						/
-						<a href="/catalog/vinograd/" title="Виноград" itemprop="item">
-							<span itemprop="name">Виноград</span>
-						</a>
-						/
-						<a href="/catalog/rozovyy/" title="Розовый" itemprop="item">
-							<span itemprop="name">Розовый</span>
-						</a>
-						/ <span>Виноград Оригинал</span>
-					</div>
-				</div>
-			</div>
-			<div class="product-stock__block">
-				<h1 class="product-detail-title">Виноград Оригинал</h1>
-				<div class="product-detail-info">
-					<div class="product-detail-gallery">
-						<div class="product-detail-gallery-thumbs">
-							<div
-								class="swiper-container swiper-container-initialized swiper-container-vertical swiper-container-thumbs">
-								<div class="swiper-wrapper" id="swiper-wrapper-9c23a1b888a91d82" aria-live="polite"
-									style="transform: translate3d(0px, 0px, 0px);">
-
-									<div class="product-detail-gallery-thumb swiper-slide swiper-slide-active swiper-slide-thumb-active"
-										role="group" aria-label="1 / 1" style="height: 65.8px; margin-bottom: 6px;">
-										<img src="https://picsum.photos/id/111/300/300"
-											alt="Виноград Оригинал" title="Виноград Оригинал">
-									</div>
-									<div class="product-detail-gallery-thumb swiper-slide swiper-slide-active swiper-slide-thumb-active"
-										role="group" aria-label="1 / 1" style="height: 65.8px; margin-bottom: 6px;">
-										<img src="https://picsum.photos/id/111/300/300"
-											alt="Виноград Оригинал" title="Виноград Оригинал">
-									</div>
-								</div>
-								<span class="swiper-notification" aria-live="assertive" aria-atomic="true"></span>
-							</div>
-						</div>
-						<div class="product-detail-gallery-slider new-product">
-							<div class="swiper-container swiper-container-initialized swiper-container-horizontal">
-								<div class="swiper-wrapper" id="swiper-wrapper-5d0e519581c933a1" aria-live="polite">
-
-									<a data-fancybox="detail-gallery"
-										class="product-detail-gallery-slide swiper-slide swiper-slide-active"
-										href="https://picsum.photos/id/111/300/300"
-										role="group" aria-label="1 / 1" style="width: 392px; margin-right: 20px;">
-										<img src="https://picsum.photos/id/111/300/300"
-											alt="Виноград Оригинал" title="Виноград Оригинал"> </a>
-											<a data-fancybox="detail-gallery"
-										class="product-detail-gallery-slide swiper-slide swiper-slide-active"
-										href="https://picsum.photos/id/111/300/300"
-										role="group" aria-label="1 / 1" style="width: 392px; margin-right: 20px;">
-										<img src="https://picsum.photos/id/111/300/300"
-											alt="Виноград Оригинал" title="Виноград Оригинал"> </a>
-								</div>
-								<span class="swiper-notification" aria-live="assertive" aria-atomic="true"></span>
-							</div>
-							<div class="swiper-pagination swiper-pagination-clickable swiper-pagination-bullets"><span
-									class="swiper-pagination-bullet swiper-pagination-bullet-active" tabindex="0"
-									role="button" aria-label="Go to slide 1"></span></div>
-						</div>
-					</div>
-				</div>
-				<div class="product-detail-desc ">
-					<div class="product-stock__title">
-						<div class="product-stock__image">
-							767 </div>
-						<div class="product-stock__text">
-							этот товар<br>
-							<span>купили более 767 раз</span>
-						</div>
-					</div>
-
-
-					<div class="product-detail-rating rating product-stock__rating">
-						<img src="img/star-1.svg">
-						<img src="img/star-1.svg">
-						<img src="img/star-1.svg">
-						<img src="img/star-1.svg">
-						<img src="img/star-2.svg">
-					</div>
-
-
-					<div class="product-detail-prop">
-						<span>Артикул:</span> 2070
-					</div>
-
-					<div class="product-detail-prop">
-						<span>Наличие:</span>
-
-						<svg class="icon color-primary">
-							<use xlink:href="/local/templates/klubsadprof/img/icons.svg#check-circle"></use>
-						</svg>
-						есть в наличии
-
-					</div>
-
-
-
-
-					<div class="product-detail-prop">
-						<a class="product-stock__link -seemore-item-" href="#detail">Подробнее о товаре</a>
-					</div>
-				</div>
-				<div class="product-stock__price">
-
-					<div>
-						<div class="product-detail-cost">
-							<span id="bx_117848907_776_price" class="product-detail-newcost product-item-price"
-								style="font-size: 36px;">115 ₽</span>
-							<div id="bx_117848907_776_block_price"
-								class="product-detail-oldcost product-item-price-discount-container">
-								<span class="product-item-price-discount" id="bx_117848907_776_old_price">249 ₽</span>
-							</div>
-						</div>
-						<div class="product-detail-counter product-item-detail-quantity-container"
-							data-entity="quantity-block">
-							<div class="product-stock__timing-title">Количество:</div>
-							<div class="counter product-item-detail-quantity-field-container">
-								<button
-									class="counter-btn product-item-detail-quantity-btn-minus no-select product-item-amount-field-btn-disabled"
-									id="bx_117848907_776_quant_down">-</button>
-								<input class="counter-input product-item-detail-quantity-field"
-									id="bx_117848907_776_quantity" type="text" inputmode="numeric" value="1">
-								<div class="product-item-detail-quantity-field" id="bx_117848907_776_counter"
-									contenteditable="true" inputmode="numeric" name="quantity" value=""
-									style="display: none;">1</div>
-								<button class="counter-btn product-item-detail-quantity-btn-plus no-select"
-									id="bx_117848907_776_quant_up">+</button>
-							</div>
-						</div>
-					</div>
-
-					<div class="product-stock__timing">
-						<div class="product-stock__timing-title">До конца акции осталось:</div>
-						<div class="product-stock__timing-block timing">
-							<div class="timing__item">
-								<div class="timing__int">15</div>
-								<div class="timing__subtitle">дн.</div>
-							</div>
-							<div class="timing__item">
-								<div class="timing__int">13</div>
-								<div class="timing__subtitle">час.</div>
-							</div>
-							<div class="timing__item">
-								<div class="timing__int">54</div>
-								<div class="timing__subtitle">мин.</div>
-							</div>
-							<div class="timing__item">
-								<div class="timing__int">55</div>
-								<div class="timing__subtitle">сек.</div>
-							</div>
-						</div>
-						<!-- <a class="product-stock__link" href="#">Нашли дешевле? Сделаем скидку!</a> -->
-						<a data-fancybox-modal="" data-type="ajax"
-							data-src="/local/ajax/dialog-findlowcost.php?item=776&amp;item_name=%D0%92%D0%B8%D0%BD%D0%BE%D0%B3%D1%80%D0%B0%D0%B4+%D0%9E%D1%80%D0%B8%D0%B3%D0%B8%D0%BD%D0%B0%D0%BB&amp;price=115"
-							class="product-stock__link">Нашли дешевле? Сделаем скидку!</a>
-					</div>
-
-
-					<div data-entity="main-button-container" class="mb-3">
-						<div id="bx_117848907_776_basket_actions">
-							<a class="product-detail-btn btn btn--accent  product-item-detail-buy-button btn-md waves-effect"
-								id="bx_117848907_776_add_basket_link" href="javascript:void(0);">
-								<svg class="icon">
-									<use xlink:href="/local/templates/klubsadprof/img/icons.svg#shopping-cart"></use>
-								</svg>
-								В корзину </a>
-						</div>
-					</div>
-					<div class="mb-3" id="bx_117848907_776_not_avail" style="display: none;">
-						<a class="product-item-detail-buy-button btn btn-primary disabled rounded-pill waves-effect"
-							href="javascript:void(0)" rel="nofollow">Нет в наличии</a>
-					</div>
-
-					<a href="tel:+78001008975" class="product-detail-phone">
-						<div class="product-detail-phone-img">
-							<img src="img/icons/phone.svg" alt="" class="icon">
-						</div>
-						<div class="product-detail-phone-content">
-							<div class="product-detail-phone-title">Купить по телефону:</div>
-							<div class="product-detail-phone-value">8 800 100 89 75</div>
-						</div>
-					</a>
-				</div>
-
-			</div>
-			
-			<!-- Плашка -->
-			<div class="banner">
-				<img src="img/banner.png" alt="" class="banner__background">
-				<span class="banner__title">Только по предзаказу на весну </span>
-			</div>
-
-			<div class="product-detail-advantages product-stock__advantages">
-				<div class="advantage-item">
-					<div class="advantage-item__img">
-						120
-					</div>
-					<div class="advantage-item__content">
-						<div class="advantage-item__title">Гарантия 120 дней</div>
-						<div class="advantage-item__desc">
-							с момента получения посылки
-						</div>
-					</div>
-				</div>
-				<div class="advantage-item">
-					<div class="advantage-item__img">
-						<svg class="icon">
-							<use xlink:href="/local/templates/klubsadprof/img/icons.svg#truck"></use>
-						</svg>
-					</div>
-					<div class="advantage-item__content">
-						<div class="advantage-item__title">Доставка</div>
-						<div class="advantage-item__desc">СДЭК, Почта России</div>
-					</div>
-				</div>
-				<div class="advantage-item">
-					<div class="advantage-item__img">
-						<svg class="icon">
-							<use xlink:href="/local/templates/klubsadprof/img/icons.svg#box"></use>
-						</svg>
-					</div>
-					<div class="advantage-item__content">
-						<div class="advantage-item__title">Сберегающая упаковка</div>
-						<div class="advantage-item__desc">Трехфазная упаковка для защиты саженцев</div>
-					</div>
-				</div>
-				<div class="advantage-item">
-					<div class="advantage-item__img">
-						<svg class="icon">
-							<use xlink:href="/local/templates/klubsadprof/img/icons.svg#headphones"></use>
-						</svg>
-					</div>
-					<div class="advantage-item__content">
-						<div class="advantage-item__title">Персональный консультант</div>
-						<div class="advantage-item__desc">Для решения любых вопросов, связанных с заказами</div>
-					</div>
-				</div>
-			</div>
-		</div>
-	</section>
-
-	<!-- <section class="container-block product-stock">
-		<button class="back-btn btn btn-sm btn--primary btn--contur">назад</button>
 		<div class="product-stock__block">
 			<div class="product-detail-info">
-				<div class="product-detail-title">Туя Западная Даника</div>
 				<div class="product-detail-gallery">
-					<div class="product-detail-gallery-thumbs">
+					<div class="product-detail-gallery-slider new-product">
 						<div class="swiper-container">
 							<div class="swiper-wrapper">
-								<div class="product-detail-gallery-thumb swiper-slide">
-									<img src="https://picsum.photos/id/111/300/300" alt="">
-								</div>
-								<div class="product-detail-gallery-thumb swiper-slide">
-									<img src="https://picsum.photos/id/133/300/300" alt="">
-								</div>
-								<div class="product-detail-gallery-thumb swiper-slide">
-									<img src="https://picsum.photos/id/202/300/300" alt="">
-								</div>
-								<div class="product-detail-gallery-thumb swiper-slide">
-									<img src="https://picsum.photos/id/212/300/300" alt="">
-								</div>
-								<div class="product-detail-gallery-thumb swiper-slide">
-									<img src="https://picsum.photos/id/311/300/300" alt="">
-								</div>
-								<div class="product-detail-gallery-thumb swiper-slide">
-									<img src="https://picsum.photos/id/320/300/300" alt="">
-								</div>
-								<div class="product-detail-gallery-thumb swiper-slide">
-									<img src="https://picsum.photos/id/322/300/300" alt="">
-								</div>
-							</div>
-						</div>
-					</div>
-					<div class="product-detail-gallery-slider">
-						<div class="swiper-container">
-							<div class="swiper-wrapper">
-								<a data-fancybox="detail-gallery" class="product-detail-gallery-slide swiper-slide"
-									href="https://picsum.photos/id/111/1920/1080">
-									<img src="https://picsum.photos/id/111/500/500" alt="">
-								</a>
-								<a data-fancybox="detail-gallery" class="product-detail-gallery-slide swiper-slide"
-									href="https://picsum.photos/id/133/1920/1080">
-									<img src="https://picsum.photos/id/133/500/500" alt="">
-								</a>
-								<a data-fancybox="detail-gallery" class="product-detail-gallery-slide swiper-slide"
-									href="https://picsum.photos/id/202/1920/1080">
-									<img src="https://picsum.photos/id/202/500/500" alt="">
-								</a>
-								<a data-fancybox="detail-gallery" class="product-detail-gallery-slide swiper-slide"
-									href="https://picsum.photos/id/212/1920/1080">
-									<img src="https://picsum.photos/id/212/500/500" alt="">
-								</a>
-								<a data-fancybox="detail-gallery" class="product-detail-gallery-slide swiper-slide"
-									href="https://picsum.photos/id/311/1920/1080">
-									<img src="https://picsum.photos/id/311/500/500" alt="">
-								</a>
-								<a data-fancybox="detail-gallery" class="product-detail-gallery-slide swiper-slide"
-									href="https://picsum.photos/id/320/1920/1080">
-									<img src="https://picsum.photos/id/320/500/500" alt="">
-								</a>
-								<a data-fancybox="detail-gallery" class="product-detail-gallery-slide swiper-slide"
-									href="https://picsum.photos/id/322/1920/1080">
-									<img src="https://picsum.photos/id/322/500/500" alt="">
-								</a>
-							</div>
-						</div>
-						<div class="swiper-pagination"></div>
-					</div>
-				</div>
-			</div>
-			<div class="product-detail-desc ">
-				<div class="product-stock__title">
-					<div class="product-stock__image">
-						200
-					</div>
-					<div class="product-stock__text">
-						это товар<br>
-						<span>купили более 200 раз</span>
-					</div>
-				</div>
-				<div class="product-detail-rating rating product-stock__rating">
-					<img src="img/star-1.svg">
-					<img src="img/star-1.svg">
-					<img src="img/star-1.svg">
-					<img src="img/star-1.svg">
-					<img src="img/star-2.svg">
-				</div>
-				<div class="product-detail-prop">
-					<span>Артикул:</span> 0121517
-				</div>
-				<div class="product-detail-prop">
-					<span>Наличие:</span>
 
-					<svg class="icon color-primary">
-						<use xlink:href="img/icons.svg#check-circle" />
-					</svg>
-					есть в наличии
-				</div>
-				<div class="product-detail-prop">
-					<span>Поставщик:</span> ООО Лучшее для сада
-				</div>
-				<div class="product-detail-prop">
-					<span>Доставка:</span> 3-5 дней
-				</div>
-				<div class="product-detail-prop">
-					<a class="product-stock__link" href="#">Подробнее о товаре</a>
-				</div>
-			</div>
-			<div class="product-stock__price">
-				<div class="product-stock__sum">
-					<div class="product-stock__sum-new">450 ₽</div>
-					<div class="product-stock__sum-line">600 ₽</div>
-				</div>
-				<div class="product-stock__timing">
-					<div class="product-stock__timing-title">До конца акции осталось:</div>
-					<div class="product-stock__timing-block timing">
-						<div class="timing__item">
-							<div class="timing__int">02</div>
-							<div class="timing__subtitle">дней</div>
+								<a data-fancybox="detail-gallery" class="product-detail-gallery-slide swiper-slide"
+									href="https://picsum.photos/800/600?random=1">
+									<img src="https://picsum.photos/800/600?random=1" alt="Виноград Оригинал"
+										title="Виноград Оригинал"> </a>
+								<a data-fancybox="detail-gallery" class="product-detail-gallery-slide swiper-slide"
+									href="https://picsum.photos/800/600?random=2">
+									<img src="https://picsum.photos/800/600?random=2" alt="Виноград Оригинал"
+										title="Виноград Оригинал"> </a>
+							</div>
 						</div>
-						<div class="timing__item">
-							<div class="timing__int">21</div>
-							<div class="timing__subtitle">часов</div>
-						</div>
-						<div class="timing__item">
-							<div class="timing__int">08</div>
-							<div class="timing__subtitle">минут</div>
-						</div>
-						<div class="timing__item">
-							<div class="timing__int">59</div>
-							<div class="timing__subtitle">секунд</div>
+						<div class="swiper-pagination"> </div>
+					</div>
+					<div class="product-detail-gallery-thumbs">
+						<div class="swiper-container swiper-container-thumbs">
+							<div class="swiper-wrapper">
+
+								<div class="product-detail-gallery-thumb swiper-slide">
+									<img src="https://picsum.photos/800/600?random=1" alt="Виноград Оригинал"
+										title="Виноград Оригинал">
+								</div>
+								<div class="product-detail-gallery-thumb swiper-slide">
+									<img src="https://picsum.photos/800/600?random=2" alt="Виноград Оригинал"
+										title="Виноград Оригинал">
+								</div>
+							</div>
 						</div>
 					</div>
-					<a class="product-stock__link" href="#">Нашли дешевле? Сделаем скидку!</a>
-					<button class="product-detail-btn btn btn--accent">
-						<svg class="icon">
-							<use xlink:href="img/icons.svg#shopping-cart" />
+				</div>
+			</div>
+			<div class="product-detail-content">
+				<h1 class="product-detail-title">Виноград Оригинал</h1>
+				<div class="product-detail-line">
+
+					<div class="flex flex-align-center">
+						<img src="img/star-1.svg" alt="" class="mr-2">
+						<img src="img/star-1.svg" alt="" class="mr-2">
+						<img src="img/star-1.svg" alt="" class="mr-2">
+						<img src="img/star-1.svg" alt="" class="mr-2">
+						<img src="img/star-1.svg" alt="" class="mr-2">
+						<div class="fade-80">5.0</div>
+					</div>
+
+					<div class="ml-sm-8 mt-sm-0 mt-1 fade-60">Tulip fringed Mustang</div>
+					<div class="ml-sm-8 mt-sm-0 mt-1 fade-60 color-green">Есть в наличии</div>
+				</div>
+
+				<div class="product-detail-cost-wrapper">
+					<div class="flex flex-align-end">
+						<div class="text-h4 mr-3">236 ₽</div>
+						<div class="text-h6 text--regular fade-40 product-detail-cost__old">236 ₽</div>
+					</div>
+
+					<div class="product-detail-counter ml-sm-auto mt-sm-0 mt-3">
+						<button class="product-detail-counter__btn btn btn--primary">-</button>
+						<input type="text" class="product-detail-counter__input" value="1" placeholder="0">
+						<button class="product-detail-counter__btn btn btn--primary">+</button>
+					</div>
+				</div>
+				<div class="product-detail-tags">
+					<div class="product-detail-tag">Долгоцветущие</div>
+					<div class="product-detail-tag">Винный</div>
+					<div class="product-detail-tag">Зимние сорта</div>
+				</div>
+				<div class="product-detail-props">
+					<div class="product-detail-prop">
+						<div class="product-detail-prop__sign fade-60 flex">
+							<svg class="icon color-primary mr-3">
+								<use xlink:href="img/icons.svg#i" />
+							</svg>
+							Артикул
+						</div>
+						<div class="product-detail-prop__value text--demibold">324345</div>
+					</div>
+					<div class="product-detail-prop">
+						<div class="product-detail-prop__sign fade-60 flex">
+							<svg class="icon color-primary mr-3">
+								<use xlink:href="img/icons.svg#i" />
+							</svg>
+							Высота растения
+						</div>
+						<div class="product-detail-prop__value text--demibold">120 - 150 см</div>
+					</div>
+					<div class="product-detail-prop">
+						<div class="product-detail-prop__sign fade-60 flex">
+							<svg class="icon color-primary mr-3">
+								<use xlink:href="img/icons.svg#i" />
+							</svg>
+							Ширина растения
+						</div>
+						<div class="product-detail-prop__value text--demibold">80 - 100 см</div>
+					</div>
+				</div>
+				<div class="flex mt-8">
+					<button class="btn btn--accent btn--fill">
+						<svg class="icon mr-2">
+							<use xlink:href="img/icons.svg#shopping-cart"></use>
 						</svg>
 						В корзину
 					</button>
-					<a href="tel:+78001008975" class="product-detail-phone">
-						<div class="product-detail-phone-img">
-							<img src="/local/templates/klubsadprof/img/icons/phone.svg" alt="" class="icon">
-						</div>
-						<div class="product-detail-phone-content">
-							<div class="product-detail-phone-title">Купить по телефону:</div>
-							<div class="product-detail-phone-value">8 800 100 89 75</div>
-						</div>
-					</a>
+					<button class="btn btn--light btn--fill ml-3">
+						<svg class="icon mr-2">
+							<use xlink:href="img/icons.svg#like"></use>
+						</svg>
+						В избранное
+					</button>
+				</div>
+				<div class="mt-8">
+					Можно купить этот товар, позвонив по номеру
+					<a href="tel:8 (800) 000-00-00" class="text--xbold text-subtitle-2"><span class="color-primary">8
+							(800) </span>000-00-00</a>
 				</div>
 			</div>
 		</div>
-		<div class="product-detail-advantages product-stock__advantages">
-			<div class="advantage-item">
-				<div class="advantage-item__img">
-					100
-				</div>
-				<div class="advantage-item__content">
-					<div class="advantage-item__title">Гарантия 100 дней</div>
-					<div class="advantage-item__desc">
-						с момента получения посылки
-					</div>
-				</div>
-			</div>
-			<div class="advantage-item">
-				<div class="advantage-item__img">
-					<svg class="icon">
-						<use xlink:href="img/icons.svg#truck" />
-					</svg>
-				</div>
-				<div class="advantage-item__content">
-					<div class="advantage-item__title">Доставка</div>
-					<div class="advantage-item__desc">СДЭК, Почта России</div>
-				</div>
-			</div>
-			<div class="advantage-item">
-				<div class="advantage-item__img">
-					<svg class="icon">
-						<use xlink:href="img/icons.svg#box" />
-					</svg>
-				</div>
-				<div class="advantage-item__content">
-					<div class="advantage-item__title">Сберегающая упаковка</div>
-					<div class="advantage-item__desc">Трехфазная упаковка для защиты саженцев</div>
-				</div>
-			</div>
-			<div class="advantage-item">
-				<div class="advantage-item__img">
-					<svg class="icon">
-						<use xlink:href="img/icons.svg#headphones" />
-					</svg>
-				</div>
-				<div class="advantage-item__content">
-					<div class="advantage-item__title">Персональный консультант</div>
-					<div class="advantage-item__desc">Для решения любых вопросов, связанных с заказами</div>
-				</div>
-			</div>
-		</div>
-	</section> -->
 
-	<!-- <div class="stock">
-		<div class="stock__title">Успейте купить</div>
-		<div class="stock__subtitle">Акция заканчивается</div>
-		<div class="stock__timer">
-			<div class="stock__item">
-				<div class="stock__int">02</div>
-				<div class="stock__time">дней</div>
-			</div>
-			<div class="stock__item">
-				<div class="stock__int">21</div>
-				<div class="stock__time">часов</div>
-			</div>
-			<div class="stock__item">
-				<div class="stock__int">08</div>
-				<div class="stock__time">минут</div>
-			</div>
-			<div class="stock__item">
-				<div class="stock__int">59</div>
-				<div class="stock__time">секунд</div>
-			</div>
-		</div>
-		<div>Скоро этот товар подоражает</div>
-		<button class="product-detail-btn btn btn--accent">
-			<svg class="icon">
-				<use xlink:href="img/icons.svg#shopping-cart" />
-			</svg>
-			В корзину
-		</button>
-	</div> -->
+	</section>
 
 	<script>
 		(() => {
 			const thumbs = new Swiper('.product-detail-gallery-thumbs .swiper-container', {
 				spaceBetween: 6,
-				slidesPerView: 5,
+				slidesPerView: 4,
 				slidesPerGroup: 1,
-				direction: "vertical",
+				// direction: "vertical",
 
 				breakpoints: {
 
@@ -849,912 +178,167 @@
 		})();
 	</script>
 
-	<section class="pray container-block">
-		<div class="pray-title">Отгрузка посадочного материала из питомника <b class="color-primary">с 30 сентября </b>
-		</div>
-		<div class="pray-subtitle">Точную дату сбора Вашего заказа подскажет Вам персональный консультант </div>
-		<div class="pray-form">
-			<label class="pray-form-field form-field form-field-error ">
-				<div class="pray-form-label">Имя</div>
-				<input class="pray-form-input form-input " placeholder="Введите имя" data-required />
-				<span class="form__err">Обязательное поле для заполнения</span>
-			</label>
-			<label class="pray-form-field form-field">
-				<div class="pray-form-label">Телефон</div>
-				<input class="pray-form-input form-input" placeholder="+7 " type="tel" />
-			</label>
-			<button class="pray-form-btn btn btn--accent">Заказать обратный звонок</button>
-		</div>
-		<div class="pray-agree">
-			<svg class="icon">
-				<use xlink:href="img/icons.svg#gal-ochka" />
-			</svg>
-			<div class="pray-agree-content">
-				Нажимая на кнопку “Заказать обратный вопрос”, Вы соглашаетесь на обработку персональных данных
+	<section class="container-block">
+		<div class="product-detail-specifications">
+			<div class="product-detail-specifications__title">характеристики</div>
+
+			<div class="grid">
+				<div class="grid-col-sm-6">
+					<div class="product-detail-prop">
+						<div class="product-detail-prop__sign fade-60 flex">
+							Особенности
+						</div>
+						<div class="product-detail-prop__value text--demibold">Два в одном - урожайный и декоративный
+						</div>
+					</div>
+					<div class="product-detail-prop">
+						<div class="product-detail-prop__sign fade-60 flex">
+							Высота растения
+						</div>
+						<div class="product-detail-prop__value text--demibold">50.0000 - см</div>
+					</div>
+					<div class="product-detail-prop">
+						<div class="product-detail-prop__sign fade-60 flex">
+							Время посадки
+						</div>
+						<div class="product-detail-prop__value text--demibold">Авг Апр Май Мар Окт Сен</div>
+					</div>
+					<div class="product-detail-prop">
+						<div class="product-detail-prop__sign fade-60 flex">
+							Время созревания
+						</div>
+						<div class="product-detail-prop__value text--demibold">Авг Апр Май</div>
+					</div>
+					<div class="product-detail-prop">
+						<div class="product-detail-prop__sign fade-60 flex">
+							Зоны морозостойкости
+						</div>
+						<div class="product-detail-prop__value text--demibold">Южные регионы</div>
+					</div>
+					<div class="product-detail-prop">
+						<div class="product-detail-prop__sign fade-60 flex">
+							Окраска
+						</div>
+						<div class="product-detail-prop__value text--demibold">
+							<div class="flex">
+								<div class="color-box mr-2" style="background: #A19D17;"></div>
+								<div class="color-box mr-2" style="background: #a1179a;"></div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="grid-col-sm-6">
+					<div class="product-detail-prop">
+						<div class="product-detail-prop__sign fade-60 flex">
+							Расстояние при посадке
+						</div>
+						<div class="product-detail-prop__value text--demibold">100 - 150 см</div>
+					</div>
+					<div class="product-detail-prop">
+						<div class="product-detail-prop__sign fade-60 flex">
+							Вес плода (г)
+						</div>
+						<div class="product-detail-prop__value text--demibold">230 - 280 г</div>
+					</div>
+					<div class="product-detail-prop">
+						<div class="product-detail-prop__sign fade-60 flex">
+							Местоположение
+						</div>
+						<div class="product-detail-prop__value text--demibold">Солнечное место</div>
+					</div>
+					<div class="product-detail-prop">
+						<div class="product-detail-prop__sign fade-60 flex">
+							Срок созревания
+						</div>
+						<div class="product-detail-prop__value text--demibold">Раннеспелый (115 - 120 дней)</div>
+					</div>
+					<div class="product-detail-prop">
+						<div class="product-detail-prop__sign fade-60 flex">
+							Зимостойкость
+						</div>
+						<div class="product-detail-prop__value text--demibold">22°C</div>
+					</div>
+				</div>
 			</div>
 		</div>
 	</section>
-
-	<div class="product-description container-block">
-		<div class="product-description-content" data-tab-cover>
-			<div class="product-description-tabs">
-				<button class="product-description-tab" data-tab-link="product-description-1">ИНФОРМАЦИЯ</button>
-				<button class="product-description-tab" data-tab-link="product-description-2">ОСОБЕННОСТИ</button>
-				<button class="product-description-tab" data-tab-link="product-description-3">ОПЛАТА И ДОСТАВКА</button>
-				<button class="product-description-tab" data-tab-link="product-description-4">ОТЗЫВЫ</button>
-			</div>
-
-			<div class="product-description-cover">
-				<div class="product-description-inner" data-tab-content="product-description-1">
-					<div class="product-description-props">
-						<div class="product-description-prop">
-							<img src="img/sempl/cold.svg" alt="" class="icon">
-							Морозостойкость -30°C
-						</div>
-						<div class="product-description-prop">
-							<img src="img/sempl/height.svg" alt="" class="icon">
-							Высота саженца 100 см
-						</div>
-						<div class="product-description-prop">
-							<img src="img/sempl/timesort.svg" alt="" class="icon">
-							Среднеспелый сорт
-						</div>
-					</div>
-					<div class="product-description-title">Внешний вид</div>
-					<div class="product-description-text">
-						Среднерослое растение достигает в высоту 4 м. Крона средней густоты, овальной формы, ветви
-						достаточно
-						прочные.
-						Основной окрас яблок зеленовато-желтый, покрывной – оранжево-красный, распределяется по всему
-						плоду
-						равномерно. Форма яблока округлая, его вес может достигать 150 г. Кожица плотная, не слишком
-						толстая, скорее
-						нежная. Мякоть сочная, сладкая на вкус.
-					</div>
-					<div class="product-description-title">Всхожесть</div>
-					<div class="product-description-text">75, 70, 69, 70 </div>
-					<div class="product-description-title">Подвой </div>
-					<div class="product-description-text">Сеянец Алычи </div>
-					<div class="product-description-title">Посадочный материал</div>
-					<div class="product-description-text">Саженец </div>
-					<div class="product-description-title">Описание</div>
-					<div class="product-description-text">
-						Помповый садовый опрыскиватель VERTO 2 л 15G503 с регулировкой струи имеет резервуар, который
-						вмещает до 2
-						литров воды. Подходит для обработки растений в саду. Конструкция обеспечивает равномерное
-						распыление
-						жидкости.
-						Красная кнопка блокировка струи обеспечивает непрерывный полив. <br>
-
-						Наличие помпы - есть <br>
-						Материал - пластик <br>
-						Объем, л - 2 <br>
-						Цвет (рисунок) - белый/зеленый <br>
-						Вес нетто, кг - 0,37 <br>
-					</div>
-					<div class="product-description-title">Эксплуатация</div>
-					<div class="product-description-text">
-						Возможна эксплуатация при температуре от 0°С до +45°C
-						<b>Внимание!</b> Опрыскиватель не может использоваться с гербицидными и пестицидными растворами.
-					</div>
-					<div class="product-description-title">Условия хранения</div>
-					<div class="product-description-text">Нет </div>
-
-					<div class="product-description-history">
-						<div class="product-description-title">История селекции</div>
-						<div class="product-description-text">
-							Яблоня была выведена в 50-х годах прошлого века. Над работами трудился селекционер Дж. Х.
-							Кидд.
-							Скрещивание
-							происходило между популярными сортами Голден Делишес и Кидс Оранж Ред. За несколько десятков
-							лет после
-							выведения сорта, Гала стала одним из лидеров среди плодовых растений, используемых для
-							промышленного
-							выращивания на территории Европы, Америки, в частности Бразилии и Канады. Сорт
-							зарегистрировали в США в
-							1974
-							году. В мировом рейтинге по востребованности Гала стала второй после Ред Делишес в 2006
-							году.
-						</div>
-					</div>
-
-					<div class="product-description-faq" data-toggle-cover data-toggle-link>
-						<div class="product-description-faq-title">
-							<div class="product-description-prop">
-								<img src="img/sempl/pollinator.svg" alt="" class="icon">
-								Опылители
-							</div>
-
-							<svg class="icon product-description-faq-arrow">
-								<use xlink:href="img/icons.svg#navigate-up" />
-							</svg>
-						</div>
-						<div class="product-description-faq-content product-description-text" data-toggle-content
-							data-toggle-height="true" data-toggle-static="true">
-							Гала является частично самоопыляемым растением. Чтобы повысить урожайность, по соседству
-							следует
-							высаживать
-							такие сорта, как Катя, Эльстар, Джеймс Грив.
-						</div>
-					</div>
-
-					<div class="product-description-faq" data-toggle-cover data-toggle-link>
-						<div class="product-description-faq-title">
-							<div class="product-description-prop">
-								<img src="img/sempl/flower.svg" alt="" class="icon">
-								Цветение
-							</div>
-
-							<svg class="icon product-description-faq-arrow">
-								<use xlink:href="img/icons.svg#navigate-up" />
-							</svg>
-						</div>
-						<div class="product-description-faq-content product-description-text" data-toggle-content
-							data-toggle-height="true" data-toggle-static="true">
-							Цветение приходится на середину мая или начало июня. Возвратные морозы в этом случае не
-							навредят
-							плодоносным
-							почкам. Цветы формируются среднего размера, окрашены они в белый цвет.
-
-						</div>
-					</div>
-
-					<div class="product-description-faq" data-toggle-cover data-toggle-link>
-						<div class="product-description-faq-title">
-							<div class="product-description-prop">
-								<img src="img/sempl/productivity.svg" alt="" class="icon">
-								Урожайность
-							</div>
-
-							<svg class="icon product-description-faq-arrow">
-								<use xlink:href="img/icons.svg#navigate-up" />
-							</svg>
-						</div>
-						<div class="product-description-faq-content product-description-text" data-toggle-content
-							data-toggle-height="true" data-toggle-static="true">
-							Деревья среднеплодные. Плодоношение отмечается только на 6 год после посадки саженца. Если
-							подвой
-							карликовый, первые яблоки будут формироваться уже на 3 год. Собирать урожай можно во второй
-							половине
-							сентября. Урожайность этого сорта делает его достаточно популярным в производственной
-							промышленности.
-							Взрослое дерево может дать до 80 кг яблок за сезон.
-						</div>
-					</div>
-					<div class="product-description-faq" data-toggle-cover data-toggle-link>
-						<div class="product-description-faq-title">
-							<div class="product-description-prop">
-								<img src="img/sempl/fruits.svg" alt="" class="icon">
-								Плоды
-							</div>
-
-							<svg class="icon product-description-faq-arrow">
-								<use xlink:href="img/icons.svg#navigate-up" />
-							</svg>
-						</div>
-						<div class="product-description-faq-content product-description-text" data-toggle-content
-							data-toggle-height="true" data-toggle-static="true">
-							Специалисты подчеркивают отменный вкус укропа и насыщенный аромат кустов. Также укроп
-							получает
-							положительные
-							отзывы садоводов за хороший срок хранения - собранная зелень долго остается свежей и не
-							теряет товарных
-							свойств. Назначение сорта Аврора универсальное. Укроп Аврора используют в основном для
-							выращивания зелени,
-							но часть позднего урожая можно применять и для консервирования
-						</div>
-					</div>
-
-					<div class="product-description-title">Посадка и уход </div>
-					<div class="product-description-text">
-						<p>Укроп Аврора высаживают с 3-й декады апреля, срок посадки приходится на последние дни мая.
-							Чтобы
-							того,чтобы
-							получит раннюю зелень весной, посев можно проводить под зиму, а посадочный материал можно
-							высевать как
-							прямо
-							в открытый грунт, так и на рассаду.
-						</p>
-
-						<p>Посадочный материал замачивают в растворе марганцовки накануне посева, достаточно 2-3 часов.
-							Эта
-							процедура
-							профилактическая - так укроп меньше болеет. Высушенные семена высевают в борозды глубиной
-							около 2 см,
-							соблюдая расстояние 20 см, так как кусты разветвленные и при более близкой посадке мешают
-							друг другу.
-							Затем
-							семена накрывают и посадки умеренно поливают. Кроме того, можно мульчировать грядки слоем
-							торфа толщиной 3
-							см.
-						</p>
-
-						<p>Дальнейший уход за укропом сорта Аврора заключается в рыхлении междурядий, прополке,
-							регулярном, но
-							умеренном поливе и подкормках. Также рекомендуется проредить рассаду, чтобы избежать
-							загущения посадок.
-						</p>
-
-						<p>Чтобы избавиться от вредителей, по возможности используют исключительно народные средства.
-							Обработка
-							укропа
-							химическими препаратами нежелательна - растение быстро впитывает ядохимикаты и становится
-							токсичным.
-						</p>
-					</div>
-
-					<div class="product-description-title">Преимущества сорта</div>
-					<div class="product-description-text">
-						<p>Преимущества сорта</p>
-						<ul>
-							<li>Хорошая зимостойкость.</li>
-							<li>Отличные вкусовые данные.</li>
-							<li>Высокая транспортабельность.</li>
-							<li>Устойчивость к болезням и вредителям.</li>
-						</ul>
-					</div>
-
-					<div class="product-description-title">Сочетание с другими растениями </div>
-					<div class="product-description-text">
-						<p>Лучшими соседями для яблони считаются ясенелистный клен и малина. Первый спасет плодородное
-							дерево от
-							плодожорки за счет выработки фитонцидов. Малиновые кустарники хорошо рыхлят почву своими
-							корнями, обогащая
-							ее воздухом и влагой. Вредным соседством считается близкое расположение вишни, черешни,
-							грецкого ореха,
-							персика или смородины.</p>
-					</div>
-
-					<section class="slider-info">
-						<div class="image-slider swiper-container swiper-mp">
-							<div class="image-slider__wrapper swiper-wrapper">
-								<div class="image-slider__slide swiper-slide">
-									<div class="news-page">
-										<picture>
-											<source srcset="img/Rectangle 1100.webp" type="image/webp">
-											<img src="img/Rectangle 1100.png" loading="lazy" class="news__image">
-										</picture>
-										<div class="news-text">
-											<div class="news__subtitle">Крыжовник Ленинградец</div>
-										</div>
-									</div>
-								</div>
-								<div class="image-slider__slide swiper-slide">
-									<div class="news-page">
-										<picture>
-											<source srcset="img/Rectangle 1100.webp" type="image/webp">
-											<img src="img/Rectangle 1100.png" loading="lazy" class="news__image">
-										</picture>
-										<div class="news-text">
-											<div class="news__subtitle">Крыжовник Ленинградец</div>
-										</div>
-									</div>
-								</div>
-								<div class="image-slider__slide swiper-slide">
-									<div class="news-page">
-										<picture>
-											<source srcset="img/Rectangle 1100.webp" type="image/webp">
-											<img src="img/Rectangle 1100.png" loading="lazy" class="news__image">
-										</picture>
-										<div class="news-text">
-											<div class="news__subtitle">Крыжовник Ленинградец</div>
-										</div>
-									</div>
-								</div>
-							</div>
-						</div>
-						<div class="swiper-pagination"></div>
-					</section>
-					<script>
-						new Swiper('.slider-info .image-slider', {
-							pagination: {
-								el: '.news .swiper-pagination',
-								clickable: true,
-							},
-							slidesPerGroup: 1,
-							spaceBetween: 30,
-							breakpoints: {
-								0: {
-									slidesPerView: 1.5,
-								},
-								568: {
-									slidesPerView: 2,
-								},
-								990: {
-									slidesPerView: 2.5,
-								},
-								1200: {
-									slidesPerView: 3,
-								},
-							},
-						});
-					</script>
-
+	<section class="container-block mt-4">
+		<div class="product-detail-pray">
+			<form class="consultation__form py-5 px-4 py-md-10 px-md-8">
+				<div class="consultation__title page-title mb-4">
+					нужна бесплатная консультация?
 				</div>
-				<div class="product-description-inner" data-tab-content="product-description-2">
-					<div class="product-description-props">
-						<div class="product-description-prop">
-							<img src="img/sempl/cold.svg" alt="" class="icon">
-							Морозостойкость -30°C
-						</div>
-						<div class="product-description-prop">
-							<img src="img/sempl/height.svg" alt="" class="icon">
-							Высота саженца 100 см
-						</div>
-						<div class="product-description-prop">
-							<img src="img/sempl/timesort.svg" alt="" class="icon">
-							Среднеспелый сорт
-						</div>
-					</div>
-					<div class="product-table">
-						<div class="product-table__item">
-							<div class="product-table__title">Особенности</div>
-							<div class="product-table__text">Распускается в идеальный цветок старинной формы</div>
-						</div>
-						<div class="product-table__item">
-							<div class="product-table__title">Высота растения</div>
-							<div class="product-table__text">120 - 150 см</div>
-						</div>
-						<div class="product-table__item">
-							<div class="product-table__title">Ширина растения</div>
-							<div class="product-table__text">80 - 100 см</div>
-						</div>
-						<div class="product-table__item">
-							<div class="product-table__title">Размер цветка</div>
-							<div class="product-table__text">12-14 см</div>
-						</div>
-						<div class="product-table__item">
-							<div class="product-table__title">Расстояние при посадки</div>
-							<div class="product-table__text">50 - 100 см</div>
-						</div>
-						<div class="product-table__item">
-							<div class="product-table__title">Местоположение</div>
-							<div class="product-table__text">солнце, легкая полутень</div>
-						</div>
-						<div class="product-table__item">
-							<div class="product-table__title">Требования к почве</div>
-							<div class="product-table__text">нетребовательна, переносит довольно сухие и бедные почвы</div>
-						</div>
-						<div class="product-table__item">
-							<div class="product-table__title">Зимостойкость</div>
-							<div class="product-table__text">минус 30°С</div>
-						</div>
-						<div class="product-table__item">
-							<div class="product-table__title">Применение</div>
-							<div class="product-table__text">идеально смотрятся в групповых посадках, формируя прекрасное цветущее облако</div>
-						</div>
-					</div>
-					<div class="product-description-title">Уход и посадка </div>
-					<div class="product-description-text">
-						<p>
-							Рост туи медленный, по этой причине она не нуждается в частых обрезках. Сорт положительно
-							относится к
-							большому
-							количеству света. В затененных участках кустарник не просто утратит свою яркую окраску, но и
-							правильную
-							форму
-							кроны. Молодые растения следует высаживать до наступления заморозков, весной или осенью.
-							Культура не
-							привередлива к почве, но будет хорошо развиваться на легких питательных почвах с
-							кислотностью в 6 рН.
-							Чтобы
-							уберечь корневую систему от гнили, на участке грунтовые воды не должны залегать близко к
-							поверхности. Тую
-							стоит уберечь от сильных порывов холодного ветра.
-						</p>
-						<p>
-							На постоянное место молодые растения высаживаются в утренние или вечерние часы. Если
-							предполагается
-							оформить
-							бордюры вдоль аллей, между кустиками следует оставлять не менее 0,3 м свободного места. При
-							высадке
-							единичного
-							экземпляра, располагать его следует на расстоянии 50 см от других растений.
-						</p>
-						<p>
-							Регулярный полив потребуется в первое время после посадки туи, особенно если установилась
-							засушливая
-							погода.
-							Под каждый кустарник следует вносить не менее 10 литров воды. После увлажнения грунт следует
-							рыхлить,
-							чтобы
-							улучшить проникание влаги и воздуха к корневой системе. Дождевание теплой водой Данике будет
-							крайне
-							полезно
-							при жаркой погоде. Удобрения помогут сохранить кустарнику яркий зеленый окрас. Для этих
-							целей подойдет
-							органика, селитра или зола. Весной рекомендуется применять азот, а летом азотно-фосфорный
-							состав.
-						</p>
-
-
-						<div class="product-description-faq" data-toggle-cover data-toggle-link>
-							<div class="product-description-faq-title">
-								<div class="product-description-prop">
-									<img src="img/sempl/pollinator.svg" alt="" class="icon">
-									Применение в ландшафтном дизайне
-								</div>
-
-								<svg class="icon product-description-faq-arrow">
-									<use xlink:href="img/icons.svg#navigate-up" />
-								</svg>
-							</div>
-							<div class="product-description-faq-content product-description-text" data-toggle-content
-								data-toggle-height="true" data-toggle-static="true">
-								Деревья среднеплодные. Плодоношение отмечается только на 6 год после посадки саженца.
-								Если подвой
-								карликовый, первые яблоки будут формироваться уже на 3 год. Собирать урожай можно во
-								второй половине
-								сентября. Урожайность этого сорта делает его достаточно популярным в производственной
-								промышленности.
-								Взрослое дерево может дать до 80 кг яблок за сезон.
-							</div>
-						</div>
-
-						<div class="product-description-faq" data-toggle-cover data-toggle-link>
-							<div class="product-description-faq-title">
-								<div class="product-description-prop">
-									<img src="img/sempl/flower.svg" alt="" class="icon">
-									Применение в кулинарии
-								</div>
-
-								<svg class="icon product-description-faq-arrow">
-									<use xlink:href="img/icons.svg#navigate-up" />
-								</svg>
-							</div>
-							<div class="product-description-faq-content product-description-text" data-toggle-content
-								data-toggle-height="true" data-toggle-static="true">
-								Деревья среднеплодные. Плодоношение отмечается только на 6 год после посадки саженца.
-								Если подвой
-								карликовый, первые яблоки будут формироваться уже на 3 год. Собирать урожай можно во
-								второй половине
-								сентября. Урожайность этого сорта делает его достаточно популярным в производственной
-								промышленности.
-								Взрослое дерево может дать до 80 кг яблок за сезон.
-
-							</div>
-						</div>
-
-						<div class="product-description-title">Полезные свойства</div>
-						<div class="product-description-text">
-							<p>Заболевания<br>
-								У туи Даники достаточно высокий иммунитет ко многим заболеваниям и распространенным
-								вредителям. При
-								этом,
-								растение может поражаться клещом, молью, щитовками и грибками. В качестве
-								профилактических мер каждые
-								полгода кустарник следует осматривать.</p>
-						</div>
-						<div class="product-description-title">Заболевания</div>
-						<div class="product-description-text">
-							<p>Заболевания<br>
-								У туи Даники достаточно высокий иммунитет ко многим заболеваниям и распространенным
-								вредителям. При
-								этом,
-								растение может поражаться клещом, молью, щитовками и грибками. В качестве
-								профилактических мер каждые
-								полгода кустарник следует осматривать.</p>
-						</div>
-					</div>
+				<div class="text-body-1 mb-4 mb-md-5">
+					Отправьте заявку, а мы перезвоним и уточним
+					все детали и нюансы
 				</div>
-				<div class="product-description-inner" data-tab-content="product-description-3">
-					<div class="product-description-title">Упаковка</div>
-					<div class="product-description-text">
-						<p>Наши саженцы -— это живые растения! Они требуют особого внимания к упаковке при
-							транспортировке.<br>
-							Компания КСП (Клуб садоводов-профессионалов) использует трехступенчатую систему упаковки,
-							которая
-							гарантирует сохранность растения на протяжении всего пути к Вам.
-						</p>
-					</div>
-					<div class="product-description-title">Доставка</div>
-					<div class="product-description-text">
-						<p>После оплаты заказа специалисты компании КСП готовят Ваш заказ к отправке.</p>
-						<ul>
-							<li>Посадочный материал (семена и луковицы) отправляют к Вам в течении 24 часов.</li>
-							<li>Саженцы отправляют 2 раза в год весной и осенью.</li>
-							<li>Зимой саженцы находятся в спящем состоянии, летом в фазе активного роста и развития.
-							</li>
-							<li>Для комфортной адаптации и для сохранности растения живыми, пересадка возможна только в
-								осенне-весенний
-								период.</li>
-							<li>В любое время компания готова принять заказ и персонально для Вас, с учетом всех
-								погодных сезонов,
-								подготовить здоровые селективные саженцы.</li>
-						</ul>
-					</div>
-					<div class="product-description-title">Курьерская служба СДЭК</div>
-					<div class="product-description-text">
-						<ul>
-							<li>Стоимость доставки в отделение - от 400 рублей</li>
-							<li>Сроки доставки – от 2 до 5 дней после отправки </li>
-							<li>В стоимость товара НЕ ВКЛЮЧЕНЫ почтовые сборы</li>
-						</ul>
-					</div>
-					<div class="product-description-title">Почта России</div>
-					<div class="product-description-text">
-						<ul>
-							<li>Стоимость доставки – от 250 рублей</li>
-							<li>Сроки доставки – от 3 до 14 дней с момента отправки</li>
-							<li>В стоимость товара НЕ ВКЛЮЧЕНЫ почтовые сборы </li>
-						</ul>
-					</div>
-					<div class="product-description-title">Способы оплаты</div>
-					<div class="product-description-text">
-						<ul>
-							<li>Банковской картой на сайте</li>
-							<li>Пополнив Баланс в личном кабинете </li>
-							<li>Оплата через Баланс в личном кабинете предоставляет функцию заморозки средств на Вашем
-								Балансе до
-								момента получения товара.</li>
-							<li>Это является Вашей гарантией и аналогом наложенного платежа.</li>
-							<li>Средства списываются с Вашего Баланса после получения посылки.</li>
-						</ul>
-					</div>
-					<div class="product-description-title">Как пополнить Баланс </div>
-					<div class="product-description-text">
-						<p>Для пополнения Баланса в личном кабинете необходимо зарегистрироваться на
-							сайте.<br>Регистрация дает
-							дополнительные преимущества. <br>
-							Зарегистрированный пользователь имеет возможность следить за статусом своего заказа и
-							этапами доставки от
-							питомника до транспортной компании и Вашего дома.</p>
-					</div>
-					<div class="product-description-text">с 30 сентября по 14 октября</div>
-					<div class="product-description-text">с 15 октября по 29 октября </div>
-					<div class="product-description-text">с 30 октября по 9 ноября </div>
-					<div class="product-description-text">с 10 ноября по 30 ноября </div>
-				</div>
-				<div class="product-description-inner tab-active" data-tab-content="product-description-4">
-					<div class="feedback-nick">
-						<div class="feedback-nick__icon"></div>
-						<div class="feedback-nick-info">
-							<div class="feedback-nick__name">Виктория Р.</div>
-							<div class="feedback-nick__date">11 июля, 11:20</div>
-						</div>
-						<div class="feedback-nick-stars">
-							<img src="img/star-2.svg">
-							<img src="img/star-2.svg">
-							<img src="img/star-2.svg">
-							<img src="img/star-2.svg">
-							<img src="img/star-2.svg">
-						</div>
-					</div>
-					<div class="product-description-text">Здравствуйте, я посадила клубнику в горшки на балконе, сначала
-						они
-						принялись.,но после первого полива начали вянуть. Хочу ещё раз попробовать посадить. Вы не
-						подскажите какого
-						размера должен быть горшок, нужно ли подрезать корни, как часто поливать, ещё какие то
-						особенности
-						выращивания
-						клубники на балконе?
-					</div>
-					<div class="feedback-imgs">
-						<div class="grid grid-spacing-lg-4">
-							<div class="grid-col-md-2 grid-col-3">
-								<a data-fancybox="comment-1-gallery" class="feedback-img"
-									href="https://picsum.photos/id/1060/1920/1080">
-									<img src="https://picsum.photos/id/1060/600/400" alt="">
-								</a>
-							</div>
-							<div class="grid-col-md-2 grid-col-3">
-								<a data-fancybox="comment-1-gallery" class="feedback-img"
-									href="https://picsum.photos/id/1060/1920/1080">
-									<img src="https://picsum.photos/id/1060/600/400" alt="">
-								</a>
-							</div>
-							<div class="grid-col-md-2 grid-col-3">
-								<a data-fancybox="comment-1-gallery" class="feedback-img"
-									href="https://picsum.photos/id/1060/1920/1080">
-									<img src="https://picsum.photos/id/1060/600/400" alt="">
-								</a>
-							</div>
-							<div class="grid-col-md-2 grid-col-3">
-								<a data-fancybox="comment-1-gallery" class="feedback-img"
-									href="https://picsum.photos/id/1060/1920/1080">
-									<img src="https://picsum.photos/id/1060/600/400" alt="">
-								</a>
-							</div>
-							<div class="grid-col-md-2 grid-col-3">
-								<a data-fancybox="comment-1-gallery" class="feedback-img"
-									href="https://picsum.photos/id/1060/1920/1080">
-									<img src="https://picsum.photos/id/1060/600/400" alt="">
-								</a>
-							</div>
-							<div class="grid-col-md-2 grid-col-3">
-								<a data-fancybox="comment-1-gallery" class="feedback-img"
-									href="https://picsum.photos/id/1060/1920/1080">
-									<img src="https://picsum.photos/id/1060/600/400" alt="">
-								</a>
-							</div>
-						</div>
-					</div>
-
-					<div class="feedback-answer">
-						<div class="feedback-answer-icon">
-							<picture>
-								<source srcset="img/logo.webp" type="image/webp">
-								<img src="img/logo.png" loading="lazy">
-							</picture>
-						</div>
-						<div class="feedback-answer__info">Виктория, добрый день. Если на одном участке растут разные
-							сора
-							земляники,
-							то да, они буду переопыляться. И это только увеличит их урожайность.</div>
-					</div>
-					<div class="feedback-nick">
-						<div class="feedback-nick__icon"></div>
-						<div class="feedback-nick-info">
-							<div class="feedback-nick__name">Наталья</div>
-							<div class="feedback-nick__date">11 июля, 11:20</div>
-						</div>
-						<div class="feedback-nick-stars">
-							<img src="img/star-1.svg">
-							<img src="img/star-1.svg">
-							<img src="img/star-2.svg">
-							<img src="img/star-2.svg">
-							<img src="img/star-2.svg">
-						</div>
-					</div>
-					<div class="product-description-text">А этот сорт на подокольнике можно растить до следущего лета.И
-						вообще
-						поподробнее когда его садить на рассаду ,когда в грунт можно будет высадить</div>
-
-
-					<div class="feedback__title">Оставить отзыв</div>
-					<form class="feedback-form">
-						<label class="feedback-form-lable">
-							<span class="feedback-form-lable__title">Имя</span>
-							<input type="text" class="feedback-form-lable__input" placeholder="Введите имя">
-						</label>
-						<label class="feedback-form-lable">
-							<span class="feedback-form-lable__title">Email</span>
-							<input type="text" class="feedback-form-lable__input" placeholder="email@mail.ru">
-						</label>
-						<textarea class="feedback-form__textarea"
-							placeholder="Опишите Ваши впечатления от товара"></textarea>
-						<div class="feedback-form-estimation">
-							<div class="feedback-form-estimation-block rating-stars rating-stars-control">
-								<span class="feedback-form-estimation__title">Оценка</span>
-
-								<input type="radio" name="review-star" id="rating-control-star-1" checked>
-								<label class="rating-stars-check" for="rating-control-star-1">
-									<svg class="icon rating-stars-item">
-										<use xlink:href="img/utils.svg#star" />
-									</svg>
-								</label>
-								<input type="radio" name="review-star" id="rating-control-star-2">
-								<label class="rating-stars-check" for="rating-control-star-2">
-									<svg class="icon rating-stars-item">
-										<use xlink:href="img/utils.svg#star" />
-									</svg>
-								</label>
-								<input type="radio" name="review-star" id="rating-control-star-3">
-								<label class="rating-stars-check" for="rating-control-star-3">
-									<svg class="icon rating-stars-item">
-										<use xlink:href="img/utils.svg#star" />
-									</svg>
-								</label>
-								<input type="radio" name="review-star" id="rating-control-star-4">
-								<label class="rating-stars-check" for="rating-control-star-4">
-									<svg class="icon rating-stars-item">
-										<use xlink:href="img/utils.svg#star" />
-									</svg>
-								</label>
-								<input type="radio" name="review-star" id="rating-control-star-5">
-								<label class="rating-stars-check" for="rating-control-star-5">
-									<svg class="icon rating-stars-item">
-										<use xlink:href="img/utils.svg#star" />
-									</svg>
-								</label>
-
-							</div>
-							<div class="feedback-form-estimation-block">
-								<label class="feedback-form-estimation feedback-form-estimation-pl">
-									<input type="file" accept="image/*">
-									<span class="feedback-form-estimation__title">Добавить фото</span>
-									<span class="feedback-form-estimation__image">
-										<svg class="icon">
-											<use xlink:href="img/icons.svg#picture" />
-										</svg>
-									</span>
-								</label>
-							</div>
-						</div>
-						<div class="feedback-form-submit">
-							<button class="feedback-form-submit__button btn btn--accent">Оставить отзыв</button>
-						</div>
-					</form>
-				</div>
-			</div>
-		</div>
-		<div class="product-description-aside">
-			<div class="product-description-aside__title">Подписаться на оповещение об акциях и новинках</div>
-			<div class="product-description-aside__subtitle">Выберите удобный способ оповещения: телефон или e-mail</div>
-			<form class="product-description-aside-form">
-				<label class="product-description-aside-form-field form-field form-field-error">
-					<div class="product-description-aside-form-label">Телефон</div>
-					<input class="product-description-aside-form-input pray-form-input form-input" placeholder="+7 "
-					type="tel" />
-					<span class="form__err">Обязательное поле для заполнения</span>
+				<label class="consultation__label mb-4">
+					<span class="text-body-1 mb-2">Имя</span>
+					<input class="page-input" type="text" placeholder="Введите текст" required>
 				</label>
-				<label class="product-description-aside-form-field form-field">
-					<div class="product-description-aside-form-label">E-mail</div>
-					<input class="product-description-aside-form-input pray-form-input form-input" type="email" />
+				<label class="consultation__label mb-9">
+					<span class="text-body-1 mb-2">Телефон</span>
+					<input class="page-input" type="tel" placeholder="+7" required>
 				</label>
-				<button class="product-description-aside-form-btn btn btn--accent">Задать вопрос</button>
+				<button class="btn btn--accent mb-6" type="submit">Отправить</button>
+				<a class="consultation__politic" href="">
+					Отправляя форму Вы даете согласие на обработку <br>Ваших персональных данных
+				</a>
 			</form>
-			<div class="form__perdan product-description-aside-form-perdan">
-				<span id="perdan">Нажимая на кнопку “Регистрация”, Вы соглашаетесь на обработку персональных
-					данных</span>
-			</div>
 		</div>
-	</div>
-
-	<section class="container-block card">
-		<div class="card__title">С ЭТИМ ТОВАРОМ ПОКУПАЮТ</div>
-		<div class="image-slider swiper-container swiper-mp">
-			<div class="image-slider__wrapper swiper-wrapper">
-				<div class="image-slider__slide swiper-slide">
-					<div class="card-page">
-						<img src="img/like.svg" class="card-page__like"></img>
-						<picture>
-							<source srcset="img/yag_1.webp" type="image/webp">
-							<img src="img/yag_1.png" loading="lazy" class="card-page__image">
-						</picture>
-						<div class="card-page-text">
-							<div class="card-page-text__subtitle">Малина Дочь Геракла</div>
-							<div class="card-page-text-grade">
-								<div class="card-page-text-grade-stars">
-									<img src="img/star-1.svg">
-									<img src="img/star-1.svg">
-									<img src="img/star-1.svg">
-									<img src="img/star-1.svg">
-									<img src="img/star-2.svg">
-								</div>
-								<div class="card-page-text-grade__review">0 отзывов</div>
-							</div>
-							<div class="card-page-text__price">399 руб.</div>
-						</div>
-					</div>
-				</div>
-				<div class="image-slider__slide swiper-slide">
-					<div class="card-page">
-						<img src="img/like.svg" class="card-page__like"></img>
-						<picture>
-							<source srcset="img/yag_2.webp" type="image/webp">
-							<img src="img/yag_2.png" loading="lazy" class="card-page__image">
-						</picture>
-						<div class="card-page-text">
-							<div class="card-page-text__subtitle">Груша Адмирал Жерве</div>
-							<div class="card-page-text-grade">
-								<div class="card-page-text-grade-stars">
-									<img src="img/star-1.svg">
-									<img src="img/star-1.svg">
-									<img src="img/star-1.svg">
-									<img src="img/star-1.svg">
-									<img src="img/star-2.svg">
-								</div>
-								<div class="card-page-text-grade__review">0 отзывов</div>
-							</div>
-							<div class="card-page-text__price">419 руб.</div>
-						</div>
-					</div>
-				</div>
-				<div class="image-slider__slide swiper-slide">
-					<div class="card-page">
-						<img src="img/like.svg" class="card-page__like"></img>
-						<picture>
-							<source srcset="img/yag_3.webp" type="image/webp">
-							<img src="img/yag_3.png" loading="lazy" class="card-page__image">
-						</picture>
-						<div class="card-page-text">
-							<div class="card-page-text__subtitle">Пузыреплодник Диабло</div>
-							<div class="card-page-text-grade">
-								<div class="card-page-text-grade-stars">
-									<img src="img/star-1.svg">
-									<img src="img/star-1.svg">
-									<img src="img/star-1.svg">
-									<img src="img/star-1.svg">
-									<img src="img/star-2.svg">
-								</div>
-								<div class="card-page-text-grade__review">0 отзывов</div>
-							</div>
-							<div class="card-page-text__price">559 руб.</div>
-						</div>
-					</div>
-				</div>
-				<div class="image-slider__slide swiper-slide">
-					<div class="card-page">
-						<img src="img/like.svg" class="card-page__like"></img>
-						<picture>
-							<source srcset="img/yag_4.webp" type="image/webp">
-							<img src="img/yag_4.png" loading="lazy" class="card-page__image">
-						</picture>
-						<div class="card-page-text">
-							<div class="card-page-text__subtitle">Гибискус Вудбридж</div>
-							<div class="card-page-text-grade">
-								<div class="card-page-text-grade-stars">
-									<img src="img/star-1.svg">
-									<img src="img/star-1.svg">
-									<img src="img/star-1.svg">
-									<img src="img/star-1.svg">
-									<img src="img/star-2.svg">
-								</div>
-								<div class="card-page-text-grade__review">0 отзывов</div>
-							</div>
-							<div class="card-page-text__price">559 руб.</div>
-						</div>
-					</div>
-				</div>
-			</div>
-		</div>
-		<div class="swiper-pagination"></div>
 	</section>
+	<section class="container-block">
+		<div class="product-detail-specifications mt-4">
+			<div class="product-detail-specifications__title">описание</div>
+			Тюльпан мустанг относится к группе бахромчатых тюльпанов. Форма цветка бокаловидная .Окраска бокала
+			малиново-красная . Высота бокала: до 8 см . По краю лепестков игольчатая бахрома. Высота растения до 60 см.
+			Среднего срока цветения . Стебли высокие, крепкие. Фактура лепестков плотная. Устойчив к вирусу
+			пестролепестности. Размножается хорошо. Используется для выгонки, срезки, групповых посадок
 
-	<!-- Соцсети -->
-	<section class="container-block social">
-		<div class="social__title">Мы в социальных сетях:</div>
-		<div class="social-icons">
-			<a href="#"><img src="img/ok.svg" class="social-icons_image"></a>
-			<a href="#"><img src="img/vk.svg" class="social-icons_image"></a>
-			<a href="#"><img src="img/instagramm.svg" class="social-icons_image"></a>
-			<a href="#"><img src="img/youtube.svg" class="social-icons_image"></a>
-			<a href="#"><img src="img/dzen.svg" class="social-icons_image"></a>
+		</div>
+
+		<div class="product-detail-specifications mt-4">
+			<div class="product-detail-specifications__title">описание</div>
+
+			<div class="flex text-h6 mb-5">
+				<svg class="icon mr-3 color-primary">
+					<use xlink:href="img/icons.svg#box" />
+				</svg>
+				Упаковка
+			</div>
+			Мы уделяем большое внимание к упаковке наших растений, потому что наша главная задача – доставить их Вам
+			живыми и невредимыми, словно Вы сами только что выкопали их в поле! Ведь саженцы требуют особого внимания к
+			упаковке при транспортировке!
+
+			<div class="text--demibold mt-4 mb-4">
+				Компания Расти Дача использует трехступенчатую систему упаковки, которая гарантирует жизнеспособность
+				растений в течение двух месяцев.
+			</div>
+
+			<ol>
+				<li>
+					В конце осени, когда сокодвижение в растении останавливается, и саженец переходит в состояние
+					анабиоза, мы
+					выкапываем готовую продукцию и закладываем на хранение в специальное помещение, предварительно
+					пересыпав
+					корни
+					аморфным грунтом.
+				</li>
+				<li>
+					После, саженцы ждут своего хозяина, чтобы найти свой дом и радовать Вас большим и вкусным урожаем! А
+					мы в
+					это время
+					усердно ищем им владельцев
+				</li>
+			</ol>
+
+			<button class="btn btn--accent btn--light btn--contur mt-8">
+				<span class="color-text">Смотреть всё</span>
+			</button>
 		</div>
 	</section>
 
-	<!-- Подвал -->
-	<footer class="container-block footer">
-		<div class="footer-block">
-			<div class="footer-block-icons">
-				<img src="img/Group 5590.svg" class="footer-block-icons__image">
-				<img src="img/КСП.svg" class="footer-block-icons__image">
-			</div>
-			<a href="tel: +78001008975" class="footer-block__link">+7 (800) 100-89-75</a>
-			<a href="mailto: klubsadprof@mail.ru" class="footer-block__link">klubsadprof@mail.ru</a>
-			<div class="footer-block-social">
-				<a href="#"><img src="img/watsapp.svg" class="footer-block-social__image"></a>
-				<a href="#"><img src="img/telegramm.svg" class="footer-block-social__image"></a>
-			</div>
-		</div>
-		<div class="footer-block" data-toggle-cover>
-			<div class="footer-block__title" data-toggle-link>Реквизиты</div>
-			<div class="heightOver" data-toggle-content data-toggle-height="true" data-toggle-static="true">
-				<div class="footer-block__requaer">ООО “Социокиберинженерия”</div>
-				<div class="footer-block__requaer">КПП 236001001</div>
-				<div class="footer-block__requaer">ИНН 2360011971</div>
-				<div class="footer-block__requaer">ОГРН 11 923 750 645 95</div>
-			</div>
-		</div>
-		<div class="footer-block" data-toggle-cover>
-			<div class="footer-block__title" data-toggle-link>Покупателям</div>
-			<div class="heightOver" data-toggle-content data-toggle-height="true" data-toggle-static="true">
-				<a href="#" class="footer-block__link">Оплата и доставка</a>
-				<a href="#" class="footer-block__link">Гарантия</a>
-				<a href="#" class="footer-block__link">Отследить заказ</a>
-				<a href="#" class="footer-block__link">Контакты</a>
-				<a href="#" class="footer-block__link">Пользовательское соглашение</a>
-				<a href="#" class="footer-block__link">Условия покупки</a>
-			</div>
-		</div>
-	</footer>
 
-	<!-- Мобильный подвал -->
-	<div class="container-block modil-footer">
-		<div class="modil-footer-icon">
-			<img src="img/mf_1.svg" class="modil-footer-icon__image">
-			<span class="modil-footer-icon__title">Избранное</span>
-		</div>
-		<div class="modil-footer-icon">
-			<img src="img/mf_2.svg" class="modil-footer-icon__image">
-			<span class="modil-footer-icon__title">Профиль</span>
-		</div>
-		<div class="modil-footer-icon">
-			<img src="img/mf_3.svg" class="modil-footer-icon__image">
-			<span class="modil-footer-icon__title">Сервисы</span>
-		</div>
-	</div>
 
 	<script src="source/jquery-3.5.0.min.js"></script>
 	<script src="source/maskedinput.js"></script>
