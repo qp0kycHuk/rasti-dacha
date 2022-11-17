@@ -252,30 +252,68 @@
 }
 
 .card-items {
-    display: grid;
-    grid-gap: 30px;
+	display : grid;
+	grid-gap: 30px;
 
-    &--4 {
-        grid-template-columns: repeat(4, 1fr);
+	&--4 {
+		grid-template-columns: repeat(4, 1fr);
 
-        @media(max-width: 989px) {
-            grid-template-columns: repeat(3, 1fr);
-        }
+		@media(max-width: 989px) {
+			grid-template-columns: repeat(3, 1fr);
+		}
 
-        @media(max-width: 768px) {
-            grid-template-columns: repeat(2, 1fr);
-        }
-    }
+		@media(max-width: 768px) {
+			grid-template-columns: repeat(2, 1fr);
+		}
+	}
 
 	&--3 {
 		grid-template-columns: repeat(3, 1fr);
 
 		@media(max-width: 1200px) {
-            grid-template-columns: repeat(2, 1fr);
-        }
+			grid-template-columns: repeat(2, 1fr);
+		}
 	}
 
-    @media(max-width: 576px) {
-        grid-gap: 15px;
-    }
+	@media(max-width: 576px) {
+		grid-gap: 15px;
+	}
+}
+
+.fade {
+	&-10 {
+		opacity: .1;
+	}
+
+	&-20 {
+		opacity: .2;
+	}
+
+	&-30 {
+		opacity: .3;
+	}
+
+	&-40 {
+		opacity: .4;
+	}
+
+	&-50 {
+		opacity: .5;
+	}
+
+	&-60 {
+		opacity: .6;
+	}
+
+	&-70 {
+		opacity: .7;
+	}
+
+	&-80 {
+		opacity: .8;
+	}
+
+	&-90 {
+		opacity: .9;
+	}
 }

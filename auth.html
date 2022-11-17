@@ -10,8 +10,9 @@
 	<link rel="stylesheet" href="source/ion.rangeSlider.min.css">
 	<link rel="stylesheet" href="css/swiper.css">
 	<link rel="stylesheet" href="source/waves.css">
-	<link rel="stylesheet" href="css/frontend--style.css">
+	<link rel="stylesheet" href="css/ui.css">
 	<link rel="stylesheet" href="css/style.css">
+	<link rel="stylesheet" href="css/frontend--style.css">
 
 
 
@@ -29,19 +30,38 @@
 			<form class="registration-block-form">
 				<div class="registration-block-form__title">Создать аккаунт</div>
 				<div class="registration-block-form__content">
+					<div class="text-body-0 text--demibold mb-2">Имя</div>
 					<label class="form-field">
-						<input class="pray-form-input form-input registration-block-new__input" placeholder="Введите имя" />
+						<input class="pray-form-input form-input registration-block-new__input"
+							placeholder="Введите имя" />
 					</label>
+					<div class="text-body-0 text--demibold mb-2">Телефон</div>
 					<label class="form-field form-field-error">
 						<input class="pray-form-input form-input registration-block-new__input" placeholder="+ 7" />
 					</label>
+					<div class="text-body-0 text--demibold mb-2">Пароль</div>
 					<label class="form-field form-field-error">
 						<input class="pray-form-input form-input registration-block-new__input" placeholder="Пароль" />
 						<img src="img/hidden.svg" class="paroll__hidden">
 					</label>
-					<span class="registration-block-new__min">Минимум 8 символов с прописными или<br> строчными буквами и цифрами</span>
+					<span class="registration-block-new__requirements">Минимум 8 символов с прописными или строчными
+						буквами и цифрами</span>
 					<button class="registration-block-new__btn btn btn--accent">Зарегистрироваться</button>
-					<span class="registration-block-new__min">Нажимая на кнопку Вы соглашаетесь с условиями<br>обработки персональных данных</span>
+					<span class="text-small fade-60">Нажимая на кнопку Вы соглашаетесь с условиями<br>обработки
+						персональных данных</span>
+
+					<a href="javascript:;" class="mt-7 d-block">
+						<div class="fade-60">У вас уже есть аккаунт?</div>
+						<div class="text--bold text--underline">Войти</div>
+					</a>
+
+					<div class="mt-8 color-red">
+						Пароль должен быть не менее <br>
+						<span class="text--demibold">8 символов длиной</span> <br> <br>
+						Пароль должен содержать <span class="text--demibold">латинские символы <br>
+						нижнего регистра (a-z)</span> <br><br>
+						Пароль должен содержать <span class="text--demibold">цифры (0-9)</span> <br>
+					</div>
 				</div>
 			</form>
 		</div>

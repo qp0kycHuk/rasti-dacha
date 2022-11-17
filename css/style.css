@@ -1492,7 +1492,7 @@ header {
 
 .form-field {
 	position: relative;
-	display: block;
+	display : block;
 }
 
 .form__err {
@@ -4089,6 +4089,9 @@ header {
 	align-items    : center;
 	justify-content: center;
 	overflow       : hidden;
+	flex-grow      : 1;
+	padding-top    : 16px;
+	padding-bottom : 16px;
 }
 
 .registration__bc {
@@ -4108,7 +4111,7 @@ header {
 	position             : relative;
 	background           : linear-gradient(0deg, #FFFFFF, #FFFFFF), #FFFFFF;
 	background-blend-mode: multiply, normal;
-	border-radius        : 10px;
+	border-radius        : 16px;
 	display              : flex;
 	z-index              : 20;
 	overflow             : hidden;
@@ -4140,7 +4143,7 @@ header {
 .registration-block-form__title {
 	background   : linear-gradient(90.26deg, rgba(0, 0, 0, 0.2) 0%, rgba(0, 0, 0, 0) 50.23%), #749E1B;
 	border-radius: 16px 16px 0px 0px;
-	padding      : 12px;
+	padding      : 15px;
 	text-align   : center;
 	font-weight  : 700;
 	font-size    : 32px;
@@ -4176,6 +4179,7 @@ header {
 
 .registration-block-new__btn {
 	margin-bottom: 20px;
+	width        : 100%;
 }
 
 .registration-block-new__min {
@@ -4286,9 +4290,9 @@ header {
 
 @media(max-width: 1200px) {
 	.registration-block {
-		flex-direction: column;
-		width         : auto;
-		box-shadow    : 6px 6px 20px rgba(0, 0, 0, 0.2);
+		flex-direction   : column;
+		/* width         : auto; */
+		box-shadow       : 6px 6px 20px rgba(0, 0, 0, 0.2);
 	}
 
 	.authorize__page {
@@ -4302,6 +4306,27 @@ header {
 }
 
 @media(max-width: 560px) {
+	.registration-block {
+		width  : 100%;
+		padding: 0;
+	}
+
+	.registration-block-form {
+		width: 100%;
+	}
+
+	.registration-block-form__content {
+		padding-left : 16px;
+		padding-right: 16px;
+	}
+
+	.registration-block-form__title {
+		font-size: 24px;
+	}
+
+	.registration__bc {
+		display: none;
+	}
 
 	.registration-block-new,
 	.registration-block-entrance {
