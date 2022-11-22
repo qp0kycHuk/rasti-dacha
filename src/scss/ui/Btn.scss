@@ -77,6 +77,7 @@
 
     @include btnColor(#{"primary"});
     @include btnColor(#{"accent"}, var(--color-text));
+    @include btnColor(#{"red"});
 
     &--gray {
         --btn-color      : #CCCCCC;
@@ -160,7 +161,7 @@
         background: transparent;
         color     : var(--btn-color);
 
-        border-bottom: 1px solid var(--btn-color);
+        // border-bottom: 1px solid var(--btn-color);
         border-radius: 0;
 
 

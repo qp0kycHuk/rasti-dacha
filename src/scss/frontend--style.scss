@@ -8,6 +8,7 @@
 	@include getColors(#749E1B, "primary");
 	@include getColors(#EFE447, "accent");
 	@include getColors(#232323, "text");
+	@include getColors(#AF2F2F, "red");
 
 	--radius-small : 5px;
 	--radius-middle: 10px;
