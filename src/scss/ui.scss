@@ -1,5 +1,7 @@
 @import './ui-reset.scss';
-// @import '../source/jquery.fancybox.custom.less';
+
+@import "./variables";
+@import "./functions";
 @import './ui/Grid.scss';
 @import './ui/Btn.scss';
 @import './ui/Margin.scss';

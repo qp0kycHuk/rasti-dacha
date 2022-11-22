@@ -1,24 +1,4 @@
-<!DOCTYPE html>
-<html lang="ru">
-
-<head>
-	<meta charset="UTF-8">
-	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<link rel="stylesheet" href="fonts/Inter/stylesheet.css">
-	<link rel="stylesheet" href="fonts/PT Sans/stylesheet.css">
-	<link rel="stylesheet" href="source/jquery.fancybox.min.css">
-	<link rel="stylesheet" href="css/swiper.css">
-	<link rel="stylesheet" href="css/ui.css">
-	<link rel="stylesheet" href="css/style.css">
-	<link rel="stylesheet" href="css/frontend--style.css">
-
-
-	<script src="js/swiper.js"></script>
-	<title>Карточка товара</title>
-</head>
-
-<body>
+<%= _.template(require('./html-includes/header.html').default)() %>
 
 	<section class="container-block page--block  product-detail">
 
@@ -338,19 +318,4 @@
 		</div>
 	</section>
 
-
-
-	<script src="source/jquery-3.5.0.min.js"></script>
-	<script src="source/maskedinput.js"></script>
-	<script src="source/maskedinput.custom.js"></script>
-	<script src="source/jquery.fancybox.min.js"></script>
-	<script src="source/jquery.fancybox.custom.js"></script>
-
-	<script src="source/frontend--swipe.js"></script>
-	<script src="source/ui--tab.js"></script>
-	<script src="source/ui--toggle.js"></script>
-	<script src="js/slider.js"></script>
-	<script src="js/main.js"></script>
-</body>
-
-</html>
+<%= _.template(require('./html-includes/footer.html').default)() %>

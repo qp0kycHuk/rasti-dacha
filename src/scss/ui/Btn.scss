@@ -75,7 +75,7 @@
 
 
 
-    @include btnColor(#{"primary"}, var(--color-text));
+    @include btnColor(#{"primary"});
     @include btnColor(#{"accent"}, var(--color-text));
 
     &--gray {
