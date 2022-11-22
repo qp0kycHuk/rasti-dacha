@@ -61,6 +61,15 @@ body {
 	fill     : currentColor;
 }
 
+.swiper-container {
+	margin-left : auto;
+	margin-right: auto;
+	position    : relative;
+	overflow    : hidden;
+	list-style  : none;
+	padding     : 0;
+	z-index     : 1;
+}
 
 .color {
 	&-primary {
@@ -1622,11 +1631,11 @@ body {
 		}
 
 		&-top {
-			display        : flex;
-			align-items    : center;
-			justify-content: space-between;
-			padding        : 14px 16px;
-			background-color:  var(--color-primary-20);
+			display         : flex;
+			align-items     : center;
+			justify-content : space-between;
+			padding         : 14px 16px;
+			background-color: var(--color-primary-20);
 
 		}
 
@@ -1688,18 +1697,18 @@ body {
 		}
 
 		&-price {
-			display: flex;
+			display    : flex;
 			align-items: flex-end;
 		}
 
 		&-cost {
-			font-weight  : 600;
-			font-size    : 20px;
+			font-weight: 600;
+			font-size  : 20px;
 
 			&-old {
-				font-weight: 400;
-				font-size: 16px;
-				opacity: 0.6;
+				font-weight         : 400;
+				font-size           : 16px;
+				opacity             : 0.6;
 				text-decoration-line: line-through;
 			}
 		}
@@ -1715,18 +1724,18 @@ body {
 		}
 
 		&-remove {
-			position : absolute;
-			right    : 0;
-			bottom   : 0;
-			font-size: 20px;
-			width: 46px;
-			height: 46px;
-			display: flex;
-			align-items: center;
+			position       : absolute;
+			right          : 0;
+			bottom         : 0;
+			font-size      : 20px;
+			width          : 46px;
+			height         : 46px;
+			display        : flex;
+			align-items    : center;
 			justify-content: center;
-			background: #EEEEEE;
-			border-radius: 8px;
-			cursor: pointer;
+			background     : #EEEEEE;
+			border-radius  : 8px;
+			cursor         : pointer;
 		}
 	}
 
@@ -1736,7 +1745,8 @@ body {
 		align-items    : center;
 		justify-content: space-between;
 
-		&-title, &-value {
+		&-title,
+		&-value {
 			font-weight: 600;
 			font-size  : 20px;
 		}

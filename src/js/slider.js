@@ -17,8 +17,8 @@ function init() {
             },
             slidesPerView: 1,
             slidesPerGroup: 1,
+            spaceBetween: 20,
             loop: true,
-            grabCursor: true,
             speed: +document.querySelector('.slider .image-slider').getAttribute('data-speed') || 500,
             autoplay: {
                 delay: +document.querySelector('.slider .image-slider').getAttribute('data-delay') || 3000,

@@ -1,0 +1,234 @@
+@mixin btnColor($name, $accent:#fff) {
+    &--#{$name} {
+        --btn-color      : var(--color-#{$name});
+        --btn-color-light: var(--color-#{$name}-20);
+        --btn-text       : #{$accent};
+
+        @media (hover) {
+            &:hover {
+                --btn-color      : var(--color-#{$name}--dark);
+                --btn-color-light: var(--color-#{$name}-30);
+            }
+        }
+    }
+}
+
+.btn {
+    --btn-color-light: var(--color-text-20);
+    --btn-color      : var(--color-text);
+    --btn-text       : var(--bg3);
+
+    background : none;
+    border     : none;
+    outline    : none;
+    user-select: none;
+    position   : relative;
+
+    display        : flex;
+    align-items    : center;
+    justify-content: center;
+
+    --size       : 46px;
+    height       : var(--size);
+    padding      : 0 calc(var(--size) / 2);
+    border-radius: 8px;
+
+    font-weight: 600;
+    font-size  : 16px;
+    font-family: var(--font-base);
+
+    background: var(--btn-color);
+    color     : var(--btn-text);
+    border    : transparent;
+
+    transition: .2s ease;
+
+
+    &:focus:not(:active) {
+        background: var(--btn-color);
+        box-shadow: 0 0 0 5px var(--btn-color-light);
+
+    }
+
+
+    &:active {
+        transform: translateY(2px);
+    }
+
+    @media (hover) {
+        &:hover {
+            --btn-color      : var(--color-text-dark);
+            --btn-color-light: var(--color-text-20);
+
+            color: var(--btn-text);
+        }
+    }
+
+    &-sm {
+        height       : 30px;
+        padding      : 0 15px;
+        border-radius: 4px;
+        line-height  : 1;
+
+    }
+
+
+
+
+    @include btnColor(#{"primary"}, var(--color-text));
+    @include btnColor(#{"accent"}, var(--color-text));
+
+    &--gray {
+        --btn-color      : #CCCCCC;
+        --btn-color-light: rgba(204, 204, 204, 0.2);
+        --btn-text       : #fff;
+
+        @media (hover) {
+            &:hover {
+                --btn-color      : #bbb;
+                --btn-color-light: rgba(204, 204, 204, 0.3);
+            }
+        }
+    }
+
+    &--white {
+        --btn-color      : #fff;
+        --btn-color-light: rgba(255, 255, 255, 0.2);
+        --btn-text       : var(--color-text);
+
+        @media (hover) {
+            &:hover {
+                --btn-color      : #fff;
+                --btn-color-light: rgba(255, 255, 255, 0.3);
+            }
+        }
+    }
+
+    &--grey {
+        --btn-color      : #EEEEEE;
+        --btn-color-light: rgba(238, 238, 238, 0.2);
+        --btn-text       : var(--color-text);
+
+        @media (hover) {
+            &:hover {
+                --btn-color      : #EEEEEE;
+                --btn-color-light: rgba(238, 238, 238, 0.3);
+            }
+        }
+    }
+
+
+    // variant
+    &--light {
+        background: var(--btn-color-light);
+        color     : var(--btn-color);
+
+        &:focus:not(:active) {
+            box-shadow: 0 0 0 2px var(--btn-color);
+            color     : var(--btn-color);
+        }
+
+        @media (hover) {
+            &:hover {
+                color: var(--btn-color);
+            }
+        }
+    }
+
+    &--contur {
+        background: var(--btn-color-light);
+        border    : 1px solid var(--btn-color);
+        color     : var(--btn-color);
+
+        &:focus:not(:active) {
+            background: var(--btn-color-light);
+            color     : var(--btn-color);
+        }
+
+        @media (hover) {
+            &:hover {
+                color: var(--btn-color);
+            }
+        }
+    }
+
+    &--link {
+        padding: 0;
+        width  : auto;
+        height : auto;
+
+        background: transparent;
+        color     : var(--btn-color);
+
+        border-bottom: 1px solid var(--btn-color);
+        border-radius: 0;
+
+
+        &:focus:not(:active) {
+            background: var(--btn-color-light);
+            color     : var(--btn-color);
+        }
+
+        @media (hover) {
+            &:hover {
+                color: var(--btn-color);
+            }
+        }
+    }
+
+
+
+    // mod
+    &--shadow {
+        box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.08);
+
+        &:focus:not(:active) {
+            box-shadow:
+                0px 4px 10px rgba(0, 0, 0, 0.08),
+                0 0 0 5px var(--btn-color-light);
+        }
+    }
+
+
+
+    &__start {
+        margin-right: 6px;
+    }
+
+    &__end {
+        margin-left: 6px;
+    }
+
+    &-fab {
+        width        : 60px;
+        height       : 60px;
+        box-shadow   : 0 6px 15px rgba(0, 0, 0, 0.16);
+        border-radius: 50%;
+        padding      : 0;
+
+        display        : flex;
+        align-items    : center;
+        justify-content: center;
+
+        &:focus:not(:active) {
+            box-shadow:
+                0 6px 15px rgba(0, 0, 0, 0.16),
+                0 0 0 5px var(--btn-color-light);
+        }
+    }
+
+    &.disabled,
+    &:disabled {
+        --btn-color      : #CCCCCC;
+        --btn-color-light: rgba(153, 153, 153, 0.2);
+        --btn-text       : #fff;
+        pointer-events   : none;
+
+        @media (hover) {
+            &:hover {
+                --btn-color      : #CCCCCC;
+                --btn-color-light: rgba(153, 153, 153, 0.2);
+            }
+        }
+    }
+}
