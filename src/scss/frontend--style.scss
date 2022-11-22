@@ -1,51 +1,13 @@
+@import './functions';
+
 .no-transition {
 	transition: 0s !important;
 }
 
 :root {
-	@color-primary        : #749E1B;
-	--color-primary       : @color-primary;
-	--color-primary-10    : fade(@color-primary, 10);
-	--color-primary-20    : fade(@color-primary, 20);
-	--color-primary-30    : fade(@color-primary, 30);
-	--color-primary-40    : fade(@color-primary, 40);
-	--color-primary-50    : fade(@color-primary, 50);
-	--color-primary-60    : fade(@color-primary, 50);
-	--color-primary-70    : fade(@color-primary, 70);
-	--color-primary-80    : fade(@color-primary, 80);
-	--color-primary--light: lighten(@color-primary, 5%);
-	--color-primary--dark : darken(@color-primary, 5%);
-
-
-
-	@color-accent        : #EFE447;
-	--color-accent       : @color-accent;
-	--color-accent-10    : fade(@color-accent, 10);
-	--color-accent-20    : fade(@color-accent, 20);
-	--color-accent-30    : fade(@color-accent, 30);
-	--color-accent-40    : fade(@color-accent, 40);
-	--color-accent-50    : fade(@color-accent, 50);
-	--color-accent-60    : fade(@color-accent, 60);
-	--color-accent-70    : fade(@color-accent, 70);
-	--color-accent-80    : fade(@color-accent, 80);
-	--color-accent--light: lighten(@color-accent, 5%);
-	--color-accent--dark : #DDCC30;
-
-
-
-
-	@color-text       : #232323;
-	--color-text      : @color-text;
-	--color-text-dark : darken(@color-text, 5%);
-	--color-text-light: lighten(@color-text, 5%);
-	--color-text-10   : fade(@color-text, 10);
-	--color-text-20   : fade(@color-text, 20);
-	--color-text-30   : fade(@color-text, 30);
-	--color-text-40   : fade(@color-text, 40);
-	--color-text-60   : fade(@color-text, 60);
-	--color-text-80   : fade(@color-text, 80);
-
-
+	@include getColors(#749E1B, "primary");
+	@include getColors(#EFE447, "accent");
+	@include getColors(#232323, "text");
 
 	--radius-small : 5px;
 	--radius-middle: 10px;
@@ -54,8 +16,8 @@
 
 
 
-	--font-alt : ~'PT Sans';
-	--font-base: ~"'Inter', Arial, Helvetica, sans-serif";
+	--font-alt : 'PT Sans';
+	--font-base: 'Inter', Arial, Helvetica, sans-serif;
 
 
 	--zi-l1: 321;
@@ -1188,7 +1150,7 @@ body {
 }
 
 .category-menu {
-	align-self: start;
+	align-self: flex-start;
 }
 
 .category-menu__fruit {
@@ -2514,7 +2476,7 @@ body {
 		display              : grid;
 		grid-template-columns: 290px 1fr;
 		grid-gap             : 100px;
-		align-items          : start;
+		align-items          : flex-start;
 	}
 
 	&-open-nav {

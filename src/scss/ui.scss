@@ -1,12 +1,12 @@
-@import './ui-reset.less';
-@import '../source/jquery.fancybox.custom.less';
-@import './Grid.less';
-@import './Margin.less';
-@import './Padding.less';
-@import './Form.less';
-@import './Progress.less';
-@import './Typography.less';
-@import './Display.less';
+@import './ui-reset.scss';
+// @import '../source/jquery.fancybox.custom.less';
+@import './ui/Grid.scss';
+@import './ui/Margin.scss';
+@import './ui/Padding.scss';
+@import './ui/Form.scss';
+@import './ui/Progress.scss';
+@import './ui/Typography.scss';
+@import './ui/Display.scss';
 
 .btn {
 	--btn-color-light: var(--color-text-10);
@@ -214,11 +214,6 @@
 
 	&__end {
 		margin-left: 6px;
-	}
-
-
-	&-icon&--link {
-		border: none;
 	}
 
 	&-fab {

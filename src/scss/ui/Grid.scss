@@ -6,6 +6,7 @@
 .grid {
 	--gap       : calc(4px * 3);
 	display     : flex;
+	justify-content: flex-start;
 	flex-wrap   : wrap;
 	margin-left : calc(-1 * var(--gap) / 2);
 	margin-right: calc(-1 * var(--gap) / 2);
@@ -827,7 +828,6 @@
 		// }
 	}
 
-	justify-content: start;
 
 	&-align {
 		&-center {
@@ -835,7 +835,7 @@
 		}
 
 		&-start {
-			align-items: start;
+			align-items: flex-start;
 		}
 
 		&-end {
