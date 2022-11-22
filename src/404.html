@@ -1,0 +1,19 @@
+<%= _.template(require('./html-includes/header.html').default)() %>
+
+
+
+	<section class="container-block page-block">
+		<div class="error-page">
+			<div class="error-page__number">404</div>
+			<div class="error-page__text text-body-1 mb-5 mb-md-10">
+				Запрашиваемая вами страница перенесена или удалена. <br>
+				Возможно, вы допустили опечатку при вводе адреса, пожалуйста, попробуйте еще раз.
+			</div>
+			<div class="error-page__btns">
+				<a class="btn btn--accent" href="">На главную</a>
+				<a class="btn btn--grey" href="">В каталог</a>
+			</div>
+		</div>
+	</section>
+
+	<%= _.template(require('./html-includes/footer.html').default)() %>

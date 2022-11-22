@@ -1,0 +1,160 @@
+<%= _.template(require('./html-includes/header.html').default)() %>
+
+	<section class="container-block page-block">
+
+		<div class="page-link mb-6">
+			<a href="">Главная</a> / <span>Каталог</span>
+		</div>
+		<a class="back-btn btn btn--white mb-2 mb-md-8" href="">
+			<img class="icon text-small" src="img/arrow-left.svg" alt="">
+			<span class="back-btn__text ml-2">Назад</span>
+		</a>
+		<h1 class="page-title mb-5 mb-md-9">Личный кабинет</h1>
+
+		<div class="lk-wrapper">
+			<div class="lk-aside">
+				<div class="lk-aside-user mb-10">
+					<div class="lk-aside-user__img">
+						<img src="https://picsum.photos/id/550/600/400" alt="">
+					</div>
+					<div class="lk-aside-user__title">Наталья Ивановна</div>
+				</div>
+	
+				<div class="lk-aside-links" data-toggle-cover>
+					<div class="lk-aside-link lk-aside-toggler" data-toggle-link>Мой аккаунт
+						<svg class="icon">
+							<use xlink:href="img/icons.svg#navigate-right" />
+						</svg>
+					</div>
+					<div class="lk-aside-links-inner" data-toggle-height="true" data-toggle-static="true" data-toggle-content>
+	
+						<div class="lk-aside-link active btn">Заказы</div>
+						<div class="lk-aside-link btn">Настройки профиля</div>
+						<div class="lk-aside-link btn">Изменить пароль</div>
+						<div class="lk-aside-link lk-aside-link--exit btn btn--link btn--red">
+							<span class="lk-aside-link-dashed">Выйти из личного кабинета</span>
+						</div>
+					</div>
+				</div>
+			</div>
+	
+			<div class="lk-content">
+				<div class="lk-orders">
+					<div class="lk-order waves">
+						<div class="lk-order-inner">
+							<div class="lk-order-status-id mr-6" style="background-color: #F8F2AA;">5455</div>
+							<div class="lk-order-content">
+								<div class="lk-order-content-block">
+									<div class="lk-order-status">Заказ оплачен</div>
+									<div class="lk-order-date">20.04.2021</div>
+								</div>
+								<hr>
+								<div class="lk-order-content-block">
+									<div class="lk-order-count">1 товар</div>
+									<div class="lk-order-cost">1798 ₽ </div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="lk-order waves">
+						<div class="lk-order-inner">
+							<div class="lk-order-status-id mr-6" style="background-color: #F8F2AA;">5455</div>
+							<div class="lk-order-content">
+								<div class="lk-order-content-block">
+									<div class="lk-order-status">Сборка</div>
+									<div class="lk-order-date">20.04.2021</div>
+								</div>
+								<hr>
+								<div class="lk-order-content-block">
+									<div class="lk-order-count">1 товар</div>
+									<div class="lk-order-cost">1798 ₽ </div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="lk-order waves">
+						<div class="lk-order-inner">
+							<div class="lk-order-status-id mr-6" style="background-color: #F8F2AA;">5455</div>
+							<div class="lk-order-content">
+								<div class="lk-order-content-block">
+									<div class="lk-order-status">Заказ отправлен</div>
+									<div class="lk-order-date">20.04.2021</div>
+								</div>
+								<hr>
+								<div class="lk-order-content-block">
+									<div class="lk-order-count">1 товар</div>
+									<div class="lk-order-cost">1798 ₽ </div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="lk-order waves">
+						<div class="lk-order-inner">
+							<div class="lk-order-status-id mr-6" style="background-color: #F8F2AA;">5455</div>
+							<div class="lk-order-content">
+								<div class="lk-order-content-block">
+									<div class="lk-order-status">Заказ принят</div>
+									<div class="lk-order-date">20.04.2021</div>
+								</div>
+								<hr>
+								<div class="lk-order-content-block">
+									<div class="lk-order-count">1 товар</div>
+									<div class="lk-order-cost">1798 ₽ </div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="lk-order waves">
+						<div class="lk-order-inner">
+							<div class="lk-order-status-id mr-6" style="background-color: #F8F2AA;">5455</div>
+							<div class="lk-order-content">
+								<div class="lk-order-content-block">
+									<div class="lk-order-status">Ожидание оплаты</div>
+									<div class="lk-order-date">20.04.2021</div>
+								</div>
+								<hr>
+								<div class="lk-order-content-block">
+									<div class="lk-order-count">1 товар</div>
+									<div class="lk-order-cost">1798 ₽ </div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="lk-order waves">
+						<div class="lk-order-inner">
+							<div class="lk-order-status-id mr-6" style="background-color: #F8F2AA;">5455</div>
+							<div class="lk-order-content">
+								<div class="lk-order-content-block">
+									<div class="lk-order-status">Ожидает отправки</div>
+									<div class="lk-order-date">20.04.2021</div>
+								</div>
+								<hr>
+								<div class="lk-order-content-block">
+									<div class="lk-order-count">1 товар</div>
+									<div class="lk-order-cost">1798 ₽ </div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="lk-order waves">
+						<div class="lk-order-inner">
+							<div class="lk-order-status-id mr-6" style="background-color: #C7E38B;">5455</div>
+							<div class="lk-order-content">
+								<div class="lk-order-content-block">
+									<div class="lk-order-status">Выполнен</div>
+									<div class="lk-order-date">20.04.2021</div>
+								</div>
+								<hr>
+								<div class="lk-order-content-block">
+									<div class="lk-order-count">1 товар</div>
+									<div class="lk-order-cost">1798 ₽ </div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<%= _.template(require('./html-includes/footer.html').default)() %>

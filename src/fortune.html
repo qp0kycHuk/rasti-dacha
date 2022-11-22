@@ -1,0 +1,17 @@
+<%= _.template(require('./html-includes/header.html').default)() %>
+
+
+	<div class="fortune-pray" id="fortune-pray">
+		<div class="fortune-pray-close" data-toggle-link="fortune-pray">
+			<svg class="icon"><use xlink:href="img/icons.svg#cross" /></svg>
+		</div>
+		<div class="fortune-pray__title">кРУТИТЕ КОЛЕСО</div>
+		<div class="fortune-pray__subtitle">и выигрывайте призы от нас!</div>
+		<div class="fortune-pray__img" data-toggle-link="fortune-pray">
+			<img src="img/sempl/fortune-pray-wheel.png" alt="">
+		</div>
+		<button  class="fortune-pray__btn btn btn--accent"  data-fancybox-modal data-src="fortune-dialog.html">Крутить колесо</button>
+	</div>
+
+
+<%= _.template(require('./html-includes/footer.html').default)() %>

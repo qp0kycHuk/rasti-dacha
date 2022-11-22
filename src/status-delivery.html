@@ -1,0 +1,158 @@
+<%= _.template(require('./html-includes/header.html').default)() %>
+
+	<section class="container-block page-block">
+		<div class="page-link mb-6">
+			<a href="">Главная</a> / <span>Каталог</span>
+		</div>
+		<a class="back-btn btn btn--white mb-2 mb-md-8" href="">
+			<img class="icon text-small" src="img/arrow-left.svg" alt="">
+			<span class="back-btn__text ml-2">Назад</span>
+		</a>
+		<h1 class="page-title mb-5 mb-md-9">Статус заказа</h1>
+
+		<div class="lk-wrapper">
+			<div class="lk-aside">
+				<div class="lk-status-info py-4 px-4 py-md-8 px-md-6">
+					<div class="lk-status-info__elem mb-5 mb-md-10">
+						<div class="lk-status-info__img mr-4">
+							<svg class="icon">
+								<use xlink:href="img/icons.svg#archive" />
+							</svg>
+						</div>
+						<div class="lk-status-info__content">
+							<span class="text-body-0 text--bold mb-2">Номер заказа</span>
+							<span class="text-body-1">123456789</span>
+						</div>
+					</div>
+					<div class="lk-status-info__elem mb-5 mb-md-10">
+						<div class="lk-status-info__img mr-4">
+							<svg class="icon">
+								<use xlink:href="img/icons.svg#calendar" />
+							</svg>
+						</div>
+						<div class="lk-status-info__content">
+							<span class="text-body-0 text--bold mb-2">Дата заказа</span>
+							<span class="text-body-1">02.03.2022</span>
+						</div>
+					</div>
+					<div class="lk-status-info__elem">
+						<div class="lk-status-info__img mr-4">
+							<svg class="icon">
+								<use xlink:href="img/icons.svg#check" />
+							</svg>
+						</div>
+						<div class="lk-status-info__content">
+							<span class="text-body-0 text--bold mb-2">Создание заказа</span>
+							<span class="text-body-1">02.03.2022</span>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="lk-content">
+				<div class="text-h6 mb-5 mb-md-8">Информация о заказе</div>
+				<div class="lk-status-items mb-5 mb-md-10">
+					<div class="lk-status-item">
+						<div class="lk-status-item__head text-subtitle-2 text--demibold p-4">Получатель</div>
+						<div class="lk-status-item__content text-body-2 p-4 p-md-6">
+							<div class="mb-3">Марьяна Турчанова</div>
+							<div class="mb-3">марьяна.ми@gmail.com</div>
+							<div>+7 900 000 00 00</div>
+						</div>
+					</div>
+					<div class="lk-status-item">
+						<div class="lk-status-item__head text-subtitle-2 text--demibold p-4">Доставка</div>
+						<div class="lk-status-item__content text-body-2 p-4 p-md-6">
+							<div class="mb-3">Компания СДЭК</div>
+							<div>г. Краснодар, ул. им Петра Метальникова, д. 5 корп. 1</div>
+						</div>
+					</div>
+					<div class="lk-status-item">
+						<div class="lk-status-item__head text-subtitle-2 text--demibold p-4">Оплачено</div>
+						<div class="lk-status-item__content text-body-2 p-4 p-md-6">
+							<div class="mb-3">Карта Сбербанка VISA**0000</div>
+							<div class="lk-status-item__price mb-3">
+								<span class="lk-status-item__price-info">Товары, 3 шт</span>
+								<span class="lk-status-item__line"></span>
+								<b class="lk-status-item__price-info">1558 ₽</b>
+							</div>
+							<div class="lk-status-item__price mb-3">
+								<span class="lk-status-item__price-info">Скидка</span>
+								<span class="lk-status-item__line"></span>
+								<b class="lk-status-item__price-info">- 256 ₽</b>
+							</div>
+							<div class="lk-status-item__price">
+								<b class="lk-status-item__price-info">Итого</b>
+								<span class="lk-status-item__line"></span>
+								<b class="lk-status-item__price-info">1302 ₽</b>
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<div class="status-delivery-intelligence-products">
+					<div class="status-delivery-intelligence-product">
+						<div class="status-delivery-intelligence-product__info">
+							<div class="status-delivery-intelligence-product-image mr-4">
+								<picture>
+									<source srcset="img/basket_3.webp" type="image/webp">
+									<img src="img/basket_3.png" loading="lazy">
+								</picture>
+							</div>
+							<div class="status-delivery-intelligence-product-name">
+								<span class="status-delivery-intelligence-product-name__title">Роза парковая Фердинанд Пичард</span>
+								<span class="status-delivery-intelligence-product-name__quantity">Количество: <b>1</b></span>
+							</div>
+						</div>
+						<div class="status-delivery-intelligence-product__price">150 ₽</div>
+					</div>
+					<div class="status-delivery-intelligence-product">
+						<div class="status-delivery-intelligence-product__info">
+							<div class="status-delivery-intelligence-product-image mr-4">
+								<picture>
+									<source srcset="img/basket_3.webp" type="image/webp">
+									<img src="img/basket_3.png" loading="lazy">
+								</picture>
+							</div>
+							<div class="status-delivery-intelligence-product-name">
+								<span class="status-delivery-intelligence-product-name__title">Роза парковая Фердинанд Пичард</span>
+								<span class="status-delivery-intelligence-product-name__quantity">Количество: <b>1</b></span>
+							</div>
+						</div>
+						<div class="status-delivery-intelligence-product__price">150 ₽</div>
+					</div>
+					<div class="status-delivery-intelligence-product">
+						<div class="status-delivery-intelligence-product__info">
+							<div class="status-delivery-intelligence-product-image mr-4">
+								<picture>
+									<source srcset="img/basket_3.webp" type="image/webp">
+									<img src="img/basket_3.png" loading="lazy">
+								</picture>
+							</div>
+							<div class="status-delivery-intelligence-product-name">
+								<span class="status-delivery-intelligence-product-name__title">Роза парковая Фердинанд Пичард</span>
+								<span class="status-delivery-intelligence-product-name__quantity">Количество: <b>1</b></span>
+							</div>
+						</div>
+						<div class="status-delivery-intelligence-product__price">150 ₽</div>
+					</div>
+					<div class="status-delivery-intelligence-product">
+						<div class="status-delivery-intelligence-product__info">
+							<div class="status-delivery-intelligence-product-image mr-4">
+								<picture>
+									<source srcset="img/basket_3.webp" type="image/webp">
+									<img src="img/basket_3.png" loading="lazy">
+								</picture>
+							</div>
+							<div class="status-delivery-intelligence-product-name">
+								<span class="status-delivery-intelligence-product-name__title">Роза парковая Фердинанд Пичард</span>
+								<span class="status-delivery-intelligence-product-name__quantity">Количество: <b>1</b></span>
+							</div>
+						</div>
+						<div class="status-delivery-intelligence-product__price">150 ₽</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<%= _.template(require('./html-includes/footer.html').default)() %>

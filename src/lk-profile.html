@@ -1,0 +1,290 @@
+<%= _.template(require('./html-includes/header.html').default)() %>
+
+	<section class="container-block page-block">
+
+		<div class="page-link mb-6">
+			<a href="">Главная</a> / <span>Каталог</span>
+		</div>
+		<a class="back-btn btn btn--white mb-2 mb-md-8" href="">
+			<img class="icon text-small" src="img/arrow-left.svg" alt="">
+			<span class="back-btn__text ml-2">Назад</span>
+		</a>
+		<h1 class="page-title mb-5 mb-md-9">Личный кабинет</h1>
+
+		<div class="lk-wrapper">
+			<div class="lk-aside">
+				<div class="lk-aside-user mb-10">
+					<div class="lk-aside-user__img">
+						<img src="https://picsum.photos/id/550/600/400" alt="">
+					</div>
+					<div class="lk-aside-user__title">Наталья Ивановна</div>
+				</div>
+	
+				<div class="lk-aside-links" data-toggle-cover>
+					<div class="lk-aside-link lk-aside-toggler" data-toggle-link>Мой аккаунт
+						<svg class="icon">
+							<use xlink:href="img/icons.svg#navigate-right" />
+						</svg>
+					</div>
+					<div class="lk-aside-links-inner" data-toggle-height="true" data-toggle-static="true" data-toggle-content>
+	
+						<div class="lk-aside-link active btn">Заказы</div>
+						<div class="lk-aside-link btn">Настройки профиля</div>
+						<div class="lk-aside-link btn">Изменить пароль</div>
+						<div class="lk-aside-link lk-aside-link--exit btn btn--link btn--red">
+							<span class="lk-aside-link-dashed">Выйти из личного кабинета</span>
+						</div>
+					</div>
+				</div>
+			</div>
+	
+			<div class="lk-content">
+				<div class="lk-profile">
+					<div class="lk-profile-images">
+						<label class="lk-profile-image-loader" data-input-dropable>
+							<div class="lk-profile-image-loader-block">
+								<input type="file" accept="image/*" data-input-file data-preview="lk-profile-photo"
+									data-error="lk-profile-images-error" data-accept="image" data-max="8192">
+								<div class="lk-profile-image-loader-icon">
+									<img class="icon text-h1" src="img/dacha/photograph.svg" alt="">
+								</div>
+								<div class="text-body-1 d-none d-md-block mt-5">
+									Нажмите <br>
+									или перетащите <br>
+									изображение <br>
+									для загрузки
+								</div>
+							</div>
+						</label>
+						<div class="lk-profile-image-item">
+							<img src="https://picsum.photos/id/1081/600/400" alt="" class="lk-profile-image-item-img"
+								id="lk-profile-photo">
+							<div class="lk-profile-image-item-remove" data-remove-src="lk-profile-photo">
+								<img src="img/icons/delete.svg" alt="">
+							</div>
+						</div>
+					</div>
+					<div class="text-body-2 mt-1 color-red" id="lk-profile-images-error"></div>
+	
+					<div class="lk-profile-data">
+	
+						<div class="text-h6 mb-6 mt-8">Личные данные</div>
+
+						<div class="lk-profile-form">
+		
+							<div class="grid grid-spacing-5 grid-spacing-md-7">
+								<div class="grid-col-lg-4">
+									<label class="ui-form-field">
+										<div class="text-body-1 text--bold mb-3"><span class="color-red">*</span>Фамилия</div>
+										<div class="ui-form-input-cover">
+											<input type="text" class="ui-form-input" required>
+										</div>
+									</label>
+								</div>
+								<div class="grid-col-lg-4">
+									<label class="ui-form-field">
+										<div class="text-body-1 text--bold mb-3"><span class="color-red">*</span>Имя</div>
+										<div class="ui-form-input-cover">
+											<input type="text" class="ui-form-input" required>
+										</div>
+									</label>
+								</div>
+								<div class="grid-col-lg-4">
+									<label class="ui-form-field">
+										<div class="text-body-1 text--bold mb-3"><span class="color-red">*</span>Отчество</div>
+										<div class="ui-form-input-cover">
+											<input type="text" class="ui-form-input" required>
+										</div>
+									</label>
+								</div>
+								<div class="grid-col-md-6">
+									<label class="ui-form-field">
+										<div class="text-body-1 text--bold mb-3"><span class="color-red">*</span>Номер</div>
+										<div class="ui-form-input-cover">
+											<input type="tel" class="ui-form-input">
+										</div>
+									</label>
+								</div>
+								<div class="grid-col-md-6">
+									<label class="ui-form-field">
+										<div class="text-body-1 text--bold mb-3">E-mail</div>
+										<div class="ui-form-input-cover">
+											<input type="email" class="ui-form-input">
+										</div>
+									</label>
+								</div>
+								<div class="grid-col-md-6">
+									<label class="ui-form-field">
+										<div class="text-body-1 text--bold mb-3">Дата рождения</div>
+										<div class="ui-form-input-cover">
+											<input type="date" class="ui-form-input">
+										</div>
+									</label>
+								</div>
+								<div class="grid-col-md-6">
+									<div class="ui-form-field">
+										<div class="text-body-1 text--bold mb-3">Пол</div>
+										<div class="ui-form-items">
+											<label class="ui-form-field ui-form-checkbox ui-form-item">
+												<input type="radio" class="ui-form-input" name="gender" checked>
+												<div class="text-body-1 ui-form-gender-target">Мужской</div>
+											</label>
+											<label class="ui-form-field ui-form-checkbox ui-form-item">
+												<input type="radio" class="ui-form-input" name="gender">
+												<div class="text-body-1 ui-form-gender-target">Женский</div>
+											</label>
+										</div>
+									</div>
+								</div>
+		
+								<div class="bd-bottom d-md-none mt-10"></div>
+		
+								<div class="grid-col-md-6">
+									<label class="ui-form-field">
+										<div class="text-body-1 text--bold mb-3">Садоводческий стаж</div>
+										<div class="ui-form-input-cover">
+											<input type="text" class="ui-form-input">
+										</div>
+									</label>
+								</div>
+								<div class="grid-col-md-6">
+									<div class="text-body-1 text--bold mb-3">Зона USDA</div>
+									<!-- <label class="ui-form-field ui-form-select">
+										<div class="ui-form-input-cover">
+		
+											<select name="" id="" class="ui-form-input">
+												<option value="">Первая</option>
+												<option value="">Вторая</option>
+												<option value="">Третья</option>
+												<option value="">4-я</option>
+												<option value="">5-я</option>
+												<option value="">6-я</option>
+												<option value="">7-я</option>
+												<option value="">8-я</option>
+												<option value="">10-я</option>
+											</select>
+										</div>
+									</label> -->
+		
+		
+									<div class="select" data-toggle-cover data-content="select-area-content">
+										<select class="select-target">
+											<option value="0"></option>
+											<option value="1"></option>
+											<option value="2"></option>
+											<option value="3"></option>
+										</select>
+										<div class="select-toggler ui-form-input" data-toggle-link>
+											<div class="select-item-inner color-light">
+												<span class="color-text">Первая</span>, Центральная Сибирь
+											</div>
+										</div>
+										<div class="select-list" data-toggle-content>
+											<div class="select-item" data-toggle-link data-value="0">
+												<div class="select-item-inner color-light">
+													<span class="color-text">Первая</span>, Центральная Сибирь
+												</div>
+												<div class="select-item-content">
+													Морозостойкость от −45.6 °C до −51.1 °C (Центральная Сибирь)
+												</div>
+											</div>
+											<div class="select-item" data-toggle-link data-value="1">
+												<div class="select-item-inner color-light">
+													<span class="color-text">Вторая</span>, Южная Сибирь
+												</div>
+												<div class="select-item-content">Морозостойкость от −40 °C до −45.6 °C (Южная Сибирь)</div>
+											</div>
+											<div class="select-item" data-toggle-link data-value="2">
+												<div class="select-item-inner color-light">
+													<span class="color-text">Третья</span>, Урал, Восточная Сибирь
+												</div>
+												<div class="select-item-content">
+													Морозостойкость от −34.4 °C до −40 °C (Урал, Восточная Сибирь)
+												</div>
+											</div>
+											<div class="select-item" data-toggle-link data-value="3">
+												<div class="select-item-inner color-light">
+													<span class="color-text">Четвертая</span>, Московская область и большая большая
+												</div>
+												<div class="select-item-content">
+													Морозостойкость от −28.9 °C до −34.4 °C (Московская область и большая часть Центральной России)
+												</div>
+											</div>
+										</div>
+									</div>
+		
+									<!-- <div class="text-body-2 text--fade mt-2" id="select-area-content">
+										Максимально возможная зимняя температура до -45С (Екатеринбург, Красноярск)
+									</div> -->
+								</div>
+		
+								<div class="bd-bottom d-md-none mt-5"></div>
+		
+								<div class="grid-col-12">
+									<label class="ui-form-field">
+										<div class="text-body-1 text--bold mb-3">О себе</div>
+										<div class="ui-form-input-cover">
+											<textarea class="ui-form-input"></textarea>
+										</div>
+									</label>
+								</div>
+							</div>
+
+						</div>
+					</div>
+	
+					<div class="lk-profile-address mt-8">
+						<div class="text-h6 mb-6 ">Адрес для доставки</div>
+						<div class="lk-profile-form">
+							<div class="grid grid-spacing-5 grid-spacing-md-7">
+								<div class="grid-col-12">
+									<label class="ui-form-field">
+										<div class="text-body-1 text--bold mb-3">Местоположение</div>
+										<div class="ui-form-input-cover">
+											<input type="text" class="ui-form-input">
+										</div>
+									</label>
+								</div>
+								<div class="grid-col-lg-6">
+									<label class="ui-form-field">
+										<div class="text-body-1 text--bold mb-3">Улица</div>
+										<div class="ui-form-input-cover">
+											<input type="text" class="ui-form-input">
+										</div>
+									</label>
+								</div>
+								<div class="grid-col-md-2 grid-col-6">
+									<label class="ui-form-field">
+										<div class="text-body-1 text--bold mb-3">Дом</div>
+										<div class="ui-form-input-cover">
+											<input type="text" class="ui-form-input">
+										</div>
+									</label>
+								</div>
+								<div class="grid-col-md-2 grid-col-6">
+									<label class="ui-form-field">
+										<div class="text-body-1 text--bold mb-3">Квартира</div>
+										<div class="ui-form-input-cover">
+											<input type="text" class="ui-form-input">
+										</div>
+									</label>
+								</div>
+								<div class="grid-col-md-2 grid-col-6">
+									<label class="ui-form-field">
+										<div class="text-body-1 text--bold mb-3">Индекс</div>
+										<div class="ui-form-input-cover">
+											<input type="text" class="ui-form-input">
+										</div>
+									</label>
+								</div>
+							</div>
+						</div>
+						<button class="btn btn--accent mt-8">Сохранить изменения</button>
+					</div>
+				</div>
+	
+			</div>
+		</div>
+	</section>
+
+	<%= _.template(require('./html-includes/footer.html').default)() %>

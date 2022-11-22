@@ -1,0 +1,567 @@
+<%= _.template(require('./html-includes/header.html').default)() %>
+
+	<section class="container-block page-block">
+		<div class="page-link mb-6">
+			<a href="">Главная</a> / <span>Каталог</span>
+		</div>
+		<a class="back-btn btn btn--white mb-2 mb-md-8" href="">
+			<img class="icon text-small" src="img/arrow-left.svg" alt="">
+			<span class="back-btn__text ml-2">Назад</span>
+		</a>
+		<h1 class="page-title mb-5 mb-md-9">тюльпаны</h1>
+		
+
+		<div class="category-block">
+			<div>
+				
+				<div class="catalog-control">
+					<div class="control-item" data-toggle-cover>
+						<button class="control-item-top" data-toggle-link>
+							<div class="control-item-top-title">Сортировка: <span>по популярности</span></div>
+							<div class="control-item-top-icon">
+								<svg class="icon">
+									<use xlink:href="img/icons.svg#navigate-down" />
+								</svg>
+							</div>
+						</button>
+						<div class="control-mobile" data-toggle-link>
+							<svg class="icon">
+								<use xlink:href="img/icons.svg#sort" />
+							</svg>
+						</div>
+						<div class="control-item-menu" data-toggle-content>
+							<div class="control-item-link">Цена по убывыанию</div>
+							<div class="control-item-link">Цена по возрастанию</div>
+							<div class="control-item-link active">По популярности</div>
+							<div class="control-item-link">По новизне</div>
+						</div>
+					</div>
+					<div class="control-mobile" data-toggle-link="catalog-filter">
+						<svg class="icon">
+							<use xlink:href="img/icons.svg#sliders" />
+						</svg>
+					</div>
+				</div>
+
+				<div class="catalog-control-mobile">
+					<div class="control-item" data-toggle-cover>
+						<button class="control-item-top" data-toggle-link>
+							<div class="control-item-top-title">Сортировка: <span>по популярности</span></div>
+							<div class="control-item-top-icon">
+								<svg class="icon">
+									<use xlink:href="img/icons.svg#navigate-down" />
+								</svg>
+							</div>
+						</button>
+						<div class="control-mobile" data-toggle-link>
+							<svg class="icon">
+								<use xlink:href="img/icons.svg#sort" />
+							</svg>
+						</div>
+						<div class="control-item-menu" data-toggle-content>
+							<div class="control-item-link">Цена по убывыанию</div>
+							<div class="control-item-link">Цена по возрастанию</div>
+							<div class="control-item-link active">По популярности</div>
+							<div class="control-item-link">По новизне</div>
+						</div>
+					</div>
+					<div class="control-mobile" data-toggle-link="catalog-filter">
+						<svg class="icon">
+							<use xlink:href="img/icons.svg#sliders" />
+						</svg>
+					</div>
+				</div>
+				
+				<div class="card-items card-items--3">
+					<div class="card-page">
+						<div class="card-page__title" style="background-color: #3FC54C;">Новинка</div>
+						<picture>
+							<source srcset="img/roza.webp" type="image/webp">
+							<img src="img/roza.png" loading="lazy" class="card-page__image">
+						</picture>
+						<div class="card-page-text">
+							<div class="card-page-text-grade">
+								<div class="card-page-text-grade-stars mr-3">
+									<img src="img/dacha/star.svg">
+									<img src="img/dacha/star.svg">
+									<img src="img/dacha/star.svg">
+									<img src="img/dacha/star.svg">
+									<img src="img/dacha/star.svg">
+								</div>
+								<div class="card-page-text-grade__review">5.0</div>
+								<img src="img/like.svg" class="card-page__like"></img>
+							</div>
+							<div class="card-page-text__subtitle">Роза Беби Маскарад (Baby Masquerade)</div>
+							<div class="card-page-text__price">
+								<div class="card-page-text__price-new">390 руб.</div>
+								<div class="card-page-text__price-old ml-2">390 руб.</div>
+							</div>
+							<a class="btn btn--accent mt-auto" href="">
+								<svg class="icon text-h6 mr-2">
+									<use xlink:href="img/icons.svg#shopping-cart" />
+								</svg>
+								В корзину
+							</a>
+						</div>
+					</div>
+					<div class="card-page">
+						<div class="card-page__title" style="background-color: #DF9527;">Хит!</div>
+						<picture>
+							<source srcset="img/roza.webp" type="image/webp">
+							<img src="img/roza.png" loading="lazy" class="card-page__image">
+						</picture>
+						<div class="card-page-text">
+							<div class="card-page-text-grade">
+								<div class="card-page-text-grade-stars mr-3">
+									<img src="img/dacha/star.svg">
+									<img src="img/dacha/star.svg">
+									<img src="img/dacha/star.svg">
+									<img src="img/dacha/star.svg">
+									<img src="img/dacha/star.svg">
+								</div>
+								<div class="card-page-text-grade__review">5.0</div>
+								<img src="img/like.svg" class="card-page__like"></img>
+							</div>
+							<div class="card-page-text__subtitle">Роза Беби Маскарад (Baby Masquerade)</div>
+							<div class="card-page-text__price">
+								<div class="card-page-text__price-new">390 руб.</div>
+								<div class="card-page-text__price-old ml-2">390 руб.</div>
+							</div>
+							<a class="btn btn--accent mt-auto" href="">
+								<svg class="icon text-h6 mr-2">
+									<use xlink:href="img/icons.svg#shopping-cart" />
+								</svg>
+								В корзину
+							</a>
+						</div>
+					</div>
+					<div class="card-page">
+						<div class="card-page__title" style="background-color: #D12F2F;">Скидка</div>
+						<picture>
+							<source srcset="img/roza.webp" type="image/webp">
+							<img src="img/roza.png" loading="lazy" class="card-page__image">
+						</picture>
+						<div class="card-page-text">
+							<div class="card-page-text-grade">
+								<div class="card-page-text-grade-stars mr-3">
+									<img src="img/dacha/star.svg">
+									<img src="img/dacha/star.svg">
+									<img src="img/dacha/star.svg">
+									<img src="img/dacha/star.svg">
+									<img src="img/dacha/star.svg">
+								</div>
+								<div class="card-page-text-grade__review">5.0</div>
+								<img src="img/like.svg" class="card-page__like"></img>
+							</div>
+							<div class="card-page-text__subtitle">Роза Беби Маскарад (Baby Masquerade)</div>
+							<div class="card-page-text__price">
+								<div class="card-page-text__price-new">390 руб.</div>
+								<div class="card-page-text__price-old ml-2">390 руб.</div>
+							</div>
+							<a class="btn btn--accent mt-auto" href="">
+								<svg class="icon text-h6 mr-2">
+									<use xlink:href="img/icons.svg#shopping-cart" />
+								</svg>
+								В корзину
+							</a>
+						</div>
+					</div>
+					<div class="card-page">
+						<div class="card-page__title" style="background-color: #3FC54C;">Новинка</div>
+						<picture>
+							<source srcset="img/roza.webp" type="image/webp">
+							<img src="img/roza.png" loading="lazy" class="card-page__image">
+						</picture>
+						<div class="card-page-text">
+							<div class="card-page-text-grade">
+								<div class="card-page-text-grade-stars mr-3">
+									<img src="img/dacha/star.svg">
+									<img src="img/dacha/star.svg">
+									<img src="img/dacha/star.svg">
+									<img src="img/dacha/star.svg">
+									<img src="img/dacha/star.svg">
+								</div>
+								<div class="card-page-text-grade__review">5.0</div>
+								<img src="img/like.svg" class="card-page__like"></img>
+							</div>
+							<div class="card-page-text__subtitle">Роза Беби Маскарад (Baby Masquerade)</div>
+							<div class="card-page-text__price">
+								<div class="card-page-text__price-new">390 руб.</div>
+								<div class="card-page-text__price-old ml-2">390 руб.</div>
+							</div>
+							<a class="btn btn--accent mt-auto" href="">
+								<svg class="icon text-h6 mr-2">
+									<use xlink:href="img/icons.svg#shopping-cart" />
+								</svg>
+								В корзину
+							</a>
+						</div>
+					</div>
+					<div class="card-page">
+						<div class="card-page__title" style="background-color: #DF9527;">Хит!</div>
+						<picture>
+							<source srcset="img/roza.webp" type="image/webp">
+							<img src="img/roza.png" loading="lazy" class="card-page__image">
+						</picture>
+						<div class="card-page-text">
+							<div class="card-page-text-grade">
+								<div class="card-page-text-grade-stars mr-3">
+									<img src="img/dacha/star.svg">
+									<img src="img/dacha/star.svg">
+									<img src="img/dacha/star.svg">
+									<img src="img/dacha/star.svg">
+									<img src="img/dacha/star.svg">
+								</div>
+								<div class="card-page-text-grade__review">5.0</div>
+								<img src="img/like.svg" class="card-page__like"></img>
+							</div>
+							<div class="card-page-text__subtitle">Роза Беби Маскарад (Baby Masquerade)</div>
+							<div class="card-page-text__price">
+								<div class="card-page-text__price-new">390 руб.</div>
+								<div class="card-page-text__price-old ml-2">390 руб.</div>
+							</div>
+							<a class="btn btn--accent mt-auto" href="">
+								<svg class="icon text-h6 mr-2">
+									<use xlink:href="img/icons.svg#shopping-cart" />
+								</svg>
+								В корзину
+							</a>
+						</div>
+					</div>
+					<div class="card-page">
+						<div class="card-page__title" style="background-color: #D12F2F;">Скидка</div>
+						<picture>
+							<source srcset="img/roza.webp" type="image/webp">
+							<img src="img/roza.png" loading="lazy" class="card-page__image">
+						</picture>
+						<div class="card-page-text">
+							<div class="card-page-text-grade">
+								<div class="card-page-text-grade-stars mr-3">
+									<img src="img/dacha/star.svg">
+									<img src="img/dacha/star.svg">
+									<img src="img/dacha/star.svg">
+									<img src="img/dacha/star.svg">
+									<img src="img/dacha/star.svg">
+								</div>
+								<div class="card-page-text-grade__review">5.0</div>
+								<img src="img/like.svg" class="card-page__like"></img>
+							</div>
+							<div class="card-page-text__subtitle">Роза Беби Маскарад (Baby Masquerade)</div>
+							<div class="card-page-text__price">
+								<div class="card-page-text__price-new">390 руб.</div>
+								<div class="card-page-text__price-old ml-2">390 руб.</div>
+							</div>
+							<a class="btn btn--accent mt-auto" href="">
+								<svg class="icon text-h6 mr-2">
+									<use xlink:href="img/icons.svg#shopping-cart" />
+								</svg>
+								В корзину
+							</a>
+						</div>
+					</div>
+					<div class="card-page">
+						<div class="card-page__title" style="background-color: #3FC54C;">Новинка</div>
+						<picture>
+							<source srcset="img/roza.webp" type="image/webp">
+							<img src="img/roza.png" loading="lazy" class="card-page__image">
+						</picture>
+						<div class="card-page-text">
+							<div class="card-page-text-grade">
+								<div class="card-page-text-grade-stars mr-3">
+									<img src="img/dacha/star.svg">
+									<img src="img/dacha/star.svg">
+									<img src="img/dacha/star.svg">
+									<img src="img/dacha/star.svg">
+									<img src="img/dacha/star.svg">
+								</div>
+								<div class="card-page-text-grade__review">5.0</div>
+								<img src="img/like.svg" class="card-page__like"></img>
+							</div>
+							<div class="card-page-text__subtitle">Роза Беби Маскарад (Baby Masquerade)</div>
+							<div class="card-page-text__price">
+								<div class="card-page-text__price-new">390 руб.</div>
+								<div class="card-page-text__price-old ml-2">390 руб.</div>
+							</div>
+							<a class="btn btn--accent mt-auto" href="">
+								<svg class="icon text-h6 mr-2">
+									<use xlink:href="img/icons.svg#shopping-cart" />
+								</svg>
+								В корзину
+							</a>
+						</div>
+					</div>
+					<div class="card-page">
+						<div class="card-page__title" style="background-color: #DF9527;">Хит!</div>
+						<picture>
+							<source srcset="img/roza.webp" type="image/webp">
+							<img src="img/roza.png" loading="lazy" class="card-page__image">
+						</picture>
+						<div class="card-page-text">
+							<div class="card-page-text-grade">
+								<div class="card-page-text-grade-stars mr-3">
+									<img src="img/dacha/star.svg">
+									<img src="img/dacha/star.svg">
+									<img src="img/dacha/star.svg">
+									<img src="img/dacha/star.svg">
+									<img src="img/dacha/star.svg">
+								</div>
+								<div class="card-page-text-grade__review">5.0</div>
+								<img src="img/like.svg" class="card-page__like"></img>
+							</div>
+							<div class="card-page-text__subtitle">Роза Беби Маскарад (Baby Masquerade)</div>
+							<div class="card-page-text__price">
+								<div class="card-page-text__price-new">390 руб.</div>
+								<div class="card-page-text__price-old ml-2">390 руб.</div>
+							</div>
+							<a class="btn btn--accent mt-auto" href="">
+								<svg class="icon text-h6 mr-2">
+									<use xlink:href="img/icons.svg#shopping-cart" />
+								</svg>
+								В корзину
+							</a>
+						</div>
+					</div>
+					<div class="card-page">
+						<div class="card-page__title" style="background-color: #D12F2F;">Скидка</div>
+						<picture>
+							<source srcset="img/roza.webp" type="image/webp">
+							<img src="img/roza.png" loading="lazy" class="card-page__image">
+						</picture>
+						<div class="card-page-text">
+							<div class="card-page-text-grade">
+								<div class="card-page-text-grade-stars mr-3">
+									<img src="img/dacha/star.svg">
+									<img src="img/dacha/star.svg">
+									<img src="img/dacha/star.svg">
+									<img src="img/dacha/star.svg">
+									<img src="img/dacha/star.svg">
+								</div>
+								<div class="card-page-text-grade__review">5.0</div>
+								<img src="img/like.svg" class="card-page__like"></img>
+							</div>
+							<div class="card-page-text__subtitle">Роза Беби Маскарад (Baby Masquerade)</div>
+							<div class="card-page-text__price">
+								<div class="card-page-text__price-new">390 руб.</div>
+								<div class="card-page-text__price-old ml-2">390 руб.</div>
+							</div>
+							<a class="btn btn--accent mt-auto" href="">
+								<svg class="icon text-h6 mr-2">
+									<use xlink:href="img/icons.svg#shopping-cart" />
+								</svg>
+								В корзину
+							</a>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="category-filter" id="catalog-filter">
+				<div class="category-filter-block mb-2">
+					<div class="category-filter-body " data-toggle-cover>
+						<button class="category-filter__toggler w-100 text--demibold toggle-active" data-toggle-link>
+							Раздел
+							<svg class="icon ml-auto text-small color-text">
+								<use xlink:href="img/icons.svg#triangle-right" />
+							</svg>
+						</button>
+						<div class="toggle-active" data-toggle-content data-toggle-height="true"
+							data-toggle-static="true">
+							<div class="category-filter-fields">
+								<div class="category-filter-field">
+									<div class="category-filter-checklist">
+										<label class="ui-form-field ui-form-checkbox">
+											<input type="checkbox" class="ui-form-input">
+											<div class="ui-form-checkbox-target">
+												<svg class="icon">
+													<use xlink:href="img/icons.svg#gal-ochka" />
+												</svg>
+											</div>
+											<div class="ui-form-label">Хризантема </div>
+										</label>
+										<label class="ui-form-field ui-form-checkbox">
+											<input type="checkbox" class="ui-form-input">
+											<div class="ui-form-checkbox-target">
+												<svg class="icon">
+													<use xlink:href="img/icons.svg#gal-ochka" />
+												</svg>
+											</div>
+											<div class="ui-form-label">Гвоздика </div>
+										</label>
+										<label class="ui-form-field ui-form-checkbox">
+											<input type="checkbox" class="ui-form-input">
+											<div class="ui-form-checkbox-target">
+												<svg class="icon">
+													<use xlink:href="img/icons.svg#gal-ochka" />
+												</svg>
+											</div>
+											<div class="ui-form-label">Роза </div>
+										</label>
+
+
+
+									</div>
+								</div>
+							</div>
+						</div>
+
+					</div>
+				</div>
+				<div class="category-filter-block mb-2">
+					<div class="category-filter-body " data-toggle-cover>
+						<button class="category-filter__toggler w-100 text--demibold" data-toggle-link>
+							Расстояние при посадке
+							<svg class="icon ml-auto text-small color-text">
+								<use xlink:href="img/icons.svg#triangle-right" />
+							</svg>
+						</button>
+						<div class="" data-toggle-content data-toggle-height="true" data-toggle-static="true">
+							<div class="category-filter-fields">
+								<div class="category-filter-field">
+									<div class="category-filter-checklist">
+										<label class="ui-form-field ui-form-checkbox">
+											<input type="checkbox" class="ui-form-input">
+											<div class="ui-form-checkbox-target">
+												<svg class="icon">
+													<use xlink:href="img/icons.svg#gal-ochka" />
+												</svg>
+											</div>
+											<div class="ui-form-label">80 cм </div>
+										</label>
+										<label class="ui-form-field ui-form-checkbox">
+											<input type="checkbox" class="ui-form-input">
+											<div class="ui-form-checkbox-target">
+												<svg class="icon">
+													<use xlink:href="img/icons.svg#gal-ochka" />
+												</svg>
+											</div>
+											<div class="ui-form-label"> 100 см </div>
+										</label>
+
+									</div>
+								</div>
+							</div>
+						</div>
+
+					</div>
+				</div>
+
+				<div class="category-filter-block">
+					<div class="text-h6 mb-4 mt-3">Цена</div>
+					<div class="category-filter-body">
+						<div class="category-filter-fields">
+							<div class="category-filter-field">
+								<div class="grid">
+									<div class="grid-col-6">
+										<div class="text-body-2 mb-1">От</div>
+										<div class="ui-form-field">
+											<input type="text" class="-cost-range-slider-from- ui-form-input">
+										</div>
+									</div>
+									<div class="grid-col-6">
+										<div class="text-body-2 mb-1">До</div>
+										<div class="ui-form-field">
+											<input type="text" class="-cost-range-slider-to- ui-form-input">
+										</div>
+									</div>
+								</div>
+								<div class="category-filter-range ui-form-range">
+									<input type="text" class="-cost-range-slider-" data-type="double" data-min="0"
+										data-max="2400" data-from="200" data-to="2400" />
+
+								</div>
+							</div>
+						</div>
+					</div>
+
+
+				</div>
+
+				<script>
+					(() => {
+						var $range = $(".-cost-range-slider-");
+						var $inputFrom = $(".-cost-range-slider-from-");
+						var $inputTo = $(".-cost-range-slider-to-");
+						var instance;
+						var min = 0;
+						var max = 1000;
+						var from = 0;
+						var to = 0;
+
+						$range.ionRangeSlider({
+							skin: 'round',
+							hide_min_max: true,
+							hide_from_to: true,
+							onStart: updateInputs,
+							onChange: updateInputs,
+							onFinish: updateInputs
+						});
+
+						instance = $range.data("ionRangeSlider");
+
+						function updateInputs(data) {
+							from = data.from;
+							to = data.to;
+
+							$inputFrom.prop("value", from);
+							$inputTo.prop("value", to);
+						}
+
+						$inputFrom.on("input", function () {
+							var val = $(this).prop("value");
+
+							// validate
+							if (val < min) {
+								val = min;
+							} else if (val > to) {
+								val = to;
+							}
+
+							instance.update({
+								from: val
+							});
+
+							$(this).prop("value", val);
+
+						});
+
+						$inputTo.on("input", function () {
+							var val = $(this).prop("value");
+
+							// validate
+							if (val < from) {
+								val = from;
+							} else if (val > max) {
+								val = max;
+							}
+
+							instance.update({
+								to: val
+							});
+
+							$(this).prop("value", val);
+						});
+					})();
+				</script>
+				<div class="category-filter-block">
+					<button class="btn btn--accent btn--fill w-100 mt-6">Показать</button>
+					<button class="btn btn--grey w-100 mt-4">Сбросить</button>
+				</div>
+			</div>
+		</div>
+		<div class="pagination mt-10">
+			<a class="pagination__link btn btn--white" href="">
+				<img class="icon" src="img/arrow-left.svg" alt="">
+			</a>
+			<a class="pagination__link pagination__link--active btn btn--primary" href="">1</a>
+			<a class="pagination__link pagination__link--number btn btn--gray btn--contur" href="">2</a>
+			<a class="pagination__link pagination__link--number btn btn--gray btn--contur" href="">3</a>
+			<a class="pagination__link pagination__link--number btn btn--gray btn--contur" href="">4</a>
+			<a class="pagination__link pagination__link--number btn btn--gray btn--contur" href="">5</a>
+			<a class="pagination__link pagination__link--dotted btn btn--gray btn--contur" href="">...</a>
+			<a class="pagination__link pagination__link--number btn btn--gray btn--contur" href="">26</a>
+			<a class="pagination__link btn btn--white" href="">
+				<img class="icon" src="img/arrow-right.svg" alt="">
+			</a>
+		</div>
+	</section>
+
+<%= _.template(require('./html-includes/footer.html').default)() %>

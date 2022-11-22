@@ -1,0 +1,867 @@
+<%= _.template(require('./html-includes/header.html').default)() %>
+
+	<!-- Слайдер -->
+	<section class="slider container-block">
+		<div class="image-slider swiper swiper-container" data-speed="1000">
+			<div class="image-slider__wrapper swiper-wrapper">
+				<div class="image-slider__slide swiper-slide slide-background">
+					<div class="image-slider__image ui-progress-container slider-radius">
+						<div class="ui-progress color-white">
+							<svg class="icon">
+								<use xlink:href="img/utils.svg#CircularProgress" />
+							</svg>
+						</div>
+						<img src="img/dacha/banner.png" alt="">
+						<div class="image-slider__content ">
+							<div class="image-slider__date py-2 px-6 mb-5">До 1 декабря</div>
+							<div class="image-slider__text mb-2">Земляника, малина и клюква</div>
+							<div class="image-slider__title font-alt mb-5" style="color: #be2929;">со скидкой 30%</div>
+							<div class="image-slider__text mb-6">+ бесплатная доставка</div>
+							<button class="image-slider__btn btn btn--white"
+								style="--hover: #be2929;">Подробнее</button>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="slider__btn container-block">
+				<div class="swiper-button-prev"></div>
+				<div class="swiper-button-next"></div>
+			</div>
+		</div>
+		<!-- <div class="swiper-pagination"></div> -->
+	</section>
+
+	<!-- Лимитированные предложения -->
+	<section class="container-block limit">
+		<h1 class="page-title mb-5 mb-md-9">лимитированные предложения</h1>
+		<div class="limit-items">
+			<a href="" class="limit-item">
+				<div class="limit-image">
+					<img src="img/catalog_img_1.png" alt="" class="limit-img">
+					<div class="limit-time">
+						<div class="limit-name py-2 px-4">
+							<img class="mr-2" src="img/dacha/oclock.svg" alt="">
+							<span>осталось</span>
+						</div>
+						<div class="limit-days py-2 px-4">21 дн</div>
+					</div>
+				</div>
+				<div class="limit-content">
+					<span class="limit-title">Хит продаж</span>
+					<span class="limit-subtitle">Земляника, малина и клюква со скидкой 30%</span>
+				</div>
+			</a>
+			<a href="" class="limit-item">
+				<div class="limit-image">
+					<img src="img/catalog_img_1.png" alt="" class="limit-img">
+					<div class="limit-time">
+						<div class="limit-name py-2 px-4">
+							<img class="mr-2" src="img/dacha/oclock.svg" alt="">
+							<span>осталось</span>
+						</div>
+						<div class="limit-days py-2 px-4">21 дн</div>
+					</div>
+				</div>
+				<div class="limit-content">
+					<span class="limit-title">Хит продаж</span>
+					<span class="limit-subtitle">Земляника, малина и клюква со скидкой 30%</span>
+				</div>
+			</a>
+			<a href="" class="limit-item">
+				<div class="limit-image">
+					<img src="img/catalog_img_1.png" alt="" class="limit-img">
+					<div class="limit-time">
+						<div class="limit-name py-2 px-4">
+							<img class="mr-2" src="img/dacha/oclock.svg" alt="">
+							<span>осталось</span>
+						</div>
+						<div class="limit-days py-2 px-4">21 дн</div>
+					</div>
+				</div>
+				<div class="limit-content">
+					<span class="limit-title">Хит продаж</span>
+					<span class="limit-subtitle">Земляника, малина и клюква со скидкой 30%</span>
+				</div>
+			</a>
+			<a href="" class="limit-item">
+				<div class="limit-image">
+					<img src="img/catalog_img_1.png" alt="" class="limit-img">
+					<div class="limit-time">
+						<div class="limit-name py-2 px-4">
+							<img class="mr-2" src="img/dacha/oclock.svg" alt="">
+							<span>осталось</span>
+						</div>
+						<div class="limit-days py-2 px-4">21 дн</div>
+					</div>
+				</div>
+				<div class="limit-content">
+					<span class="limit-title">Хит продаж</span>
+					<span class="limit-subtitle">Земляника, малина и клюква со скидкой 30%</span>
+				</div>
+			</a>
+			<a href="" class="limit-item">
+				<div class="limit-image">
+					<img src="img/catalog_img_1.png" alt="" class="limit-img">
+					<div class="limit-time">
+						<div class="limit-name py-2 px-4">
+							<img class="mr-2" src="img/dacha/oclock.svg" alt="">
+							<span>осталось</span>
+						</div>
+						<div class="limit-days py-2 px-4">21 дн</div>
+					</div>
+				</div>
+				<div class="limit-content">
+					<span class="limit-title">Хит продаж</span>
+					<span class="limit-subtitle">Земляника, малина и клюква со скидкой 30%</span>
+				</div>
+			</a>
+			<a href="" class="limit-item">
+				<div class="limit-image">
+					<img src="img/catalog_img_1.png" alt="" class="limit-img">
+					<div class="limit-time">
+						<div class="limit-name py-2 px-4">
+							<img class="mr-2" src="img/dacha/oclock.svg" alt="">
+							<span>осталось</span>
+						</div>
+						<div class="limit-days py-2 px-4">21 дн</div>
+					</div>
+				</div>
+				<div class="limit-content">
+					<span class="limit-title">Хит продаж</span>
+					<span class="limit-subtitle">Земляника, малина и клюква со скидкой 30%</span>
+				</div>
+			</a>
+		</div>
+	</section>
+
+	<!-- Хиты продаж -->
+	<section class="container-block card">
+		<div class="card-top mb-5 mb-md-9">
+			<h1 class="page-title mb-1">хиты продаж</h1>
+			<a class="btn btn--accent btn--contur" href="">
+				<span class="color-text">Показать больше</span>
+			</a>
+		</div>
+		<div class="card-items card-items--4">
+			<div class="card-page">
+				<div class="card-page__title" style="background-color: #3FC54C;">Новинка</div>
+				<picture>
+					<source srcset="img/roza.webp" type="image/webp">
+					<img src="img/roza.png" loading="lazy" class="card-page__image">
+				</picture>
+				<div class="card-page-text">
+					<div class="card-page-text-grade">
+						<div class="card-page-text-grade-stars mr-3">
+							<img src="img/dacha/star.svg">
+							<img src="img/dacha/star.svg">
+							<img src="img/dacha/star.svg">
+							<img src="img/dacha/star.svg">
+							<img src="img/dacha/star.svg">
+						</div>
+						<div class="card-page-text-grade__review">5.0</div>
+						<img src="img/like.svg" class="card-page__like"></img>
+					</div>
+					<div class="card-page-text__subtitle">Роза Беби Маскарад (Baby Masquerade)</div>
+					<div class="card-page-text__price">
+						<div class="card-page-text__price-new">390 руб.</div>
+						<div class="card-page-text__price-old ml-2">390 руб.</div>
+					</div>
+					<a class="btn btn--accent mt-auto" href="">
+						<svg class="icon text-h6 mr-2">
+							<use xlink:href="img/icons.svg#shopping-cart" />
+						</svg>
+						В корзину
+					</a>
+				</div>
+			</div>
+			<div class="card-page">
+				<div class="card-page__title" style="background-color: #DF9527;">Хит!</div>
+				<picture>
+					<source srcset="img/roza.webp" type="image/webp">
+					<img src="img/roza.png" loading="lazy" class="card-page__image">
+				</picture>
+				<div class="card-page-text">
+					<div class="card-page-text-grade">
+						<div class="card-page-text-grade-stars mr-3">
+							<img src="img/dacha/star.svg">
+							<img src="img/dacha/star.svg">
+							<img src="img/dacha/star.svg">
+							<img src="img/dacha/star.svg">
+							<img src="img/dacha/star.svg">
+						</div>
+						<div class="card-page-text-grade__review">5.0</div>
+						<img src="img/like.svg" class="card-page__like"></img>
+					</div>
+					<div class="card-page-text__subtitle">Роза Беби Маскарад (Baby Masquerade)</div>
+					<div class="card-page-text__price">
+						<div class="card-page-text__price-new">390 руб.</div>
+						<div class="card-page-text__price-old ml-2">390 руб.</div>
+					</div>
+					<a class="btn btn--accent mt-auto" href="">
+						<svg class="icon text-h6 mr-2">
+							<use xlink:href="img/icons.svg#shopping-cart" />
+						</svg>
+						В корзину
+					</a>
+				</div>
+			</div>
+			<div class="card-page">
+				<div class="card-page__title" style="background-color: #D12F2F;">Скидка</div>
+				<picture>
+					<source srcset="img/roza.webp" type="image/webp">
+					<img src="img/roza.png" loading="lazy" class="card-page__image">
+				</picture>
+				<div class="card-page-text">
+					<div class="card-page-text-grade">
+						<div class="card-page-text-grade-stars mr-3">
+							<img src="img/dacha/star.svg">
+							<img src="img/dacha/star.svg">
+							<img src="img/dacha/star.svg">
+							<img src="img/dacha/star.svg">
+							<img src="img/dacha/star.svg">
+						</div>
+						<div class="card-page-text-grade__review">5.0</div>
+						<img src="img/like.svg" class="card-page__like"></img>
+					</div>
+					<div class="card-page-text__subtitle">Роза Беби Маскарад (Baby Masquerade)</div>
+					<div class="card-page-text__price">
+						<div class="card-page-text__price-new">390 руб.</div>
+						<div class="card-page-text__price-old ml-2">390 руб.</div>
+					</div>
+					<a class="btn btn--accent mt-auto" href="">
+						<svg class="icon text-h6 mr-2">
+							<use xlink:href="img/icons.svg#shopping-cart" />
+						</svg>
+						В корзину
+					</a>
+				</div>
+			</div>
+			<div class="card-page">
+				<picture>
+					<source srcset="img/roza.webp" type="image/webp">
+					<img src="img/roza.png" loading="lazy" class="card-page__image">
+				</picture>
+				<div class="card-page-text">
+					<div class="card-page-text-grade">
+						<div class="card-page-text-grade-stars mr-3">
+							<img src="img/dacha/star.svg">
+							<img src="img/dacha/star.svg">
+							<img src="img/dacha/star.svg">
+							<img src="img/dacha/star.svg">
+							<img src="img/dacha/star.svg">
+						</div>
+						<div class="card-page-text-grade__review">5.0</div>
+						<img src="img/like.svg" class="card-page__like"></img>
+					</div>
+					<div class="card-page-text__subtitle">Роза Беби Маскарад (Baby Masquerade)</div>
+					<div class="card-page-text__price">
+						<div class="card-page-text__price-new">390 руб.</div>
+						<div class="card-page-text__price-old ml-2">390 руб.</div>
+					</div>
+					<a class="btn btn--accent mt-auto" href="">
+						<svg class="icon text-h6 mr-2">
+							<use xlink:href="img/icons.svg#shopping-cart" />
+						</svg>
+						В корзину
+					</a>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<!-- Статистика -->
+	<section class="container-block statistics leaves">
+		<div class="statistics__item pl-lg-10 pr-lg-10">
+			<img class="statistics__img" src="img/dacha/statistics-1.png" alt="">
+			<div class="statistics__title mb-3">
+				Более 18 лет <br>опыта
+			</div>
+			<div class="statistics__text">
+				на садоводческом <br>рынке страны
+			</div>
+		</div>
+		<div class="statistics__item pr-lg-10">
+			<img class="statistics__img" src="img/dacha/statistics-2.png" alt="">
+			<div class="statistics__title mb-3">
+				15000 товаров <br>в каталоге
+			</div>
+			<div class="statistics__text">
+				в удобном каталоге <br>магазина
+			</div>
+		</div>
+		<div class="statistics__item pr-lg-10">
+			<img class="statistics__img" src="img/dacha/statistics-3.png" alt="">
+			<div class="statistics__title mb-3">
+				120 дней <br>гарантии на всё
+			</div>
+			<div class="statistics__text">
+				с момента получения <br>посылки
+			</div>
+		</div>
+		<div class="statistics__item pr-lg-10">
+			<img class="statistics__img" src="img/dacha/statistics-4.png" alt="">
+			<div class="statistics__title mb-3">
+				Круглосуточная <br>работа
+			</div>
+			<div class="statistics__text">
+				Отвечаем вам в чате <br>поддержки
+			</div>
+		</div>
+		<div class="statistics__item pr-lg-10">
+			<img class="statistics__img" src="img/dacha/statistics-5.png" alt="">
+			<div class="statistics__title mb-3">
+				3-х фазная <br>защита
+			</div>
+			<div class="statistics__text">
+				для эффективной <br>защиты саженцев
+			</div>
+		</div>
+	</section>
+
+	<!-- Каталог -->
+	<section class="container-block catalog">
+		<h1 class="page-title mb-5 mb-md-9">популярные категории</h1>
+		<div class="grid grid-spacing-lg-7">
+			<div class="grid-col-lg-3 grid-col-6">
+				<a class="catalog-item catalog-item--sm">
+					<div class="catalog-item__img ui-progress-container">
+						<div class="ui-progress">
+							<svg class="icon">
+								<use xlink:href="img/utils.svg#CircularProgress" />
+							</svg>
+						</div>
+						<img src="https://picsum.photos/id/103/600/400" alt="">
+					</div>
+					<div class="catalog-item__title">Клубника</div>
+				</a>
+			</div>
+			<div class="grid-col-lg-3 grid-col-6">
+				<a class="catalog-item catalog-item--sm">
+					<div class="catalog-item__img ui-progress-container">
+						<div class="ui-progress">
+							<svg class="icon">
+								<use xlink:href="img/utils.svg#CircularProgress" />
+							</svg>
+						</div>
+						<img src="https://picsum.photos/id/111/600/400" alt="">
+					</div>
+					<div class="catalog-item__title">Клубника</div>
+				</a>
+			</div>
+			<div class="grid-col-lg-3 grid-col-6">
+				<a class="catalog-item catalog-item--sm">
+					<div class="catalog-item__img ui-progress-container">
+						<div class="ui-progress">
+							<svg class="icon">
+								<use xlink:href="img/utils.svg#CircularProgress" />
+							</svg>
+						</div>
+						<img src="https://picsum.photos/id/133/600/400" alt="">
+					</div>
+					<div class="catalog-item__title">Клубника</div>
+				</a>
+			</div>
+			<div class="grid-col-lg-3 grid-col-6">
+				<a class="catalog-item catalog-item--sm">
+					<div class="catalog-item__img ui-progress-container">
+						<div class="ui-progress">
+							<svg class="icon">
+								<use xlink:href="img/utils.svg#CircularProgress" />
+							</svg>
+						</div>
+						<img src="https://picsum.photos/id/202/600/400" alt="">
+					</div>
+					<div class="catalog-item__title">Клубника</div>
+				</a>
+			</div>
+			<div class="grid-col-lg-3 grid-col-6">
+				<a class="catalog-item catalog-item--sm">
+					<div class="catalog-item__img ui-progress-container">
+						<div class="ui-progress">
+							<svg class="icon">
+								<use xlink:href="img/utils.svg#CircularProgress" />
+							</svg>
+						</div>
+						<img src="https://picsum.photos/id/212/600/400" alt="">
+					</div>
+					<div class="catalog-item__title">Клубника</div>
+				</a>
+			</div>
+			<div class="grid-col-lg-3 grid-col-6">
+				<a class="catalog-item catalog-item--sm">
+					<div class="catalog-item__img ui-progress-container">
+						<div class="ui-progress">
+							<svg class="icon">
+								<use xlink:href="img/utils.svg#CircularProgress" />
+							</svg>
+						</div>
+						<img src="https://picsum.photos/id/311/600/400" alt="">
+					</div>
+					<div class="catalog-item__title">Клубника</div>
+				</a>
+			</div>
+			<div class="grid-col-lg-3 grid-col-6">
+				<a class="catalog-item catalog-item--sm">
+					<div class="catalog-item__img ui-progress-container">
+						<div class="ui-progress">
+							<svg class="icon">
+								<use xlink:href="img/utils.svg#CircularProgress" />
+							</svg>
+						</div>
+						<img src="https://picsum.photos/id/320/600/400" alt="">
+					</div>
+					<div class="catalog-item__title">Клубника</div>
+				</a>
+			</div>
+			<div class="grid-col-lg-3 grid-col-6">
+				<a class="catalog-item catalog-item--sm">
+					<div class="catalog-item__img ui-progress-container">
+						<div class="ui-progress">
+							<svg class="icon">
+								<use xlink:href="img/utils.svg#CircularProgress" />
+							</svg>
+						</div>
+						<img src="https://picsum.photos/id/322/600/400" alt="">
+					</div>
+					<div class="catalog-item__title">Клубника</div>
+				</a>
+			</div>
+			<div class="grid-col-lg-3 grid-col-6">
+				<a class="catalog-item catalog-item--sm">
+					<div class="catalog-item__img ui-progress-container">
+						<div class="ui-progress">
+							<svg class="icon">
+								<use xlink:href="img/utils.svg#CircularProgress" />
+							</svg>
+						</div>
+						<img src="https://picsum.photos/id/323/600/400" alt="">
+					</div>
+					<div class="catalog-item__title">Клубника</div>
+				</a>
+			</div>
+			<div class="grid-col-lg-3 grid-col-6">
+				<a class="catalog-item catalog-item--sm">
+					<div class="catalog-item__img ui-progress-container">
+						<div class="ui-progress">
+							<svg class="icon">
+								<use xlink:href="img/utils.svg#CircularProgress" />
+							</svg>
+						</div>
+						<img src="https://picsum.photos/id/325/600/400" alt="">
+					</div>
+					<div class="catalog-item__title">Клубника</div>
+				</a>
+			</div>
+			<div class="grid-col-lg-3 grid-col-6">
+				<a class="catalog-item catalog-item--sm">
+					<div class="catalog-item__img ui-progress-container">
+						<div class="ui-progress">
+							<svg class="icon">
+								<use xlink:href="img/utils.svg#CircularProgress" />
+							</svg>
+						</div>
+						<img src="https://picsum.photos/id/327/600/400" alt="">
+					</div>
+					<div class="catalog-item__title">Клубника</div>
+				</a>
+			</div>
+			<div class="grid-col-lg-3 grid-col-6">
+				<a class="catalog-item catalog-item--sm">
+					<div class="catalog-item__img ui-progress-container">
+						<div class="ui-progress">
+							<svg class="icon">
+								<use xlink:href="img/utils.svg#CircularProgress" />
+							</svg>
+						</div>
+						<img src="https://picsum.photos/id/328/600/400" alt="">
+					</div>
+					<div class="catalog-item__title">Клубника</div>
+				</a>
+			</div>
+			<div class="grid-col-lg-3 grid-col-6">
+				<a class="catalog-item catalog-item--sm">
+					<div class="catalog-item__img ui-progress-container">
+						<div class="ui-progress">
+							<svg class="icon">
+								<use xlink:href="img/utils.svg#CircularProgress" />
+							</svg>
+						</div>
+						<img src="https://picsum.photos/id/330/600/400" alt="">
+					</div>
+					<div class="catalog-item__title">Клубника</div>
+				</a>
+			</div>
+			<div class="grid-col-lg-3 grid-col-6">
+				<a class="catalog-item catalog-item--sm">
+					<div class="catalog-item__img ui-progress-container">
+						<div class="ui-progress">
+							<svg class="icon">
+								<use xlink:href="img/utils.svg#CircularProgress" />
+							</svg>
+						</div>
+						<img src="https://picsum.photos/id/335/600/400" alt="">
+					</div>
+					<div class="catalog-item__title">Клубника</div>
+				</a>
+			</div>
+			<div class="grid-col-lg-3 grid-col-6">
+				<a class="catalog-item catalog-item--sm">
+					<div class="catalog-item__img ui-progress-container">
+						<div class="ui-progress">
+							<svg class="icon">
+								<use xlink:href="img/utils.svg#CircularProgress" />
+							</svg>
+						</div>
+						<img src="https://picsum.photos/id/337/600/400" alt="">
+					</div>
+					<div class="catalog-item__title">Клубника</div>
+				</a>
+			</div>
+			<div class="grid-col-lg-3 grid-col-6">
+				<a class="catalog-item catalog-item--sm">
+					<div class="catalog-item__img ui-progress-container">
+						<div class="ui-progress">
+							<svg class="icon">
+								<use xlink:href="img/utils.svg#CircularProgress" />
+							</svg>
+						</div>
+						<img src="https://picsum.photos/id/340/600/400" alt="">
+					</div>
+					<div class="catalog-item__title">Клубника</div>
+				</a>
+			</div>
+			<div class="grid-col-lg-3 grid-col-6">
+				<a class="catalog-item catalog-item--sm">
+					<div class="catalog-item__img ui-progress-container">
+						<div class="ui-progress">
+							<svg class="icon">
+								<use xlink:href="img/utils.svg#CircularProgress" />
+							</svg>
+						</div>
+						<img src="https://picsum.photos/id/342/600/400" alt="">
+					</div>
+					<div class="catalog-item__title">Клубника</div>
+				</a>
+			</div>
+			<div class="grid-col-lg-3 grid-col-6">
+				<a class="catalog-item catalog-item--sm">
+					<div class="catalog-item__img ui-progress-container">
+						<div class="ui-progress">
+							<svg class="icon">
+								<use xlink:href="img/utils.svg#CircularProgress" />
+							</svg>
+						</div>
+						<img src="https://picsum.photos/id/351/600/400" alt="">
+					</div>
+					<div class="catalog-item__title">Клубника</div>
+				</a>
+			</div>
+			<div class="grid-col-lg-3 grid-col-6">
+				<a class="catalog-item catalog-item--sm">
+					<div class="catalog-item__img ui-progress-container">
+						<div class="ui-progress">
+							<svg class="icon">
+								<use xlink:href="img/utils.svg#CircularProgress" />
+							</svg>
+						</div>
+						<img src="https://picsum.photos/id/353/600/400" alt="">
+					</div>
+					<div class="catalog-item__title">Клубника</div>
+				</a>
+			</div>
+			<div class="grid-col-lg-3 grid-col-6">
+				<a class="catalog-item catalog-item--sm">
+					<div class="catalog-item__img ui-progress-container">
+						<div class="ui-progress">
+							<svg class="icon">
+								<use xlink:href="img/utils.svg#CircularProgress" />
+							</svg>
+						</div>
+						<img src="https://picsum.photos/id/360/600/400" alt="">
+					</div>
+					<div class="catalog-item__title">Клубника</div>
+				</a>
+			</div>
+		</div>
+	</section>
+
+	<!-- Возможности -->
+	<section class="container-block opportunities">
+		<div class="image-slider swiper-container">
+			<div class="image-slider__wrapper swiper-wrapper">
+				<div class="image-slider__slide swiper-slide">
+					<div class="opportunities-slide">
+						<div class="opportunities-image opportunities__first">
+							<img src="img/1000+.svg" class="opportunities__icon">
+						</div>
+						<div class="opportunities__title">Ассортимент более 1000 сортов</div>
+					</div>
+				</div>
+				<div class="image-slider__slide swiper-slide">
+					<div class="opportunities-slide">
+						<div class="opportunities-image">
+							<img src="img/boxes.svg" class="opportunities__icon">
+						</div>
+						<div class="opportunities__title">Трехфазная упаковка для защиты саженцев</div>
+					</div>
+				</div>
+				<div class="image-slider__slide swiper-slide">
+					<div class="opportunities-slide">
+						<div class="opportunities-image">
+							<img src="img/apple.svg" class="opportunities__icon">
+						</div>
+						<div class="opportunities__title">Не устроило качество саженцев — сделаем замену</div>
+					</div>
+				</div>
+				<div class="image-slider__slide swiper-slide">
+					<div class="opportunities-slide">
+						<div class="opportunities-image">
+							<img src="img/wallet.svg" class="opportunities__icon">
+						</div>
+						<div class="opportunities__title">Оплата при получении товара</div>
+					</div>
+				</div>
+				<div class="image-slider__slide swiper-slide">
+					<div class="opportunities-slide">
+						<div class="opportunities-image">
+							<img src="img/camera.svg" class="opportunities__icon">
+						</div>
+						<div class="opportunities__title">Реальные фото и соответствие сорту</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="swiper-pagination"></div>
+	</section>
+
+	<!-- новинки -->
+	<section class="container-block card">
+		<div class="card-top mb-5 mb-md-9">
+			<h1 class="page-title mb-1">новинки</h1>
+			<a class="btn btn--accent btn--contur" href="">
+				<span class="color-text">Показать больше</span>
+			</a>
+		</div>
+		<div class="card-items card-items--4">
+			<div class="card-page">
+				<div class="card-page__title" style="background-color: #3FC54C;">Новинка</div>
+				<picture>
+					<source srcset="img/roza.webp" type="image/webp">
+					<img src="img/roza.png" loading="lazy" class="card-page__image">
+				</picture>
+				<div class="card-page-text">
+					<div class="card-page-text-grade">
+						<div class="card-page-text-grade-stars mr-3">
+							<img src="img/dacha/star.svg">
+							<img src="img/dacha/star.svg">
+							<img src="img/dacha/star.svg">
+							<img src="img/dacha/star.svg">
+							<img src="img/dacha/star.svg">
+						</div>
+						<div class="card-page-text-grade__review">5.0</div>
+						<img src="img/like.svg" class="card-page__like"></img>
+					</div>
+					<div class="card-page-text__subtitle">Роза Беби Маскарад (Baby Masquerade)</div>
+					<div class="card-page-text__price">
+						<div class="card-page-text__price-new">390 руб.</div>
+						<div class="card-page-text__price-old ml-2">390 руб.</div>
+					</div>
+					<a class="btn btn--accent mt-auto" href="">
+						<svg class="icon text-h6 mr-2">
+							<use xlink:href="img/icons.svg#shopping-cart" />
+						</svg>
+						В корзину
+					</a>
+				</div>
+			</div>
+			<div class="card-page">
+				<div class="card-page__title" style="background-color: #DF9527;">Хит!</div>
+				<picture>
+					<source srcset="img/roza.webp" type="image/webp">
+					<img src="img/roza.png" loading="lazy" class="card-page__image">
+				</picture>
+				<div class="card-page-text">
+					<div class="card-page-text-grade">
+						<div class="card-page-text-grade-stars mr-3">
+							<img src="img/dacha/star.svg">
+							<img src="img/dacha/star.svg">
+							<img src="img/dacha/star.svg">
+							<img src="img/dacha/star.svg">
+							<img src="img/dacha/star.svg">
+						</div>
+						<div class="card-page-text-grade__review">5.0</div>
+						<img src="img/like.svg" class="card-page__like"></img>
+					</div>
+					<div class="card-page-text__subtitle">Роза Беби Маскарад (Baby Masquerade)</div>
+					<div class="card-page-text__price">
+						<div class="card-page-text__price-new">390 руб.</div>
+						<div class="card-page-text__price-old ml-2">390 руб.</div>
+					</div>
+					<a class="btn btn--accent mt-auto" href="">
+						<svg class="icon text-h6 mr-2">
+							<use xlink:href="img/icons.svg#shopping-cart" />
+						</svg>
+						В корзину
+					</a>
+				</div>
+			</div>
+			<div class="card-page">
+				<div class="card-page__title" style="background-color: #D12F2F;">Скидка</div>
+				<picture>
+					<source srcset="img/roza.webp" type="image/webp">
+					<img src="img/roza.png" loading="lazy" class="card-page__image">
+				</picture>
+				<div class="card-page-text">
+					<div class="card-page-text-grade">
+						<div class="card-page-text-grade-stars mr-3">
+							<img src="img/dacha/star.svg">
+							<img src="img/dacha/star.svg">
+							<img src="img/dacha/star.svg">
+							<img src="img/dacha/star.svg">
+							<img src="img/dacha/star.svg">
+						</div>
+						<div class="card-page-text-grade__review">5.0</div>
+						<img src="img/like.svg" class="card-page__like"></img>
+					</div>
+					<div class="card-page-text__subtitle">Роза Беби Маскарад (Baby Masquerade)</div>
+					<div class="card-page-text__price">
+						<div class="card-page-text__price-new">390 руб.</div>
+						<div class="card-page-text__price-old ml-2">390 руб.</div>
+					</div>
+					<a class="btn btn--accent mt-auto" href="">
+						<svg class="icon text-h6 mr-2">
+							<use xlink:href="img/icons.svg#shopping-cart" />
+						</svg>
+						В корзину
+					</a>
+				</div>
+			</div>
+			<div class="card-page">
+				<picture>
+					<source srcset="img/roza.webp" type="image/webp">
+					<img src="img/roza.png" loading="lazy" class="card-page__image">
+				</picture>
+				<div class="card-page-text">
+					<div class="card-page-text-grade">
+						<div class="card-page-text-grade-stars mr-3">
+							<img src="img/dacha/star.svg">
+							<img src="img/dacha/star.svg">
+							<img src="img/dacha/star.svg">
+							<img src="img/dacha/star.svg">
+							<img src="img/dacha/star.svg">
+						</div>
+						<div class="card-page-text-grade__review">5.0</div>
+						<img src="img/like.svg" class="card-page__like"></img>
+					</div>
+					<div class="card-page-text__subtitle">Роза Беби Маскарад (Baby Masquerade)</div>
+					<div class="card-page-text__price">
+						<div class="card-page-text__price-new">390 руб.</div>
+						<div class="card-page-text__price-old ml-2">390 руб.</div>
+					</div>
+					<a class="btn btn--accent mt-auto" href="">
+						<svg class="icon text-h6 mr-2">
+							<use xlink:href="img/icons.svg#shopping-cart" />
+						</svg>
+						В корзину
+					</a>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<!-- Форма отправки -->
+	<section class="container-block consultation">
+		<form class="consultation__form py-5 px-4 py-md-10 px-md-8">
+			<div class="consultation__title page-title mb-4">
+				нужна бесплатная консультация?
+			</div>
+			<div class="text-body-1 mb-4 mb-md-5">
+				Отправьте заявку, а мы перезвоним и уточним
+				все детали и нюансы
+			</div>
+			<label class="consultation__label mb-4">
+				<span class="text-body-1 mb-2">Имя</span>
+				<input class="page-input" type="text" placeholder="Введите текст" required>
+			</label>
+			<label class="consultation__label mb-9">
+				<span class="text-body-1 mb-2">Телефон</span>
+				<input class="page-input" type="tel" placeholder="+7" required>
+			</label>
+			<button class="btn btn--accent mb-6" type="submit">Отправить</button>
+			<a class="consultation__politic" href="">
+				Отправляя форму Вы даете согласие на обработку <br>Ваших персональных данных
+			</a>
+		</form>
+	</section>
+
+	<!-- Новости садоводства -->
+	<section class="container-block news">
+		<div class="card-top mb-5 mb-md-9">
+			<h1 class="page-title mb-1">новости садоводства</h1>
+			<a class="btn btn--accent btn--contur" href="">
+				<span class="color-text">Показать больше</span>
+			</a>
+		</div>
+		<div class="image-slider swiper swiper-mp">
+			<div class="image-slider__wrapper swiper-wrapper">
+				<div class="image-slider__slide swiper-slide">
+					<div class="news-page">
+						<picture>
+							<source srcset="img/gard-1.webp" type="image/webp">
+							<img src="img/gard-1.png" loading="lazy" class="news__image">
+						</picture>
+						<div class="news-text">
+							<div class="news__date mb-10">02.03.21</div>
+							<div class="news__subtitle">
+								Можно ли совершать полив овощных посадо морской водой?
+							</div>
+							<p class="news__info mb-5">
+								Ответ на этот актуальный вопрос дали ученые из международной исследовательской группы...
+							</p>
+							<a class="news__btn btn btn--accent mt-auto" href="">Читать подробнее</a>
+						</div>
+					</div>
+				</div>
+				<div class="image-slider__slide swiper-slide">
+					<div class="news-page">
+						<picture>
+							<source srcset="img/gard-2.webp" type="image/webp">
+							<img src="img/gard-2.png" loading="lazy" class="news__image">
+						</picture>
+						<div class="news-text">
+							<div class="news__date mb-10">02.03.21</div>
+							<div class="news__subtitle">
+								Капуста, влюбившая в себя весь мир
+							</div>
+							<p class="news__info mb-5">
+								Известный агрохолдинг «Московский» явил миру совершенно новый продукт для...
+							</p>
+							<a class="news__btn btn btn--accent mt-auto" href="">Читать подробнее</a>
+						</div>
+					</div>
+				</div>
+				<div class="image-slider__slide swiper-slide">
+					<div class="news-page">
+						<picture>
+							<source srcset="img/gard-3.webp" type="image/webp">
+							<img src="img/gard-3.png" loading="lazy" class="news__image">
+						</picture>
+						<div class="news-text">
+							<div class="news__date mb-10">02.03.21</div>
+							<div class="news__subtitle">
+								Куда сдавать яблоки? Садоводы жалуются на проблемы с реализацией урожаев из-за импорта
+							</div>
+							<p class="news__info mb-5">
+								Ответ на этот актуальный вопрос дали ученые из международной...
+							</p>
+							<a class="news__btn btn btn--accent mt-auto" href="">Читать подробнее</a>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="swiper-pagination"></div>
+	</section>
+
+
+	<%= _.template(require('./html-includes/footer.html').default)() %>

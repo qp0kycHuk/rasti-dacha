@@ -1,0 +1,141 @@
+<%= _.template(require('./html-includes/header.html').default)() %>
+
+	
+	<section class="container-block page-block">
+		<div class="page-link mb-6">
+			<a href="">Главная</a> / <span>Каталог</span>
+		</div>
+		<a class="back-btn btn btn--white mb-2 mb-md-8" href="">
+			<img class="icon text-small" src="img/arrow-left.svg" alt="">
+			<span class="back-btn__text ml-2">Назад</span>
+		</a>
+		<h1 class="page-title mb-5 mb-md-9">корзина</h1>
+
+		<div class="basket">
+			<div class="basket__content">
+				<div class="basket-products">
+					<div class="basket-products-order">
+						<div class="basket-products-order-image">
+							<picture>
+								<source srcset="img/basket_3.webp" type="image/webp">
+								<img src="img/basket_3.png" loading="lazy">
+							</picture>
+						</div>
+						<div class="basket-products__content">
+							<div class="basket-products-order-quantity__title">Роза парковая Фердинанд Пичард</div>
+							<div class="text-small">
+								<div>Скидка <b>35%</b></div>
+								<div>Тип цены <b>Розничная цена</b></div>
+							</div>
+						</div>
+						<div class="basket-products-order-quantity">
+							<div class=" basket-products-order-quantity-counter">
+								<div class="counter">
+									<button class="counter-btn">-</button>
+									<input type="text" class="counter-input">
+									<button class="counter-btn">+</button>
+								</div>
+							</div>
+						</div>
+						<div class="basket-products-order__price">
+							<span class="basket-products-order__price-old">150 ₽</span>
+							<span class="basket-products-order__price-new">150 ₽</span>
+						</div>
+						<div class="basket-products-order-garbage mr-lg-5">
+							<svg class="icon text-h6">
+								<use xlink:href="img/icons.svg#x" />
+							</svg>
+						</div>
+					</div>
+					<div class="basket-products-order">
+						<div class="basket-products-order-image">
+							<picture>
+								<source srcset="img/basket_3.webp" type="image/webp">
+								<img src="img/basket_3.png" loading="lazy">
+							</picture>
+						</div>
+						<div class="basket-products__content">
+							<div class="basket-products-order-quantity__title">Роза парковая Фердинанд Пичард</div>
+							<div class="text-small">
+								<div>Скидка <b>35%</b></div>
+								<div>Тип цены <b>Розничная цена</b></div>
+							</div>
+						</div>
+						<div class="basket-products-order-quantity">
+							<div class=" basket-products-order-quantity-counter">
+								<div class="counter">
+									<button class="counter-btn">-</button>
+									<input type="text" class="counter-input">
+									<button class="counter-btn">+</button>
+								</div>
+							</div>
+						</div>
+						<div class="basket-products-order__price">
+							<span class="basket-products-order__price-old">150 ₽</span>
+							<span class="basket-products-order__price-new">150 ₽</span>
+						</div>
+						<div class="basket-products-order-garbage mr-lg-5">
+							<svg class="icon text-h6">
+								<use xlink:href="img/icons.svg#x" />
+							</svg>
+						</div>
+					</div>
+					<div class="basket-products-order">
+						<div class="basket-products-order-image">
+							<picture>
+								<source srcset="img/basket_3.webp" type="image/webp">
+								<img src="img/basket_3.png" loading="lazy">
+							</picture>
+						</div>
+						<div class="basket-products__content">
+							<div class="basket-products-order-quantity__title">Роза парковая Фердинанд Пичард</div>
+							<div class="text-small">
+								<div>Скидка <b>35%</b></div>
+								<div>Тип цены <b>Розничная цена</b></div>
+							</div>
+						</div>
+						<div class="basket-products-order-quantity">
+							<div class=" basket-products-order-quantity-counter">
+								<div class="counter">
+									<button class="counter-btn">-</button>
+									<input type="text" class="counter-input">
+									<button class="counter-btn">+</button>
+								</div>
+							</div>
+						</div>
+						<div class="basket-products-order__price">
+							<span class="basket-products-order__price-old">150 ₽</span>
+							<span class="basket-products-order__price-new">150 ₽</span>
+						</div>
+						<div class="basket-products-order-garbage mr-lg-5">
+							<svg class="icon text-h6">
+								<use xlink:href="img/icons.svg#x" />
+							</svg>
+						</div>
+					</div>
+				</div>
+				<div class="basket__promocode mt-10">
+					<div class="text-subtitle-2 mb-5">Введите код купона для скидки</div>
+					<form class="basket__promocode-form">
+						<input class="page-input" type="text">
+						<button class="btn btn--primary">Добавить</button>
+					</form>
+				</div>
+			</div>
+			<div class="basket-form">
+				<div class="basket-price">
+					<div class="basket-price__all"><span>К оплате</span><span class="basket-price__line"></span> <b>2100 руб.</b></div>
+					<div class="basket-price__product"><span>Товары, 3 шт.</span><span class="basket-price__line"></span><b>2100 руб.</b></div>
+					<div class="basket-price__subtitle">Без учета стоимости доставки</div>
+				</div>
+				<div class="basket-form__btns mt-3">
+					<div class="text-h6 mb-6">Оформить заказ </div>
+					<button class="btn btn--accent mb-4">Cамостоятельно</button>
+					<button class="btn btn--accent" data-fancybox-modal="" data-type="ajax" data-src="dialog-modal.html">С помощью менеджера</button>
+				</div>
+				<div class="basket-form__conditions">Читать условия доставки и оплаты</div>
+			</div>
+		</div>
+	</section>
+
+<%= _.template(require('./html-includes/footer.html').default)() %>

@@ -1,0 +1,24 @@
+<%= _.template(require('./html-includes/header.html').default)() %>
+
+	<section class="container-block page-block">
+		<div class="status">
+			<form class="status-form">
+				<div class="status__title font-alt py-4 px-8">Отследить товар</div>
+				<div class="status-form__items py-6 px-4 px-md-8">
+					<label class="status-form-label">
+						<span class="status-form-label__title">Телефон</span>
+						<span class="status-form-label__subtitle text-body-2 mb-3">который вы указали при заказе</span>
+						<input class="page-input" type="tel" placeholder="+7 (999) 999-99-99">
+					</label>
+					<label class="status-form-label status-form-label--error">
+						<span class="status-form-label__title mb-2">Номер заказа</span>
+						<input class="page-input" type="text" placeholder="Например,  А-159753">
+						<span class="status-form__error">Ошибка! Неверный номер заказа</span>
+					</label>
+					<button class="btn btn--accent w-100">Показать</button>
+				</div>
+			</form>
+		</div>
+	</section>
+
+<%= _.template(require('./html-includes/footer.html').default)() %>

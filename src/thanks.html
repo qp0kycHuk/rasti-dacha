@@ -1,0 +1,25 @@
+<%= _.template(require('./html-includes/header.html').default)() %>
+
+	<section class="container-block page-block">
+		<div class="page-link mb-6">
+			<a href="">Главная</a> / <span>Каталог</span>
+		</div>
+		<a class="back-btn btn btn--white mb-2 mb-md-8" href="">
+			<img class="icon text-small" src="img/arrow-left.svg" alt="">
+			<span class="back-btn__text ml-2">Назад</span>
+		</a>
+		<h1 class="page-title mb-5 mb-md-9">
+			<img class="icon mr-3" src="img/dacha/check.svg" alt="">
+			Спасибо за заказ
+		</h1>
+
+		<div class="payment-status">
+			<div class="payment-status__text mb-6">
+				Чтобы посмотреть статус заказа, нажмите кнопку или войдите в свою <a class="payment-status__link" href="">учетную запись</a>
+			</div>
+			<a class="payment-status__btn btn btn--accent" href="">Перейти в мои заказы</a>
+		</div>
+		
+	</section>
+
+	<%= _.template(require('./html-includes/footer.html').default)() %>

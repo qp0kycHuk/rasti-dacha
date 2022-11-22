@@ -1,0 +1,290 @@
+<%= _.template(require('./html-includes/header.html').default)() %>
+
+
+
+	<section class="container-block page--block basket basket-data-block">
+		<div class="basket-data-visibly">
+			<div class="basket-data__title">Ваши данные</div>
+			<div class="basket-data-client">
+				<label class="basket-data-client-label form-field form-field-error">
+					<span class="basket-data-client-label__title">Имя</span>
+					<input type="text" class="basket-data-client-label__input form-input">
+					<span class="form__err">Обязательное поле для заполнения</span>
+				</label>
+				<label class="basket-data-client-label">
+					<span class="basket-data-client-label__title">Фамилия</span>
+					<input type="text" class="basket-data-client-label__input form-input">
+				</label>
+				<label class="basket-data-client-label">
+					<span class="basket-data-client-label__title">Телефон</span>
+					<input type="tel" class="basket-data-client-label__input form-input">
+				</label>
+				<label class="basket-data-client-label">
+					<span class="basket-data-client-label__title explanation-label">Электронная почта для чека
+					
+						<div class="explanation" data-toggle-cover>
+							<button class="explanation-btn" data-toggle-link>
+								<svg class="icon"><use xlink:href="img/icons.svg#explanation" /></svg>
+							</button>
+							<div class="explanation-content" data-toggle-content="">
+								На эту электронную почту мы отправим чек. Если чек не нужен, оставьте поле пустым
+							</div>
+						</div>
+					</span>
+					<input type="email" class="basket-data-client-label__input form-input">
+				</label>
+			</div>
+		</div>
+		<div class="basket-data">
+			<div class="basket-data__title basket-data-none">Ваши данные</div>
+			<div class="basket-data-client basket-data-none">
+				<label class="basket-data-client-label form-field form-field-error">
+					<span class="basket-data-client-label__title">Имя</span>
+					<input type="text" class="basket-data-client-label__input form-input">
+					<span class="form__err">Обязательное поле для заполнения</span>
+				</label>
+				<label class="basket-data-client-label">
+					<span class="basket-data-client-label__title">Фамилия</span>
+					<input type="text" class="basket-data-client-label__input form-input">
+				</label>
+				<label class="basket-data-client-label">
+					<span class="basket-data-client-label__title">Телефон</span>
+					<input type="tel" class="basket-data-client-label__input form-input">
+				</label>
+				<label class="basket-data-client-label">
+					<span class="basket-data-client-label__title explanation-label">Электронная почта для чека 
+
+						<div class="explanation" data-toggle-cover>
+							<button class="explanation-btn" data-toggle-link>
+								<svg class="icon"><use xlink:href="img/icons.svg#explanation" /></svg>
+							</button>
+							<div class="explanation-content" data-toggle-content="">
+								На эту электронную почту мы отправим чек. Если чек не нужен, оставьте поле пустым
+							</div>
+						</div>
+					</span>
+					<input type="email" class="basket-data-client-label__input form-input">
+				</label>
+			</div>
+			<div class="basket-data__title basket-data__subtitle">
+				<span>Способ доставки</span>
+				<button data-fancybox-modal data-src="dialog-cost.html">Узнать стоимость доставки</button>
+			</div>
+			<div class="basket-data-delivery" data-tab-cover>
+				<div class="basket-data-buttons">
+					<label class="basket-data-buttons-check">
+						<input type="radio" name="buttons-1" checked data-tab-link="delivery-1">
+						<div class="basket-data-buttons__btn">Самовывоз СДЭК</div>
+					</label>
+					<label class="basket-data-buttons-check" data-tab-link="delivery-2">
+						<input type="radio" name="buttons-1">
+						<div class="basket-data-buttons__btn">Курьер на дом СДЭК</div>
+					</label>
+					<label class="basket-data-buttons-check" data-tab-link="delivery-3">
+						<input type="radio" name="buttons-1">
+						<div class="basket-data-buttons__btn">Почта России</div>
+					</label>
+				</div>
+				<div class="basket-data-delivery-cover">
+					<div class="basket-data-delivery-content" data-tab-content="delivery-1">
+						<div class="basket-data-address">
+							<div class="basket-data-address__title">Компания СДЭК (Самовывоз)</div>
+							<div class="basket-data-address__subtitle">Срок доставки с момента отправки</div>
+							<div class="basket-data-address__workday">2-3 дня</div>
+							<button class="btn btn--accent mt-10">Выбрать пункт самовывоза</button>
+						</div>
+					</div>
+					<div class="basket-data-delivery-content" data-tab-content="delivery-2">
+						<div class="basket-data-address">
+							<div class="basket-data-address__title">Компания СДЭК (Курьер)</div>
+							<div class="basket-data-address__subtitle">Срок доставки с момента отправки</div>
+							<div class="basket-data-address__workday">2-3 дня</div>
+							<div class="basket-data-address-form grid grid-spacing-7">
+								<div class="grid-col-lg-6">
+									<label class="basket-data-address-form-label form-field basket-data-population">
+										<span class="basket-data-address-form-label form-field__title">Населенный пункт</span>
+										<input type="text" class="basket-data-client-label__input form-input">
+									</label>
+								</div>
+								<div class="grid-col-lg-6">
+									<label class="basket-data-address-form-label form-field basket-data-street">
+										<span class="basket-data-address-form-label form-field__title">Улица</span>
+										<input type="text" class="basket-data-client-label__input form-input">
+									</label>
+								</div>
+								<div class="grid-col-lg-2 grid-col-4">
+									<label class="basket-data-address-form-label form-field form-field-error basket-data-home">
+										<span class="basket-data-address-form-label form-field__title">Дом</span>
+										<input type="text" class="basket-data-client-label__input form-input">
+										<span class="form__err">Обязательное поле для заполнения</span>
+									</label>
+								</div>
+								<div class="grid-col-lg-2 grid-col-4">
+									<label class="basket-data-address-form-label form-field basket-data-body">
+										<span class="basket-data-address-form-label form-field__title">Корпус</span>
+										<input type="text" class="basket-data-client-label__input form-input">
+									</label>
+								</div>
+								<div class="grid-col-lg-2 grid-col-4">
+									<label class="basket-data-address-form-label form-field basket-data-flat">
+										<span class="basket-data-address-form-label form-field__title">Квартира</span>
+										<input type="text" class="basket-data-client-label__input form-input">
+									</label>
+								</div>
+								
+							</div>
+						</div>
+					</div>
+					<div class="basket-data-delivery-content" data-tab-content="delivery-3">
+						<div class="basket-data-address">
+							<div class="basket-data-address__title">Почта России (Посылка стандарт)</div>
+							<div class="basket-data-address__subtitle">Срок доставки с момента отправки</div>
+							<div class="basket-data-address__workday">до 8 раб. дней</div>
+							<div class="basket-data-address-form grid grid-spacing-7">
+								<div class="grid-col-lg-6">
+									<label class="basket-data-address-form-label form-field basket-data-population form-field form-field-error">
+										<span class="basket-data-address-form-label form-field__title">Населенный пункт</span>
+										<input type="text" class="basket-data-client-label__input form-input form-input">
+										<span class="form__err">Обязательное поле для заполнения</span>
+									</label>
+								</div>
+								<div class="grid-col-lg-6">
+									<label class="basket-data-address-form-label form-field basket-data-street">
+										<span class="basket-data-address-form-label form-field__title">Улица</span>
+										<input type="text" class="basket-data-client-label__input form-input">
+									</label>
+								</div>
+								<div class="grid-col-lg-2 grid-col-4">
+									<label class="basket-data-address-form-label form-field basket-data-home">
+										<span class="basket-data-address-form-label form-field__title">Дом</span>
+										<input type="text" class="basket-data-client-label__input form-input">
+									</label>
+								</div>
+								<div class="grid-col-lg-2 grid-col-4">
+									<label class="basket-data-address-form-label form-field basket-data-body">
+										<span class="basket-data-address-form-label form-field__title">Корпус</span>
+										<input type="text" class="basket-data-client-label__input form-input">
+									</label>
+								</div>
+								<div class="grid-col-lg-2 grid-col-4">
+									<label class="basket-data-address-form-label form-field basket-data-flat">
+										<span class="basket-data-address-form-label form-field__title">Квартира</span>
+										<input type="text" class="basket-data-client-label__input form-input">
+									</label>
+								</div>
+								<div class="grid-col-lg-6">
+									<label class="basket-data-address-form-label form-field basket-data-index">
+										<span class="basket-data-address-form-label form-field__title">Индекс</span>
+										<input type="text" class="basket-data-client-label__input form-input">
+									</label>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+
+			</div>
+
+			<div class="basket-data__title">Способ оплаты</div>
+			<div class="basket-data-buttons basket-data-buttons-2">
+				<label class="basket-data-buttons-check">
+					<input type="radio" name="buttons-2" checked>
+					<div class="basket-data-buttons__btn">Списать с личного счета: 300,20 руб.</div>
+				</label>
+				<label class="basket-data-buttons-check">
+					<input type="radio" name="buttons-2">
+					<div class="basket-data-buttons__btn">Банковской картой</div>
+				</label>
+			</div>
+			<div class="basket-data-bank">
+				<div class="basket-data-bank__title">Мы принимаем:</div>
+				<div class="basket-data-bank__cards">
+					<img src="img/bank_1.png" class="basket-data-bank__card">
+					<img src="img/bank_2.png" class="basket-data-bank__card">
+					<img src="img/bank_3.png" class="basket-data-bank__card">
+				</div>
+			</div>
+
+			<div class="basket-promocode">
+				<div class="basket-promocode-title">Добавить промокод</div>
+				<div class="basket-promocode-fields">
+					<div class="basket-promocode-field form-field form-field-error">
+						<input type="text" class="form__input form-input basket-promocode-input">
+						<span class="form__err">Данный промокод не действителен</span>
+					</div>
+					<button class="basket-promocode-btn btn btn--accent">Добавить</button>
+				</div>
+			</div>
+		</div>
+		<div class="basket-form">
+			<div class="basket-price">
+				<div class="basket-price__all"><span>К оплате</span> <span>2340 руб.</span></div>
+				<div class="basket-price__product"><span>Товары, 3 шт.</span> <span>2340 руб.</span></div>
+				<div class="basket-price__subtitle">Без учета стоимости доставки</div>
+				<button class="btn btn--accent">Оформить заказ</button>
+				<div class="basket-price__agreement">Нажимая на кнопку Вы соглашаетесь на обработку персональных данных
+					и с условиями покупки</div>
+			</div>
+			<div class="basket-mini">
+				<div class="basket-mini-titles">
+					<div class="basket-mini-titles__title">Ваши товары</div>
+					<div class="basket-mini-titles__subtitle">Изменить</div>
+				</div>
+				<div class="basket-mini-scroll">
+					<div class="status-delivery-intelligence-product basket-mini-scroll-product">
+						<div class="status-delivery-intelligence-product-image">
+							<picture>
+								<source srcset="img/basket_3.webp" type="image/webp">
+								<img src="img/basket_3.png" loading="lazy">
+							</picture>
+						</div>
+						<div class="status-delivery-intelligence-product-name">
+							<span class="status-delivery-intelligence-product-name__title">Роза Августа Луиза (Augusta
+								Luise)</span>
+							<span class="status-delivery-intelligence-product-name__quantity">Кол-во: 1 </span>
+						</div>
+					</div>
+					<div class="status-delivery-intelligence-product basket-mini-scroll-product">
+						<div class="status-delivery-intelligence-product-image">
+							<picture>
+								<source srcset="img/basket_2.webp" type="image/webp">
+								<img src="img/basket_2.png" loading="lazy">
+							</picture>
+						</div>
+						<div class="status-delivery-intelligence-product-name">
+							<span class="status-delivery-intelligence-product-name__title">Жимолость Нимфа</span>
+							<span class="status-delivery-intelligence-product-name__quantity">Кол-во: 1 </span>
+						</div>
+					</div>
+					<div class="basket-mini-scroll__all">Все товары</div>
+					<div class="status-delivery-intelligence-product basket-mini-scroll-product">
+						<div class="status-delivery-intelligence-product-image">
+							<picture>
+								<source srcset="img/basket_1.webp" type="image/webp">
+								<img src="img/basket_1.png" loading="lazy">
+							</picture>
+						</div>
+						<div class="status-delivery-intelligence-product-name">
+							<span class="status-delivery-intelligence-product-name__title">Абрикос</span>
+							<span class="status-delivery-intelligence-product-name__quantity">Кол-во: 1 </span>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+
+
+	<!-- Соцсети -->
+	<section class="container-block social">
+		<div class="social__title">Мы в социальных сетях:</div>
+		<div class="social-icons">
+			<a href="#"><img src="img/ok.svg" class="social-icons_image"></a>
+			<a href="#"><img src="img/vk.svg" class="social-icons_image"></a>
+			<a href="#"><img src="img/instagramm.svg" class="social-icons_image"></a>
+			<a href="#"><img src="img/youtube.svg" class="social-icons_image"></a>
+			<a href="#"><img src="img/dzen.svg" class="social-icons_image"></a>
+		</div>
+	</section>
+
+<%= _.template(require('./html-includes/footer.html').default)() %>
