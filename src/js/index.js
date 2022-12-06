@@ -14,21 +14,21 @@ import '../scss/index.scss'
 window.addEventListener('DOMContentLoaded', loadHandler)
 
 function loadHandler() {
-    toggle.init()
-    tab.init()
-    inputTel.init()
-    slider.init()
-    fancybox.init()
-    showPass.init()
-    select.init()
-    filterCheck.init()
-    profileLoadPhoto.init()
+	toggle.init()
+	tab.init()
+	inputTel.init()
+	slider.init()
+	fancybox.init()
+	showPass.init()
+	select.init()
+	filterCheck.init()
+	profileLoadPhoto.init()
 
-    ripple.init();
-    ripple.attach('.btn:not(.btn--link)');
-    ripple.attach('.waves');
-    ripple.attach('.card-page__image');
-    ripple.attach('.card-page-card-icon');
+	ripple.init();
+	ripple.attach('.btn:not(.btn--link)');
+	ripple.attach('.waves');
+	ripple.attach('.card-page__image');
+	ripple.attach('.card-page-card-icon');
 }
 
 
@@ -96,8 +96,16 @@ window.addEventListener('submit', (event) => {
 		.then((result) => {
 			console.log(result);
 
-			jQuery.fancybox.close()
-			jQuery.fancybox.openModal('/local/ajax/dialog-info.html')
+			Fancybox.close()
+
+			Fancybox.show([{
+
+				src: '/local/ajax/dialog-info.php',
+				type: 'ajax',
+				dragToClose: false,
+				mainClass: 'fancybox-modal'
+
+			}])
 
 			event.target.reset()
 			event.target.querySelectorAll('.form-field-error').forEach(element => element.classList.remove('form-field-error'));
