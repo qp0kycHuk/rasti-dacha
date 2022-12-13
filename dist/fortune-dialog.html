@@ -1,0 +1,219 @@
+<div class="fancybox-content">
+  <div class="fortune-dialog">
+    <div class="fortune-dialog-left">
+      <canvas id="fortune-dialog-canvas" class="fortune-dialog-canvas active"></canvas>
+      <div class="fortune-dialog-prize">
+        <div class="fortune-dialog-prize-top">
+          Ваш приз 5 семян<br>
+          <span class="-prize-name-">Земляника (Клубника) Гигант русский F1 </span><br>
+          уже лежит в корзине!
+        </div>
+        <div class="fortune-dialog-prize-img">
+          <img src="" alt="" class="-prize-img-">
+        </div>
+      </div>
+    </div>
+    <div class="fortune-dialog-right">
+      <div class="fortune-dialog-preview active">
+        <div class="fortune-dialog-preview__title">Выиграй</div>
+        <div class="fortune-dialog-preview__subtitle">
+          один из ценных призов <br>
+          к каждому заказу!
+        </div>
+        <button class="btn btn--accent fortune-dialog-preview__btn -start-spin-">Крутить колесо</button>
+      </div>
+      <div class="fortune-dialog-win">
+        <div class="fortune-dialog-win__title">вы выиграли!</div>
+        <div class="fortune-dialog-win__subtitle">
+          Приз автоматически появится <br>
+          в вашем заказе. После оплаты можно <br>
+          крутить еще раз!
+        </div>
+        <div class="fortune-dialog-win__separator"></div>
+        <div class="fortune-dialog-win__subtitle">
+          Сколько оплаченых заказов <br>
+          столько и выигранных призов!
+        </div>
+        <div class="fortune-dialog-win__sign">
+          Чтобы забрать заказ, Вам нужно <br>
+          зарегистрироваться!
+        </div>
+        <button class="btn btn--accent fortune-dialog-win__btn">Зарегистрироваться</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script src="http://cdnjs.cloudflare.com/ajax/libs/gsap/latest/TweenMax.min.js"></script>
+<script src="source/Winwheel.min.js"></script>
+<script>
+  (() => {
+    const segments = [
+      { prizeId: '47BF79', fillStyle: '#47BF79', text: ' 5 семян', },
+      { prizeId: 'BB6BD9', fillStyle: '#BB6BD9', text: '10 семян', },
+      { prizeId: '9B51E0', fillStyle: '#9B51E0', text: '15 семян', },
+      { prizeId: '56CCF2', fillStyle: '#56CCF2', text: '20 семян', },
+      { prizeId: '2D9CDB', fillStyle: '#2D9CDB', text: '25 семян', },
+      { prizeId: '2F80ED', fillStyle: '#2F80ED', text: '30 семян', },
+      { prizeId: 'F2994A', fillStyle: '#F2994A', text: '35 семян', },
+      { prizeId: 'EB5757', fillStyle: '#EB5757', text: '40 семян', }
+    ]
+    const canvas = document.getElementById('fortune-dialog-canvas')
+    const multiple = 1
+    let radius = 230 * multiple
+    canvas.width = canvas.getBoundingClientRect().width * multiple
+    canvas.height = canvas.getBoundingClientRect().height * multiple
+    let wheelSpinning = false
+
+    let theWheel = new Winwheel({
+      canvasId: 'fortune-dialog-canvas',
+      numSegments: 8,
+      rotationAngle: -(360 / 8) / 2,
+      textFontSize: 28 * multiple,
+      innerRadius: 36 * multiple,
+      textFillStyle: '#fff',
+      textFontSize: 24 * multiple,
+      strokeStyle: null,
+      lineWidth: 0,
+      outerRadius: radius,
+      segments: segments,
+      centerX: canvas.width / 2,
+      centerY: canvas.height / 2,
+      animation: {
+        type: 'spinToStop',
+        duration: 5,
+        spins: 8,
+        callbackFinished: fortuneFinished,
+        callbackAfter: afterAnim
+      }
+    });
+
+
+
+    const topMarker = new Image();
+    topMarker.onload = drawMarker;
+    topMarker.src = 'img/sempl/fortune-top-marker.svg';
+    const logo = new Image();
+    logo.onload = drawLogo;
+    logo.src = 'img/sempl/fortune-cnter-logo.png';
+
+    function afterAnim() {
+      drawSamples()
+      drawMarker()
+      drawLogo()
+    }
+
+    function drawMarker() {
+      let ctx = canvas.getContext('2d');
+      if (ctx) {
+        ctx.save();
+        const width = canvas.width / 100 * 2 * 6.6 * multiple
+        const height = canvas.width / 100 * 2 * 7.0 * multiple
+        ctx.drawImage(
+          topMarker,
+          canvas.width / 2 - (width / 2),
+          20 * multiple,
+          width,
+          height);
+        ctx.restore();
+      }
+    }
+
+    function drawLogo() {
+      let ctx = canvas.getContext('2d');
+      if (ctx) {
+        ctx.save();
+        ctx.drawImage(logo, canvas.width / 2 - (72 * multiple / 2), canvas.height / 2 - (72 * multiple / 2), 72 * multiple, 72 * multiple);
+        ctx.restore();
+      }
+    }
+
+    function drawSamples() {
+      let ctx = canvas.getContext('2d');
+      ctx.strokeStyle = 'rgb(255, 255, 255)'
+      ctx.lineWidth = 10 * multiple
+      ctx.beginPath();
+      ctx.arc(canvas.width / 2, canvas.height / 2, radius, 0, 2 * Math.PI);
+      ctx.stroke();
+
+      ctx.strokeStyle = 'rgba(255, 255, 255, 0.3)'
+      ctx.lineWidth = 30 * multiple
+      ctx.beginPath();
+      ctx.arc(canvas.width / 2, canvas.height / 2, radius + 10 * multiple, 0, 2 * Math.PI);
+      ctx.stroke();
+    }
+
+    function fortuneOnClick(event) {
+      if (event.target.closest('.-start-spin-')) {
+        event.target.disabled = true
+        startSpin()
+      }
+    }
+
+    function fortuneOnResize() {
+      if (screen.width < 420) {
+        radius = 150 * multiple
+        theWheel.textFontSize = 16 * multiple
+      } else if (screen.width < 580) {
+        radius = 180 * multiple
+        theWheel.textFontSize = 18 * multiple
+      } else {
+        radius = 230 * multiple
+        theWheel.textFontSize = 24 * multiple
+      }
+      canvas.width = canvas.getBoundingClientRect().width * multiple
+      canvas.height = canvas.getBoundingClientRect().height * multiple
+      theWheel.outerRadius = radius
+      theWheel.centerX = canvas.width / 2
+      theWheel.centerY = canvas.height / 2
+
+      theWheel.draw()
+      afterAnim()
+
+
+    }
+
+    function startSpin() {
+
+      if (wheelSpinning !== false) return
+
+      theWheel.startAnimation();
+      wheelSpinning = true;
+
+    }
+
+
+    function fortuneFinished(indicatedSegment) {
+
+      // ajax request
+
+      document.querySelector('.fortune-dialog-win').classList.add('active')
+      document.querySelector('.fortune-dialog-preview').classList.remove('active')
+
+      document.querySelector('.fortune-dialog-prize').classList.add('active')
+      document.querySelector('.fortune-dialog-canvas').classList.remove('active')
+
+    }
+
+
+    drawSamples()
+    fortuneOnResize()
+    document.addEventListener('click', fortuneOnClick)
+    window.addEventListener('resize', fortuneOnResize)
+
+    // on modal close
+    const instance = $.fancybox.getInstance();
+
+    const onClose = (e, inst) => {
+      if (inst != instance) return;
+      $(document).unbind('afterClose.fb', onClose);
+
+      document.removeEventListener('click', fortuneOnClick)
+      window.removeEventListener('resize', fortuneOnResize)
+    }
+
+    $(document).bind('afterClose.fb', onClose)
+
+  })();
+
+</script>
