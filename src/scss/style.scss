@@ -5605,6 +5605,22 @@ header {
 	line-height: 23px;
 }
 
+.product-detail__empty {
+	background   : linear-gradient(90deg, #EEEEEE 0%, rgba(238, 238, 238, 0) 100%);
+	border-radius: 8px;
+	padding      : 34px;
+	font-weight  : 400;
+	font-size    : 36px;
+	color        : rgb(35, 35, 35, 0.6);
+}
+
+@media(max-width: 768px) {
+	.product-detail__empty {
+		padding  : 20px 10px;
+		font-size: 16px;
+	}
+}
+
 .product-stock__price .product-detail-btn {
 	margin-top: 17px;
 }
