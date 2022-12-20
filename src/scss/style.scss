@@ -6138,3 +6138,31 @@ header {
 	text-align: center;
 	cursor    : pointer;
 }
+
+
+.consultation-block {
+	background     : #F8F2AA;
+	border-radius  : 16px;
+	display        : flex;
+	align-items    : center;
+	justify-content: space-between;
+	flex-wrap      : wrap;
+	font-family    : var(--font-alt);
+	grid-gap       : 20px;
+}
+
+.consultation-block__text {
+	font-size  : 22px;
+	line-height: 1.5;
+	color      : #232323;
+}
+
+@media(max-width: 576px) {
+	.consultation-block__text {
+		font-size: 18px
+	}
+
+	.consultation-block__text b {
+		font-size: 20px;
+	}
+}
