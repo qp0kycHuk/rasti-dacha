@@ -15,7 +15,7 @@
 	--radius-large : 15px;
 
 
-	--spacing:4px;
+	--spacing: 4px;
 
 	--font-alt : 'PT Sans';
 	--font-base: 'Inter', Arial, Helvetica, sans-serif;
@@ -3802,5 +3802,126 @@ body {
 		border-radius: 0;
 		padding-left : 15px;
 		padding-right: 15px;
+	}
+}
+
+.top-buner {
+	// position       : sticky;
+	// top: 0;
+	position       : relative;
+	overflow       : hidden;
+	height         : 60px;
+	display        : flex;
+	align-items    : center;
+	justify-content: center;
+
+	@media (max-width:1420px) {
+		padding: 10px 15px;
+
+		height: auto;
+	}
+
+	&__left,
+	&__right {
+		position: absolute;
+		top     : 0;
+		height  : 100%;
+
+		img {
+			height: 100%;
+		}
+	}
+
+	&__left {
+		left: 0;
+
+		@media (max-width:1620px) {
+			left: -150px;
+		}
+
+		@media (max-width:1420px) {
+			display: none;
+		}
+	}
+
+	&__right {
+		right: 0;
+
+		@media (max-width:1620px) {
+			right: -150px;
+		}
+
+		@media (max-width:1420px) {
+			right: -200px;
+		}
+
+		@media (max-width:$md) {
+			display: none;
+		}
+	}
+
+	&__title {
+		text-align : center;
+		font-weight: 800;
+		font-size  : 16px;
+		font-family: var(--font-accent);
+		text-align : center;
+		position: relative;
+		z-index: 3;
+
+		@media (max-width:1620px) {
+			font-size: 16px;
+		}
+
+		@media (max-width:1420px) {
+			text-align  : left;
+			margin-right: auto;
+
+		}
+
+		@media (max-width:$lg) {
+			font-size: 16px;
+		}
+
+		@media (max-width:$md) {
+			font-size: 3.1vw;
+		}
+
+		@media (max-width:$sm) {
+			font-size: 4vw;
+		}
+
+
+	}
+
+	&__close {
+		// --size   : 30px;
+		// font-size: 12px;
+		position : relative;
+		z-index  : 3;
+
+		@media (min-width:$sm) {
+			// position: absolute;
+			// right   : 10px;
+			// top     : 10px;
+
+		}
+	}
+
+	&__link {
+		position: absolute;
+		inset   : 0;
+		z-index : 2;
+	}
+}
+
+.top-buner-wrapper {
+	position: relative;
+
+	.top-buner {
+		position: absolute;
+		left    : 0;
+		top     : 0;
+		width   : 100%;
 	}
 }
