@@ -132,7 +132,7 @@ header {
 	align-items    : center;
 	justify-content: space-between;
 	grid-gap       : 15px;
-	background     : #FFFFFF url('../img/new-year/head-bg.png') no-repeat center / cover;
+	background     : #FFFFFF;
 	box-shadow     : 0px 8px 16px rgba(35, 35, 35, 0.06);
 	border-radius  : 0px 0px 16px 16px;
 }
@@ -422,10 +422,8 @@ header {
 	display        : flex;
 	align-items    : center;
 	justify-content: space-between;
-	background     :
-		url('../img/new-year/nav-bg.png') no-repeat center / cover,
-		linear-gradient(90.26deg, rgba(0, 0, 0, 0.2) 0%, rgba(0, 0, 0, 0) 50.23%), var(--color-primary);
-	border-radius: 8px;
+	background     : linear-gradient(90.26deg, rgba(0, 0, 0, 0.2) 0%, rgba(0, 0, 0, 0) 50.23%), var(--color-primary);
+	border-radius  : 8px;
 }
 
 .nav-menu__btn {
@@ -5743,17 +5741,16 @@ header {
 
 /* Реквизиты */
 .requisites {
-	padding-top         : 46px;
-	padding-bottom      : 46px;
-	background-color    : var(--color-primary);
-	// background-image : url('../img/dacha/requisites-bg.png'), linear-gradient(86.7deg, #16644F 0%, rgba(22, 100, 79, 0) 52.73%);
-	background-image    : url('../img/new-year/footer.bg.png'), linear-gradient(86.7deg, #16644F 0%, rgba(22, 100, 79, 0) 52.73%);
-	background-repeat   : no-repeat;
-	background-size     : cover;
-	display             : flex;
-	justify-content     : space-between;
-	grid-gap            : 20px;
-	color               : #fff;
+	padding-top      : 46px;
+	padding-bottom   : 46px;
+	background-color : var(--color-primary);
+	background-image : url('../img/dacha/requisites-bg.png'), linear-gradient(86.7deg, #16644F 0%, rgba(22, 100, 79, 0) 52.73%);
+	background-repeat: no-repeat;
+	background-size  : cover;
+	display          : flex;
+	justify-content  : space-between;
+	grid-gap         : 20px;
+	color            : #fff;
 }
 
 .requisites a:not(.requisites-logo) {
@@ -6228,5 +6225,27 @@ header {
 
 	.documentation__pic {
 		order: 1;
+	}
+}
+
+.new-year-theme {
+	& .header-block__container {
+		background: #FFFFFF url('../img/new-year/head-bg.png') no-repeat center / cover;
+	}
+
+	& .nav-menu__block {
+		background:
+			url('../img/new-year/nav-bg.png') no-repeat center / cover,
+			linear-gradient(90.26deg, rgba(0, 0, 0, 0.2) 0%, rgba(0, 0, 0, 0) 50.23%), var(--color-primary);
+	}
+
+	& .requisites {
+		background-image: url('../img/new-year/footer.bg.png'), linear-gradient(86.7deg, #16644F 0%, rgba(22, 100, 79, 0) 52.73%);
+
+		@media(max-width: 989px) {
+			& {
+				background-image: linear-gradient(86.7deg, #16644F 0%, rgba(22, 100, 79, 0) 52.73%);
+			}
+		}
 	}
 }
