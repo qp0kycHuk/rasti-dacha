@@ -45,7 +45,7 @@
 
 
     &:focus:not(:active) {
-        background: var(--btn-color);
+        // background: var(--btn-color);
         box-shadow: 0 0 0 5px var(--btn-color-light);
 
     }
