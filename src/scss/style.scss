@@ -6264,3 +6264,125 @@ header {
 		}
 	}
 }
+
+.leave-page {
+	width          : 100%;
+	min-height     : 100vh;
+	overflow       : hidden;
+	position       : relative;
+	display        : flex;
+	flex-direction : column;
+	align-items    : center;
+	justify-content: center;
+
+	&--green {
+		background: linear-gradient(86.7deg, #16644F 0%, rgba(22, 100, 79, 0) 52.73%), #749E1B;
+	}
+
+	&--grey {
+		background: #F9F9F9;
+	}
+
+	&__bg {
+		position       : absolute;
+		inset          : 0;
+		pointer-events : none;
+		display        : flex;
+		align-items    : center;
+		justify-content: center;
+	}
+
+	&__blur {
+		position      : absolute;
+		inset         : 0;
+		width         : 100%;
+		height        : 100%;
+		object-fit    : cover;
+		mix-blend-mode: soft-light;
+	}
+
+	&__list {
+		width    : 100%;
+		max-width: 1400px;
+	}
+
+	&__content {
+		position       : relative;
+		display        : flex;
+		align-items    : center;
+		justify-content: center;
+		flex-direction : column;
+	}
+
+	&__info {
+		max-width    : 360px;
+		background   : #FFFFFF;
+		box-shadow   : 0px 20px 40px rgba(0, 0, 0, 0.05);
+		border-radius: 32px;
+		padding      : 16px;
+	}
+
+	&__head {
+		background   : linear-gradient(180deg, rgba(234, 243, 214, 0) 0%, #EAF3D6 100%);
+		border-radius: 32px;
+		position     : relative;
+		height       : 240px;
+
+		& img {
+			position  : absolute;
+			inset     : 0;
+			width     : 100%;
+			height    : 100%;
+			object-fit: scale-down;
+		}
+	}
+
+	&__block {
+		max-width      : 530px;
+		background     : #FFFFFF;
+		box-shadow     : 0px 20px 40px rgba(0, 0, 0, 0.05);
+		backdrop-filter: blur(20px);
+		border-radius  : 32px;
+		padding        : 47px 52px;
+	}
+
+	&__form {
+		display       : flex;
+		flex-direction: column;
+	}
+
+	&__input {
+		outline      : none;
+		width        : 100%;
+		background   : #FFFFFF;
+		border       : 1px solid #B5B5B5;
+		border-radius: 8px;
+		height       : 52px;
+		font-size    : 18px;
+		padding      : 13px 16px;
+
+		&--textarea {
+			height: 186px;
+		}
+
+		&::placeholder {
+			color: rgba(35, 35, 35, 0.4);
+		}
+	}
+
+	@media(max-width: $md) {
+		&__list {
+			display: none;
+		}
+
+		&__block {
+			padding: 48px 16px;
+		}
+
+		&__input {
+			&--textarea {
+				height: 100px;
+			}
+		}
+	}
+}
