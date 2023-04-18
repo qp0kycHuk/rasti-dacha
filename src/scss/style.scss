@@ -6344,6 +6344,15 @@ header {
 		backdrop-filter: blur(20px);
 		border-radius  : 32px;
 		padding        : 47px 52px;
+		width          : 100%;
+
+		&--success {
+			display        : flex;
+			align-items    : center;
+			justify-content: center;
+			flex-direction : column;
+			min-height     : 470px;
+		}
 	}
 
 	&__form {
@@ -6370,6 +6379,10 @@ header {
 		}
 	}
 
+	&__icon {
+		font-size: 162px;
+	}
+
 	@media(max-width: $md) {
 		&__list {
 			display: none;
@@ -6377,6 +6390,10 @@ header {
 
 		&__block {
 			padding: 48px 16px;
+
+			&--success {
+				min-height: 370px;
+			}
 		}
 
 		&__input {
