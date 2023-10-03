@@ -3,7 +3,7 @@ import tab from 'npm-kit-tab';
 import ripple from 'npm-kit-ripple';
 import slider from './slider'
 import fancybox from "./fancybox";
-import inputTel from "./input-tel";
+import phonemask from "./phonemask/phonemask";
 import showPass from "./show-pass";
 import select from "./select";
 import filterCheck from "./filter-check";
@@ -16,7 +16,7 @@ window.addEventListener('DOMContentLoaded', loadHandler)
 function loadHandler() {
 	toggle.init()
 	tab.init()
-	inputTel.init()
+	phonemask.init('[type="tel"]')
 	slider.init()
 	fancybox.init()
 	showPass.init()
