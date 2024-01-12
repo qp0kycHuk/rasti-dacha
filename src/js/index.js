@@ -8,17 +8,19 @@ import showPass from "./show-pass";
 import select from "./select";
 import filterCheck from "./filter-check";
 import profileLoadPhoto from "./profile-load-photo";
+import copyLink from "./copy-link";
 
 import '../scss/index.scss'
 
 window.addEventListener('DOMContentLoaded', loadHandler)
+
+fancybox.init()
 
 function loadHandler() {
 	toggle.init()
 	tab.init()
 	phonemask.init('[type="tel"]')
 	slider.init()
-	fancybox.init()
 	showPass.init()
 	select.init()
 	filterCheck.init()
@@ -29,6 +31,7 @@ function loadHandler() {
 	ripple.attach('.waves');
 	ripple.attach('.card-page__image');
 	ripple.attach('.card-page-card-icon');
+	copyLink.init()
 }
 
 
