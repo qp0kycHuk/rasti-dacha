@@ -9,6 +9,7 @@ import select from "./select";
 import filterCheck from "./filter-check";
 import profileLoadPhoto from "./profile-load-photo";
 import copyLink from "./copy-link";
+import canvasImage from "./canvas-image";
 
 import '../scss/index.scss'
 
@@ -32,6 +33,7 @@ function loadHandler() {
 	ripple.attach('.card-page__image');
 	ripple.attach('.card-page-card-icon');
 	copyLink.init()
+	canvasImage.init()
 }
 
 

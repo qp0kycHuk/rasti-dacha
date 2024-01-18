@@ -1,0 +1,40 @@
+<div class="dialog-click">
+	<div class="dialog-click__head font-alt p-4">
+		Отправить сертификат
+	</div>
+	<form class="dialog-click__form px-8 py-5 px-md-8" data-form>
+		<label class="dialog-click__label mb-8">
+			<span class="text-body-0 text--demibold mb-2">Ваша почта</span>
+			<input class="page-input" type="email" required>
+		</label>
+		<button class="btn btn--accent btn--fill">Отправить сертификат</button>
+	</form>
+</div>
+
+<script>
+	document.addEventListener('submit', (event) => {
+    	if (event.target.hasAttribute('data-form')) {
+			event.preventDefault()
+			
+			const form = event.target
+			const formData = new FormData(form)
+			const canvas = document.querySelector('#certificate-canvas-1')
+			const url = canvas.toDataURL()
+		
+			formData.append('certificate', url)
+
+			fetch('путь', {
+        		method: 'POST',
+        		body: formData,
+      		})
+        	.then((response) => {
+          		response.text()
+        	})
+        	.then(() => {
+				$.fancybox.close()
+		  		$.fancybox.openModal('модалка что отправлено')
+        	})
+        	.catch((error) => console.log('The form has not been sent', error))
+		}
+  	})
+</script>

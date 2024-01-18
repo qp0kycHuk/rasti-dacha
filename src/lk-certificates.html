@@ -1,0 +1,120 @@
+<%= _.template(require('./html-includes/header.html').default)() %>
+
+<section class="container-block page-block">
+
+  <div class="page-link mb-6">
+    <a href="">Главная</a> / <span>Каталог</span>
+  </div>
+  <a class="back-btn btn btn--white mb-2 mb-md-8" href="">
+    <img class="icon text-small" src="img/arrow-left.svg" alt="">
+    <span class="back-btn__text ml-2">Назад</span>
+  </a>
+  <h1 class="page-title mb-5 mb-md-9">Личный кабинет</h1>
+
+  <div class="lk-wrapper">
+    <div class="lk-aside">
+      <div class="lk-aside-user mb-10">
+        <div class="lk-aside-user__img">
+          <img src="https://picsum.photos/id/550/600/400" alt="">
+        </div>
+        <div class="lk-aside-user__title">Наталья Ивановна</div>
+      </div>
+
+      <div class="lk-aside-links" data-toggle-cover>
+        <div class="lk-aside-link lk-aside-toggler" data-toggle-link>Мой аккаунт
+          <svg class="icon">
+            <use xlink:href="img/icons.svg#navigate-right" />
+          </svg>
+        </div>
+        <div class="lk-aside-links-inner" data-toggle-height="true" data-toggle-static="true" data-toggle-content>
+
+          <div class="lk-aside-link active btn">Заказы</div>
+          <div class="lk-aside-link btn">Настройки профиля</div>
+          <div class="lk-aside-link btn">Изменить пароль</div>
+          <div class="lk-aside-link lk-aside-link--exit btn btn--link btn--red">
+            <span class="lk-aside-link-dashed">Выйти из личного кабинета</span>
+          </div>
+        </div>
+        <div class="lk-balance">
+          Бонусный счет: 3 000 ₽
+        </div>
+      </div>
+
+    </div>
+
+    <div class="lk-content">
+      <div class="lk-certificates">
+        <div class="lk-certificates__item" data-certificate="SL-QGLZC-KHQDJ2H">
+          <div class="lk-certificates__image">
+            <img class="d-block w-100" src="img/certificate.png" alt="">
+            <div class="lk-certificates__status lk-certificates__status--none py-2 px-3">Использован</div>
+            <canvas class="d-none" data-certificate-canvas="img/certificate-big.jpg" id="certificate-canvas-1" width="540px" height="750px"></canvas>
+          </div>
+          <div class="lk-certificates__content w-100">
+            <div class="lk-certificates__text">
+              <span class="text-body-1">Сертификат 1000</span>
+              <span class="text-body-1 fade-40">Куплен: 25.12.2023</span>
+            </div>
+            <div class="text-subtitle-2 text--medium mt-2">1000 руб</div>
+            <div class="text-body-1 mt-6">
+              <span class="fade-40">Промокод:</span> <span class="text--medium">SL-QGLZC-KHQDJ2H</span>
+            </div>
+            <div class="lk-certificates__cover mt-2" data-copy>
+              <input class="lk-certificates__input" data-copy-input type="text" value="SL-QGLZC-KHQDJ2H">
+              <button class="lk-certificates__copy btn btn--primary btn--link" data-copy-button>Скопировать код</button>
+            </div>
+            <div class="flex mt-6 mt-md-10">
+              <a class="btn btn--accent btn--fill mr-5" data-certificate-download href="" download>
+                <img class="icon text-subtitle-2 mr-2" src="img/download.svg" alt="">
+                Скачать
+              </a>
+              <button class="btn btn--accent btn--light color-text" data-fancybox-modal="" data-type="ajax" data-src="dialog-certificate.html">Отправить</button>
+            </div>
+          </div>
+        </div>
+        <div class="lk-certificates__item" data-certificate="SL-QGLZC-KHQDJ2H">
+          <div class="lk-certificates__image">
+            <img class="d-block w-100" src="img/certificate.png" alt="">
+            <div class="lk-certificates__status lk-certificates__status--active py-2 px-3">Не использован</div>
+            <canvas class="d-none" data-certificate-canvas="img/certificate-big.jpg" id="certificate-canvas-2" width="540px" height="750px"></canvas>
+          </div>
+          <div class="lk-certificates__content w-100">
+            <div class="lk-certificates__text">
+              <span class="text-body-1">Сертификат 1000</span>
+              <span class="text-body-1 fade-40">Куплен: 25.12.2023</span>
+            </div>
+            <div class="text-subtitle-2 text--medium mt-2">1000 руб</div>
+            <div class="text-body-1 mt-6">
+              <span class="fade-40">Промокод:</span> <span class="text--medium">SL-QGLZC-KHQDJ2H</span>
+            </div>
+            <div class="lk-certificates__cover mt-2" data-copy>
+              <input class="lk-certificates__input" data-copy-input type="text" value="SL-QGLZC-KHQDJ2H">
+              <button class="lk-certificates__copy btn btn--primary btn--link" data-copy-button>Скопировать код</button>
+            </div>
+            <div class="flex mt-6 mt-md-10">
+              <a class="btn btn--accent btn--fill mr-5" data-certificate-download href="" download>
+                <img class="icon text-subtitle-2 mr-2" src="img/download.svg" alt="">
+                Скачать
+              </a>
+              <button class="btn btn--accent btn--light color-text" data-fancybox-modal="" data-type="ajax" data-src="dialog-certificate.html">Отправить</button>
+            </div>
+          </div>
+        </div>
+        <div class="lk-certificates__item">
+          <div class="lk-certificates__image">
+            <img class="d-block w-100" src="img/certificate-plug.png" alt="">
+          </div>
+          <div class="lk-certificates__content w-100">
+            <div class="text-subtitle-2 text--medium">Нет сертификатов</div>
+            <div class="text-body-1 mt-2">На данный момент вы не приобрели ни одного сертификата</div>
+            <div class="flex mt-6 mt-md-10">
+              <a class="btn btn--accent btn--fill" href="" download>Выбрать сертификат</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<%= _.template(require('./html-includes/footer.html').default)() %>

@@ -6552,3 +6552,77 @@ header {
 	background-color: transparent;
 	max-width: 100%;
 }
+
+.lk-certificates {
+	display: flex;
+	flex-direction: column;
+	gap: 50px;
+
+	&__item {
+		display: flex;
+		align-items: center;
+		gap: 28px;
+	}
+
+	&__image {
+		width: 242px;
+		min-width: 242px;
+		border-radius: 16px;
+		overflow: hidden;
+		position: relative;
+	}
+
+	&__status {
+		position: absolute;
+		top: 8px;
+		left: 8px;
+		border-radius: 16px;
+
+		&--none {
+			background-color: #FFCBCB;
+		}
+
+		&--active {
+			background-color: #F8F2AA;
+		}
+	}
+
+	&__text {
+		display: flex;
+		flex-wrap: wrap;
+		align-items: center;
+		justify-content: space-between;
+		gap: 8px;
+	}
+
+	&__cover {
+		position: relative;
+	}
+
+	&__input {
+		position: absolute;
+		inset: 0;
+		opacity: 0;
+	}
+
+	&__copy {
+		border-bottom: 1px dashed currentColor;
+	}
+
+	@media(max-width: 576px) {
+		& {
+			gap: 24px;
+		}
+
+		&__item {
+			flex-direction: column;
+			align-items: flex-start;
+			gap: 16px;
+		}
+
+		&__text {
+			flex-direction: column;
+			align-items: flex-start;
+		}
+	}
+}
