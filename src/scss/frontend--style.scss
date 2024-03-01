@@ -4055,3 +4055,69 @@ body {
 		font-size: 160px;
 	}
 }
+
+.banner-pre-order {
+	background-color: #FFCCC6;
+	padding         : 20px;
+	overflow        : hidden;
+	position        : relative;
+
+	&--border {
+		border-radius: 16px;
+	}
+
+	&--border &__before {
+		left: -150px;
+	}
+
+	&--border &__after {
+		right: -150px;
+	}
+
+	&__before,
+	&__after {
+		top: 0;
+		bottom: 0;
+		height: 100%;
+		position: absolute;
+	}
+	
+	&__before {
+		left: 0;
+	}
+	
+	&__after {
+		right    : 0;
+		transform: scale(-1, 1);
+	}
+	
+	&__text {
+		position   : relative;
+		z-index    : 1;
+		font-weight: 700;
+		font-size  : 22px;
+		line-height: 140%;
+		text-align : center;
+		z-index    : 1;
+	}
+	
+	@media(max-width: 1200px) {
+	
+		&__before,
+		&__after {
+			opacity: 0.5;
+		}
+	}
+	
+	@media(max-width: 576px) {
+	
+		&__before,
+		&__after {
+			display: none;
+		}
+
+		&__text {
+			font-size  : 16px;
+		}
+	}
+}
